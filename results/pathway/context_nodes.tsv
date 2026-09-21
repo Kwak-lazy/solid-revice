@@ -1,0 +1,1823 @@
+context_id	context_name	context_type	n_genes_total	n_genes_kirc	in_subgraph
+Pathway::PC7_7439	Signaling Pathways	Pathway	1956	1950	True
+Pathway::PC7_5322	Metabolism	Pathway	1564	1563	True
+Pathway::PC7_3278	Disease	Pathway	1253	1253	True
+Pathway::PC7_4112	Gene Expression	Pathway	1142	1142	True
+Pathway::PC7_4688	Immune System	Pathway	1134	1125	True
+Pathway::PC7_7457	Signaling by GPCR	Pathway	1013	1007	True
+Pathway::PC7_4043	GPCR downstream signaling	Pathway	898	893	True
+Pathway::PC7_5330	Metabolism of proteins	Pathway	683	682	True
+Pathway::PC7_8339	Transmembrane transport of small molecules	Pathway	606	606	True
+Pathway::PC7_1563	Adaptive Immune System	Pathway	607	601	True
+Pathway::PC7_4741	Innate Immune System	Pathway	577	572	True
+Pathway::PC7_5326	Metabolism of lipids and lipoproteins	Pathway	569	569	True
+Pathway::PC7_2519	Cell Cycle	Pathway	544	544	True
+Pathway::PC7_4449	Hemostasis	Pathway	506	506	True
+Pathway::PC7_3084	Developmental Biology	Pathway	494	494	True
+Pathway::PC7_2521	Cell Cycle, Mitotic	Pathway	473	473	True
+Pathway::PC7_4116	Generic Transcription Pathway	Pathway	458	458	True
+Pathway::PC7_4044	GPCR ligand binding	Pathway	440	437	True
+Pathway::PC7_6044	Olfactory Signaling Pathway	Pathway	357	354	True
+Pathway::PC7_5530	Mitotic M-M/G1 phases	Pathway	329	329	True
+Pathway::PC7_1863	Axon guidance	Pathway	324	324	True
+Pathway::PC7_7484	Signaling by Wnt	Pathway	317	317	True
+Pathway::PC7_2620	Class A/1 (Rhodopsin-like receptors)	Pathway	313	311	True
+Pathway::PC7_5049	M Phase	Pathway	295	295	True
+Pathway::PC7_7463	Signaling by NGF	Pathway	286	286	True
+Pathway::PC7_5887	Neuronal System	Pathway	279	279	True
+Pathway::PC7_2907	Cytokine Signaling in Immune system	Pathway	280	278	True
+Pathway::PC7_6540	Post-translational protein modification	Pathway	269	268	True
+Pathway::PC7_5324	Metabolism of RNA	Pathway	266	266	True
+Pathway::PC7_2532	Cellular responses to stress	Pathway	264	264	True
+Pathway::PC7_3777	Extracellular matrix organization	Pathway	264	264	True
+Pathway::PC7_7290	SLC-mediated transmembrane transport	Pathway	260	260	True
+Pathway::PC7_2500	Carbohydrate metabolism	Pathway	259	259	True
+Pathway::WP455_r81793	GPCRs, Class A Rhodopsin-like	Pathway	258	257	True
+Pathway::PC7_2623	Class I MHC mediated antigen processing & presentation	Pathway	252	252	True
+Pathway::PC7_7483	Signaling by WNT in cancer	Pathway	249	249	True
+Pathway::PC7_3992	G alpha (i) signalling events	Pathway	235	234	True
+Pathway::PC7_8317	Transcription	Pathway	231	231	True
+Pathway::PC7_6815	RNF mutants show enhanced WNT signaling and proliferation	Pathway	227	227	True
+Pathway::PC7_6512	Platelet activation, signaling and aggregation	Pathway	221	221	True
+Pathway::PC7_5327	Metabolism of mRNA	Pathway	219	219	True
+Pathway::PC7_7784	TCF dependent signaling in response to WNT	Pathway	218	218	True
+Pathway::PC7_2570	Chromatin modifying enzymes	Pathway	217	217	True
+Pathway::PC7_4365	HIV Infection	Pathway	216	216	True
+Pathway::PC7_4107	Gastrin-CREB signalling pathway via PKC and MAPK	Pathway	215	214	True
+Pathway::PC7_1672	Antigen processing: Ubiquitination & Proteasome degradation	Pathway	208	208	True
+Pathway::PC7_5772	NGF signalling via TRKA from the plasma membrane	Pathway	206	206	True
+Pathway::WP3594_r84573	Circadian rythm related genes	Pathway	201	201	True
+Pathway::PC7_8340	Transmission across Chemical Synapses	Pathway	200	200	True
+Pathway::PC7_1877	B Cell Activation	Pathway	195	194	True
+Pathway::WP2377_r80437	Integrated Pancreatic Cancer Pathway	Pathway	191	191	True
+Pathway::PC7_5307	Membrane Trafficking	Pathway	190	190	True
+Pathway::WP306_r80308	Focal Adhesion	Pathway	190	190	True
+Pathway::PC7_6396	Peptide ligand-binding receptors	Pathway	190	189	True
+Pathway::PC7_1629	Amino acid and derivative metabolism	Pathway	188	188	True
+Pathway::PC7_2529	Cellular Senescence	Pathway	186	186	True
+Pathway::PC7_3993	G alpha (q) signalling events	Pathway	187	186	True
+Pathway::PC7_7475	Signaling by PDGF	Pathway	182	182	True
+Pathway::PC7_7444	Signaling by EGFR in Cancer	Pathway	181	181	True
+Pathway::PC7_3882	Fatty acid, triacylglycerol, and ketone body metabolism	Pathway	180	180	True
+Pathway::PC7_7443	Signaling by EGFR	Pathway	179	179	True
+Pathway::PC7_7448	Signaling by FGFR in disease	Pathway	177	177	True
+Pathway::PC7_3884	Fc epsilon receptor (FCERI) signaling	Pathway	177	176	True
+Pathway::PC7_2925	DAP12 interactions	Pathway	177	174	True
+Pathway::WP702_r73516	Metapathway biotransformation	Pathway	175	174	True
+Pathway::PC7_5531	Mitotic Metaphase and Anaphase	Pathway	172	172	True
+Pathway::PC7_2098	Biological oxidations	Pathway	172	171	True
+Pathway::PC7_5527	Mitotic Anaphase	Pathway	171	171	True
+Pathway::WP382_r79951	MAPK Signaling Pathway	Pathway	168	168	True
+Pathway::PC7_3326	Downstream signaling events of B Cell Receptor (BCR)	Pathway	167	167	True
+Pathway::PC7_4771	Interferon Signaling	Pathway	169	167	True
+Pathway::PC7_2926	DAP12 signaling	Pathway	164	164	True
+Pathway::PC7_7445	Signaling by ERBB2	Pathway	163	163	True
+Pathway::PC7_4791	Ion channel transport	Pathway	162	162	True
+Pathway::PC7_7447	Signaling by FGFR	Pathway	162	162	True
+Pathway::WP437_r79266	EGF/EGFR Signaling Pathway	Pathway	162	162	True
+Pathway::PC7_3325	Downstream signal transduction	Pathway	161	161	True
+Pathway::PC7_7427	Separation of Sister Chromatids	Pathway	160	160	True
+Pathway::WP481_r82731	Insulin Signaling	Pathway	160	160	True
+Pathway::WP706_r80056	SIDS Susceptibility Pathways	Pathway	156	156	True
+Pathway::PC7_1684	Apoptosis	Pathway	155	155	True
+Pathway::WP289_r81078	Myometrial Relaxation and Contraction Pathways	Pathway	155	155	True
+Pathway::PC7_7446	Signaling by ERBB4	Pathway	152	152	True
+Pathway::WP1984_r82941	Integrated Breast Cancer Pathway	Pathway	151	151	True
+Pathway::PC7_3328	Downstream signaling of activated FGFR	Pathway	149	149	True
+Pathway::WP51_r79977	Regulation of Actin Cytoskeleton	Pathway	149	149	True
+Pathway::WP536_r80211	Calcium Regulation in the Cardiac Cell	Pathway	149	149	True
+Pathway::PC7_8229	The citric acid (TCA) cycle and respiratory electron transport	Pathway	147	147	True
+Pathway::PC7_6057	Organelle biogenesis and maintenance	Pathway	145	145	True
+Pathway::PC7_8331	Translation	Pathway	145	145	True
+Pathway::PC7_6589	Processing of Capped Intron-Containing Pre-mRNA	Pathway	144	144	True
+Pathway::WP2380_r79953	BDNF signaling pathway	Pathway	144	144	True
+Pathway::WP2884_r83041	NRF2 pathway	Pathway	146	144	True
+Pathway::PC7_11018	beta-catenin independent WNT signaling	Pathway	143	143	True
+Pathway::PC7_6797	RNA Polymerase I, RNA Polymerase III, and Mitochondrial Transcription	Pathway	142	142	True
+Pathway::PC7_4727	Influenza Infection	Pathway	141	141	True
+Pathway::PC7_7478	Signaling by SCF-KIT	Pathway	141	141	True
+Pathway::PC7_8295	Toll-Like Receptors Cascades	Pathway	141	141	True
+Pathway::PC7_3277	Direct p53 effectors	Pathway	140	140	True
+Pathway::PC7_5890	Neurotransmitter Receptor Binding And Downstream Transmission In The Postsynaptic Cell	Pathway	140	140	True
+Pathway::PC7_4308	HATs acetylate histones	Pathway	139	139	True
+Pathway::WP1449_r81172	Regulation of toll-like receptor signaling pathway	Pathway	139	139	True
+Pathway::PC7_6462	Phospholipid metabolism	Pathway	138	138	True
+Pathway::WP2858_r83015	Ectoderm Differentiation	Pathway	138	138	True
+Pathway::PC7_3869	Factors involved in megakaryocyte development and platelet production	Pathway	136	136	True
+Pathway::PC7_4366	HIV Life Cycle	Pathway	136	136	True
+Pathway::PC7_4728	Influenza Life Cycle	Pathway	136	136	True
+Pathway::PC7_5534	Mitotic Prophase	Pathway	136	136	True
+Pathway::PC7_5528	Mitotic G1-G1/S phases	Pathway	135	135	True
+Pathway::WP366_r84196	TGF-beta Signaling Pathway	Pathway	132	132	True
+Pathway::PC7_2526	Cell-Cell communication	Pathway	130	130	True
+Pathway::WP236_r80209	Adipogenesis	Pathway	130	130	True
+Pathway::PC7_4729	Influenza Viral RNA Transcription and Replication	Pathway	127	127	True
+Pathway::PC7_4492	Host Interactions of HIV factors	Pathway	126	126	True
+Pathway::PC7_6141	PDGFR-beta signaling pathway	Pathway	125	125	True
+Pathway::WP411_r79980	mRNA Processing	Pathway	126	125	True
+Pathway::PC7_3994	G alpha (s) signalling events	Pathway	124	124	True
+Pathway::PC7_4948	Late Phase of HIV Life Cycle	Pathway	123	123	True
+Pathway::PC7_7024	S Phase	Pathway	123	123	True
+Pathway::PC7_3682	Epigenetic regulation of gene expression	Pathway	122	122	True
+Pathway::PC7_8288	Toll Like Receptor 4 (TLR4) Cascade	Pathway	122	122	True
+Pathway::PC7_3018	Defective B3GAT3 causes JDSSDHD	Pathway	119	119	True
+Pathway::PC7_6072	Oxidative Stress Induced Senescence	Pathway	119	119	True
+Pathway::PC7_1750	Asparagine N-linked glycosylation	Pathway	118	118	True
+Pathway::PC7_6957	Rho GTPase cycle	Pathway	118	118	True
+Pathway::PC7_2520	Cell Cycle Checkpoints	Pathway	117	117	True
+Pathway::WP2431_r84650	Spinal Cord Injury	Pathway	118	117	True
+Pathway::PC7_7460	Signaling by Insulin receptor	Pathway	116	116	True
+Pathway::PC7_5271	Meiosis	Pathway	115	115	True
+Pathway::PC7_5529	Mitotic G2-G2/M phases	Pathway	115	115	True
+Pathway::PC7_7482	Signaling by VEGF	Pathway	115	115	True
+Pathway::PC7_12073	mRNA Splicing	Pathway	113	113	True
+Pathway::PC7_1517	Activated TLR4 signalling	Pathway	113	113	True
+Pathway::PC7_2950	DNA Repair	Pathway	113	113	True
+Pathway::PC7_4011	G2/M Transition	Pathway	113	113	True
+Pathway::PC7_6910	Regulation of lipid metabolism by Peroxisome proliferator-activated receptor alpha (PPARalpha)	Pathway	113	113	True
+Pathway::PC7_6923	Regulatory RNA pathways	Pathway	113	113	True
+Pathway::PC7_7458	Signaling by Hedgehog	Pathway	113	113	True
+Pathway::PC7_2469	Cap-dependent Translation Initiation	Pathway	112	112	True
+Pathway::PC7_6203	PPARA activates gene expression	Pathway	110	110	True
+Pathway::PC7_4005	G1/S Transition	Pathway	109	109	True
+Pathway::PC7_7465	Signaling by NOTCH	Pathway	109	109	True
+Pathway::WP710_r79974	DNA Damage Response (only ATM dependent)	Pathway	109	109	True
+Pathway::PC7_5533	Mitotic Prometaphase	Pathway	108	108	True
+Pathway::PC7_7461	Signaling by Interleukins	Pathway	108	108	True
+Pathway::PC7_6794	RNA Polymerase I Transcription	Pathway	107	107	True
+Pathway::PC7_7357	SRP-dependent cotranslational protein targeting to membrane	Pathway	107	107	True
+Pathway::PC7_8664	VEGFA-VEGFR2 Pathway	Pathway	107	107	True
+Pathway::PC7_5972	Nonsense Mediated Decay (NMD) enhanced by the Exon Junction Complex (EJC)	Pathway	106	106	True
+Pathway::PC7_6943	Respiratory electron transport, ATP synthesis by chemiosmotic coupling, and heat production by uncoupling proteins.	Pathway	106	106	True
+Pathway::PC7_3698	ErbB1 downstream signaling	Pathway	105	105	True
+Pathway::PC7_4085	GTP hydrolysis and joining of the 60S ribosomal subunit	Pathway	105	105	True
+Pathway::PC7_5875	Negative epigenetic regulation of rRNA expression	Pathway	105	105	True
+Pathway::PC7_6791	RNA Polymerase I Promoter Clearance	Pathway	105	105	True
+Pathway::PC7_7426	Senescence-Associated Secretory Phenotype (SASP)	Pathway	105	105	True
+Pathway::WP615_r81193	Senescence and Autophagy in Cancer	Pathway	105	105	True
+Pathway::PC7_2951	DNA Replication	Pathway	104	104	True
+Pathway::PC7_4754	Integration of energy metabolism	Pathway	104	104	True
+Pathway::PC7_6065	Orphan transporters	Pathway	104	104	True
+Pathway::PC7_6801	RNA Polymerase II Transcription	Pathway	104	104	True
+Pathway::PC7_685	3' -UTR-mediated translational regulation	Pathway	104	104	True
+Pathway::PC7_6994	Role of LAT2/NTAL/LAB on calcium mobilization	Pathway	105	104	True
+Pathway::WP111_r82216	Electron Transport Chain	Pathway	103	103	True
+Pathway::PC7_4012	GAB1 signalosome	Pathway	102	102	True
+Pathway::PC7_5966	NoRC negatively regulates rRNA expression	Pathway	102	102	True
+Pathway::WP179_r70629	Cell Cycle	Pathway	102	102	True
+Pathway::WP399_r79474	Wnt Signaling Pathway and Pluripotency	Pathway	102	102	True
+Pathway::WP75_r83867	Toll-like Receptor Signaling Pathway	Pathway	102	102	True
+Pathway::PC7_6000	O-linked glycosylation	Pathway	102	101	True
+Pathway::PC7_6157	PI3K/AKT activation	Pathway	101	101	True
+Pathway::PC7_8326	Transcriptional regulation by small RNAs	Pathway	101	101	True
+Pathway::WP2064_r79263	Neural Crest Differentiation	Pathway	101	101	True
+Pathway::PC7_5157	MHC class II antigen presentation	Pathway	102	100	True
+Pathway::PC7_6941	Resolution of Sister Chromatid Cohesion	Pathway	100	100	True
+Pathway::WP185_r80036	Integrin-mediated Cell Adhesion	Pathway	100	100	True
+Pathway::PC7_2525	Cell surface interactions at the vascular wall	Pathway	99	99	True
+Pathway::PC7_5560	MyD88-independent cascade	Pathway	99	99	True
+Pathway::PC7_6543	Potassium Channels	Pathway	99	99	True
+Pathway::PC7_2575	Chromosome Maintenance	Pathway	98	98	True
+Pathway::PC7_4438	Hedgehog 'off' state	Pathway	98	98	True
+Pathway::PC7_6149	PI-3K cascade	Pathway	98	98	True
+Pathway::PC7_8352	Transport of glucose and other sugars, bile salts and organic acids, metal ions and amine compounds	Pathway	97	97	True
+Pathway::WP23_r79985	B Cell Receptor Signaling Pathway	Pathway	97	97	True
+Pathway::PC7_4917	L1CAM interactions	Pathway	96	96	True
+Pathway::PC7_7731	Synthesis of DNA	Pathway	96	96	True
+Pathway::PC7_3280	Diseases associated with visual transduction	Pathway	95	95	True
+Pathway::PC7_7681	Stimuli-sensing channels	Pathway	95	95	True
+Pathway::PC7_8354	Transport of inorganic cations/anions and amino acids/oligopeptides	Pathway	95	95	True
+Pathway::PC7_3415	EPH-Ephrin signaling	Pathway	94	94	True
+Pathway::PC7_3963	Formation of a pool of free 40S subunits	Pathway	94	94	True
+Pathway::PC7_4334	HDACs deacetylate histones	Pathway	94	94	True
+Pathway::PC7_5561	MyD88:Mal cascade initiated on plasma membrane	Pathway	94	94	True
+Pathway::PC7_4583	IGF1R signaling cascade	Pathway	92	92	True
+Pathway::PC7_4749	Insulin receptor signalling cascade	Pathway	92	92	True
+Pathway::PC7_8291	Toll Like Receptor 9 (TLR9) Cascade	Pathway	92	92	True
+Pathway::WP231_r81070	TNF alpha Signaling Pathway	Pathway	92	92	True
+Pathway::WP2355_r79973	Corticotropin-releasing hormone	Pathway	92	92	True
+Pathway::WP35_r79952	G Protein Signaling Pathways	Pathway	93	92	True
+Pathway::PC7_5521	Mitochondrial translation	Pathway	91	91	True
+Pathway::WP117_r82985	GPCRs, Other	Pathway	91	91	True
+Pathway::WP1772_r84701	Apoptosis Modulation and Signaling	Pathway	91	91	True
+Pathway::PC7_6108	PCP/CE pathway	Pathway	90	90	True
+Pathway::WP69_r79955	TCR Signaling Pathway	Pathway	90	90	True
+Pathway::PC7_3065	Degradation of the extracellular matrix	Pathway	89	89	True
+Pathway::PC7_4664	IRS-related events triggered by IGF1R	Pathway	89	89	True
+Pathway::PC7_5973	Nonsense Mediated Decay (NMD) independent of the Exon Junction Complex (EJC)	Pathway	89	89	True
+Pathway::WP138_r79958	Androgen receptor signaling pathway	Pathway	89	89	True
+Pathway::PC7_3772	Eukaryotic Translation Elongation	Pathway	88	88	True
+Pathway::PC7_4262	Glycerophospholipid biosynthesis	Pathway	88	88	True
+Pathway::PC7_4663	IRS-related events	Pathway	88	88	True
+Pathway::PC7_5559	MyD88 dependent cascade initiated on endosome	Pathway	88	88	True
+Pathway::WP477_r67139	Cytoplasmic Ribosomal Proteins	Pathway	89	88	True
+Pathway::PC7_11610	formation of the beta-catenin:TCF transactivating complex	Pathway	87	87	True
+Pathway::PC7_2621	Class B/2 (Secretin family receptors)	Pathway	87	87	True
+Pathway::PC7_3017	Defective AMN causes hereditary megaloblastic anemia 1	Pathway	87	87	True
+Pathway::PC7_6433	Phase II conjugation	Pathway	88	87	True
+Pathway::WP2446_r84651	Retinoblastoma (RB) in Cancer	Pathway	87	87	True
+Pathway::PC7_2679	Constitutive PI3K/AKT Signaling in Cancer	Pathway	86	86	True
+Pathway::PC7_6790	RNA Polymerase I Chain Elongation	Pathway	86	86	True
+Pathway::PC7_6911	Regulation of mRNA stability by proteins that bind AU-rich elements	Pathway	86	86	True
+Pathway::PC7_6942	Respiratory electron transport	Pathway	86	86	True
+Pathway::PC7_8058	TRAF6 mediated induction of NFkB and MAP kinases upon TLR7/8 or 9 activation	Pathway	86	86	True
+Pathway::PC7_2524	Cell junction organization	Pathway	85	85	True
+Pathway::PC7_4662	IRS-mediated signalling	Pathway	85	85	True
+Pathway::PC7_5524	Mitochondrial translation termination	Pathway	85	85	True
+Pathway::PC7_5558	MyD88 cascade initiated on plasma membrane	Pathway	85	85	True
+Pathway::PC7_6395	Peptide hormone metabolism	Pathway	85	85	True
+Pathway::PC7_6945	Response to elevated platelet cytosolic Ca2+	Pathway	85	85	True
+Pathway::WP15_r82705	Selenium Micronutrient Network	Pathway	88	85	True
+Pathway::PC7_2170	C-MYB transcription factor network	Pathway	84	84	True
+Pathway::PC7_2373	CXCR4-mediated signaling events	Pathway	84	84	True
+Pathway::PC7_2670	Collagen formation	Pathway	84	84	True
+Pathway::PC7_3774	Eukaryotic Translation Termination	Pathway	84	84	True
+Pathway::PC7_5272	Meiotic recombination	Pathway	84	84	True
+Pathway::PC7_5522	Mitochondrial translation elongation	Pathway	84	84	True
+Pathway::PC7_5523	Mitochondrial translation initiation	Pathway	84	84	True
+Pathway::PC7_6393	Peptide chain elongation	Pathway	84	84	True
+Pathway::PC7_8712	Viral mRNA Translation	Pathway	84	84	True
+Pathway::WP1544_r84696	MicroRNAs in cardiomyocyte hypertrophy	Pathway	84	84	True
+Pathway::WP254_r84652	Apoptosis	Pathway	84	84	True
+Pathway::PC7_12280	p75 NTR receptor-mediated signalling	Pathway	82	82	True
+Pathway::PC7_4161	Glucocorticoid receptor regulatory network	Pathway	82	82	True
+Pathway::WP2261_r81197	Signaling Pathways in Glioblastoma	Pathway	82	82	True
+Pathway::PC7_1128	APC/C-mediated degradation of cell cycle proteins	Pathway	81	81	True
+Pathway::PC7_2952	DNA Replication Pre-Initiation	Pathway	81	81	True
+Pathway::PC7_6050	Opioid Signalling	Pathway	81	81	True
+Pathway::PC7_6913	Regulation of nuclear SMAD2/3 signaling	Pathway	81	81	True
+Pathway::PC7_1118	AMER1 mutants destabilize the destruction complex	Pathway	80	80	True
+Pathway::PC7_1655	Amyloids	Pathway	80	80	True
+Pathway::PC7_1671	Antigen processing-Cross presentation	Pathway	80	80	True
+Pathway::PC7_3886	Fcgamma receptor (FCGR) dependent phagocytosis	Pathway	81	80	True
+Pathway::PC7_6514	Platelet degranulation	Pathway	80	80	True
+Pathway::PC7_6786	RIG-I/MDA5 mediated induction of IFN-alpha/beta pathways	Pathway	80	80	True
+Pathway::PC7_6914	Regulation of nuclear beta catenin signaling and target gene transcription	Pathway	80	80	True
+Pathway::PC7_7491	Signaling events mediated by Hepatocyte Growth Factor Receptor (c-Met)	Pathway	80	80	True
+Pathway::PC7_12279	p73 transcription factor network	Pathway	79	79	True
+Pathway::PC7_6890	Regulation of PLK1 Activity at G2/M Transition	Pathway	79	79	True
+Pathway::PC7_8677	Validated targets of C-MYC transcriptional activation	Pathway	79	79	True
+Pathway::WP2059_r82906	Alzheimers Disease	Pathway	79	79	True
+Pathway::PC7_5994	Nucleotide metabolism	Pathway	78	78	True
+Pathway::PC7_6432	Phase 1 - Functionalization of compounds	Pathway	78	78	True
+Pathway::PC7_6515	Platelet homeostasis	Pathway	78	78	True
+Pathway::PC7_8141	Telomere Maintenance	Pathway	78	78	True
+Pathway::PC7_8631	Unfolded Protein Response (UPR)	Pathway	78	78	True
+Pathway::WP2328_r84648	Allograft Rejection	Pathway	79	78	True
+Pathway::PC7_6909	Regulation of insulin secretion	Pathway	77	77	True
+Pathway::PC7_8328	Transcriptional regulation of white adipocyte differentiation	Pathway	77	77	True
+Pathway::PC7_2949	DNA Damage/Telomere Stress Induced Senescence	Pathway	76	76	True
+Pathway::PC7_6875	Regulation of APC/C activators between G1/S and early anaphase	Pathway	76	76	True
+Pathway::PC7_3991	G alpha (12/13) signalling events	Pathway	75	75	True
+Pathway::PC7_5273	Meiotic synapsis	Pathway	75	75	True
+Pathway::PC7_6788	RMTs methylate histone arginines	Pathway	75	75	True
+Pathway::PC7_8054	TRAF6 Mediated Induction of proinflammatory cytokines	Pathway	75	75	True
+Pathway::WP2034_r80016	Leptin signaling pathway	Pathway	75	75	True
+Pathway::PC7_6881	Regulation of DNA replication	Pathway	74	74	True
+Pathway::WP2118_r71265	Arrhythmogenic Right Ventricular Cardiomyopathy	Pathway	74	74	True
+Pathway::PC7_3362	E2F transcription factor network	Pathway	73	73	True
+Pathway::WP24_r79999	Peptide GPCRs	Pathway	74	73	True
+Pathway::WP2572_r79947	Primary Focal Segmental Glomerulosclerosis FSGS	Pathway	72	72	True
+Pathway::PC7_2534	Centrosome maturation	Pathway	71	71	True
+Pathway::PC7_2674	Condensation of Prophase Chromosomes	Pathway	71	71	True
+Pathway::PC7_3803	FBXW7 Mutants and NOTCH1 in Cancer	Pathway	71	71	True
+Pathway::PC7_4207	Glucose metabolism	Pathway	71	71	True
+Pathway::PC7_6930	Removal of licensing factors from origins	Pathway	71	71	True
+Pathway::PC7_7651	Sphingolipid metabolism	Pathway	71	71	True
+Pathway::WP1530_r84694	miRNA Regulation of DNA Damage Response	Pathway	71	71	True
+Pathway::PC7_1123	AP-1 transcription factor network	Pathway	70	70	True
+Pathway::PC7_1674	Antiviral mechanism by IFN-stimulated genes	Pathway	70	70	True
+Pathway::PC7_2263	CDC42 signaling events	Pathway	70	70	True
+Pathway::PC7_5025	Loss of Function of SMAD2/3 in Cancer	Pathway	70	70	True
+Pathway::PC7_6233	PRC2 methylates histones and DNA	Pathway	70	70	True
+Pathway::PC7_7488	Signaling events mediated by HDAC Class I	Pathway	70	70	True
+Pathway::WP2359_r72121	Parkin-Ubiquitin Proteasomal System pathway	Pathway	70	70	True
+Pathway::PC7_12281	p75(NTR)-mediated signaling	Pathway	69	69	True
+Pathway::PC7_1521	Activation of APC/C and APC/C:Cdc20 mediated degradation of mitotic proteins	Pathway	69	69	True
+Pathway::PC7_6054	Orc1 removal from chromatin	Pathway	69	69	True
+Pathway::WP1982_r79943	SREBP signalling	Pathway	69	69	True
+Pathway::WP2857_r80151	Mesodermal Commitment Pathway	Pathway	70	69	True
+Pathway::PC7_1131	APC/C:Cdc20 mediated degradation of mitotic proteins	Pathway	68	68	True
+Pathway::PC7_1132	APC/C:Cdh1 mediated degradation of Cdc20 and other APC/C:Cdh1 targeted proteins in late mitosis/early G1	Pathway	68	68	True
+Pathway::PC7_2518	Cdc20:Phospho-APC/C mediated degradation of Cyclin A	Pathway	68	68	True
+Pathway::PC7_5697	NCAM signaling for neurite out-growth	Pathway	68	68	True
+Pathway::PC7_6153	PI3K Cascade	Pathway	68	68	True
+Pathway::PC7_6895	Regulation of Telomerase	Pathway	68	68	True
+Pathway::PC7_7496	Signaling events mediated by VEGFR1 and VEGFR2	Pathway	68	68	True
+Pathway::WP1403_r79471	AMPK Signaling	Pathway	69	68	True
+Pathway::WP2853_r83014	Endoderm Differentiation	Pathway	68	68	True
+Pathway::WP45_r80001	G1 to S cell cycle control	Pathway	68	68	True
+Pathway::WP707_r82937	DNA Damage Response	Pathway	68	68	True
+Pathway::PC7_1987	BCR signaling pathway	Pathway	67	67	True
+Pathway::PC7_2100	Biosynthesis of the N-glycan precursor (dolichol lipid-linked oligosaccharide, LLO) and transfer to a nascent protein	Pathway	67	67	True
+Pathway::PC7_4773	Interferon gamma signaling	Pathway	69	67	True
+Pathway::PC7_7425	Semaphorin interactions	Pathway	67	67	True
+Pathway::WP3303_r83781	Rac1/Pak1/p38/MMP-2 pathway	Pathway	67	67	True
+Pathway::WP428_r79854	Wnt Signaling Pathway	Pathway	67	67	True
+Pathway::PC7_12078	mTOR signaling pathway	Pathway	66	66	True
+Pathway::PC7_1816	Assembly of the pre-replicative complex	Pathway	66	66	True
+Pathway::PC7_2076	Beta1 integrin cell surface interactions	Pathway	66	66	True
+Pathway::PC7_2701	Costimulation by the CD28 family	Pathway	68	66	True
+Pathway::PC7_2830	Cyclin A:Cdk2-associated events at S phase entry	Pathway	66	66	True
+Pathway::PC7_2910	Cytosolic sensors of pathogen-associated DNA	Pathway	66	66	True
+Pathway::PC7_3327	Downstream signaling in naïve CD8+ T cells	Pathway	66	66	True
+Pathway::PC7_4340	HIF-1-alpha transcription factor network	Pathway	66	66	True
+Pathway::PC7_4689	Immunoregulatory interactions between a Lymphoid and a non-Lymphoid cell	Pathway	70	66	True
+Pathway::PC7_4758	Integrin cell surface interactions	Pathway	66	66	True
+Pathway::PC7_6918	Regulation of retinoblastoma protein	Pathway	66	66	True
+Pathway::PC7_7787	TCR signaling in naïve CD4+ T cells	Pathway	66	66	True
+Pathway::WP2032_r79960	TSH signaling pathway	Pathway	66	66	True
+Pathway::WP2324_r78487	AGE/RAGE pathway	Pathway	66	66	True
+Pathway::WP2369_r83012	Histone Modifications	Pathway	66	66	True
+Pathway::PC7_1537	Activation of NF-kappaB in B cells	Pathway	65	65	True
+Pathway::PC7_2833	Cyclin E associated events during G1/S transition	Pathway	65	65	True
+Pathway::PC7_4772	Interferon alpha/beta signaling	Pathway	65	65	True
+Pathway::PC7_7272	SIRT1 negatively regulates rRNA Expression	Pathway	65	65	True
+Pathway::WP176_r82704	Folate Metabolism	Pathway	66	65	True
+Pathway::WP2374_r73668	Oncostatin M Signaling Pathway	Pathway	65	65	True
+Pathway::PC7_4940	LPA receptor mediated events	Pathway	64	64	True
+Pathway::PC7_8319	Transcription of the HIV genome	Pathway	64	64	True
+Pathway::PC7_8675	Validated nuclear estrogen receptor alpha network	Pathway	64	64	True
+Pathway::WP474_r80208	Endochondral Ossification	Pathway	64	64	True
+Pathway::PC7_1130	APC/C:Cdc20 mediated degradation of Securin	Pathway	63	63	True
+Pathway::PC7_3073	Deposition of new CENPA-containing nucleosomes at the centromere	Pathway	63	63	True
+Pathway::PC7_3427	ER-Phagosome pathway	Pathway	63	63	True
+Pathway::PC7_3670	Endothelins	Pathway	63	63	True
+Pathway::PC7_4762	Integrins in angiogenesis	Pathway	63	63	True
+Pathway::PC7_6001	O-linked glycosylation of mucins	Pathway	64	63	True
+Pathway::PC7_8678	Validated targets of C-MYC transcriptional repression	Pathway	63	63	True
+Pathway::PC7_1821	Asymmetric localization of PCP proteins	Pathway	62	62	True
+Pathway::PC7_2668	Collagen biosynthesis and modifying enzymes	Pathway	62	62	True
+Pathway::PC7_2953	DNA methylation	Pathway	62	62	True
+Pathway::PC7_4439	Hedgehog ligand biogenesis	Pathway	62	62	True
+Pathway::PC7_4627	IL4-mediated signaling events	Pathway	62	62	True
+Pathway::PC7_6799	RNA Polymerase II Pre-transcription Events	Pathway	62	62	True
+Pathway::WP183_r81161	Proteasome Degradation	Pathway	62	62	True
+Pathway::PC7_2393	Ca2+ pathway	Pathway	61	61	True
+Pathway::PC7_2523	Cell death signalling via NRAGE, NRIF and NADE	Pathway	61	61	True
+Pathway::PC7_2630	Clathrin derived vesicle budding	Pathway	61	61	True
+Pathway::PC7_2698	Coregulation of Androgen receptor activity	Pathway	61	61	True
+Pathway::PC7_3885	Fc-epsilon receptor I signaling in mast cells	Pathway	61	61	True
+Pathway::PC7_5029	Loss of Nlp from mitotic centrosomes	Pathway	61	61	True
+Pathway::PC7_5893	Neurotrophic factor-mediated Trk receptor signaling	Pathway	61	61	True
+Pathway::PC7_7497	Signaling events mediated by focal adhesion kinase	Pathway	61	61	True
+Pathway::PC7_8337	Translocation of GLUT4 to the plasma membrane	Pathway	61	61	True
+Pathway::WP43_r84102	Oxidation by Cytochrome P450	Pathway	61	61	True
+Pathway::WP61_r78592	Notch Signaling Pathway	Pathway	61	61	True
+Pathway::PC7_1858	Autodegradation of Cdh1 by Cdh1:APC/C	Pathway	60	60	True
+Pathway::PC7_2527	Cell-cell junction organization	Pathway	60	60	True
+Pathway::PC7_2905	Cytochrome P450 - arranged by substrate type	Pathway	60	60	True
+Pathway::PC7_4594	IL12-mediated signaling events	Pathway	60	60	True
+Pathway::PC7_6793	RNA Polymerase I Promoter Opening	Pathway	60	60	True
+Pathway::WP623_r79961	Oxidative phosphorylation	Pathway	60	60	True
+Pathway::PC7_1178	ATF-2 transcription factor network	Pathway	59	59	True
+Pathway::PC7_12271	p53 pathway	Pathway	59	59	True
+Pathway::PC7_4004	G1/S DNA Damage Checkpoints	Pathway	59	59	True
+Pathway::WP304_r78799	Kit receptor signaling pathway	Pathway	59	59	True
+Pathway::WP558_r79680	Complement and Coagulation Cascades	Pathway	59	59	True
+Pathway::PC7_3060	Degradation of GLI1 by the proteasome	Pathway	58	58	True
+Pathway::PC7_3061	Degradation of GLI2 by the proteasome	Pathway	58	58	True
+Pathway::PC7_4037	GLI3 is processed to GLI3R by the proteasome	Pathway	58	58	True
+Pathway::PC7_5981	Notch signaling pathway	Pathway	58	58	True
+Pathway::PC7_6877	Regulation of Apoptosis	Pathway	58	58	True
+Pathway::PC7_7269	SHP2 signaling	Pathway	58	58	True
+Pathway::WP3527_r84571	Preimplantation Embryo	Pathway	58	58	True
+Pathway::PC7_2278	CDT1 association with the CDC6:ORC:origin complex	Pathway	57	57	True
+Pathway::PC7_2506	Caspase Cascade in Apoptosis	Pathway	57	57	True
+Pathway::PC7_4467	Hh ligand biogenesis disease	Pathway	57	57	True
+Pathway::PC7_7786	TCR signaling	Pathway	59	57	True
+Pathway::PC7_12274	p53-Dependent G1 DNA Damage Response	Pathway	56	56	True
+Pathway::PC7_1552	Activation of the mRNA upon binding of the cap-binding complex and eIFs, and subsequent binding to 43S	Pathway	56	56	True
+Pathway::PC7_2681	Constitutive Signaling by NOTCH1 HD+PEST Domain Mutants	Pathway	56	56	True
+Pathway::PC7_5051	MAP kinase activation in TLR cascade	Pathway	56	56	True
+Pathway::PC7_6461	Phospholipase C-mediated cascade	Pathway	56	56	True
+Pathway::PC7_6896	Regulation of actin dynamics for phagocytic cup formation	Pathway	57	56	True
+Pathway::PC7_7230	SCF(Skp2)-mediated degradation of p27/p21	Pathway	56	56	True
+Pathway::PC7_8266	Thromboxane A2 receptor signaling	Pathway	56	56	True
+Pathway::PC7_11385	degradation of DVL	Pathway	55	55	True
+Pathway::PC7_2543	Chemokine receptors bind chemokines	Pathway	56	55	True
+Pathway::PC7_2582	Circadian Clock	Pathway	55	55	True
+Pathway::PC7_3366	ECM proteoglycans	Pathway	55	55	True
+Pathway::PC7_6642	Protein folding	Pathway	55	55	True
+Pathway::PC7_6966	Ribosomal scanning and start codon recognition	Pathway	55	55	True
+Pathway::PC7_8332	Translation initiation complex formation	Pathway	55	55	True
+Pathway::WP195_r79965	IL-1 signaling pathway	Pathway	55	55	True
+Pathway::WP2018_r79959	RANKL/RANK Signaling Pathway	Pathway	55	55	True
+Pathway::WP2272_r78594	Pathogenic Escherichia coli infection	Pathway	55	55	True
+Pathway::WP2795_r78544	Cardiac Hypertrophic Response	Pathway	55	55	True
+Pathway::PC7_1214	AUF1 (hnRNP D0) destabilizes mRNA	Pathway	54	54	True
+Pathway::PC7_3811	FGF signaling pathway	Pathway	54	54	True
+Pathway::PC7_4300	Golgi Associated Vesicle Biogenesis	Pathway	54	54	True
+Pathway::PC7_4613	IL2-mediated signaling events	Pathway	54	54	True
+Pathway::PC7_5515	Mitochondrial biogenesis	Pathway	54	54	True
+Pathway::PC7_6740	RAC1 signaling pathway	Pathway	54	54	True
+Pathway::PC7_6992	Role of Calcineurin-dependent NFAT signaling in lymphocytes	Pathway	54	54	True
+Pathway::PC7_8343	Transport of Mature Transcript to Cytoplasm	Pathway	54	54	True
+Pathway::PC7_8680	Validated transcriptional targets of TAp63 isoforms	Pathway	54	54	True
+Pathway::WP395_r79978	IL-4 Signaling Pathway	Pathway	54	54	True
+Pathway::WP560_r83868	TGF-beta Receptor Signaling	Pathway	54	54	True
+Pathway::WP585_r80201	Interferon type I signaling pathways	Pathway	54	54	True
+Pathway::WP673_r80202	ErbB Signaling Pathway	Pathway	54	54	True
+Pathway::PC7_11384	degradation of AXIN	Pathway	53	53	True
+Pathway::PC7_4016	GABA receptor activation	Pathway	53	53	True
+Pathway::PC7_4451	Heparan sulfate/heparin (HS-GAG) metabolism	Pathway	53	53	True
+Pathway::PC7_6876	Regulation of Androgen receptor activity	Pathway	53	53	True
+Pathway::PC7_6899	Regulation of cholesterol biosynthesis by SREBP (SREBF)	Pathway	53	53	True
+Pathway::PC7_7231	SCF-beta-TrCP mediated degradation of Emi1	Pathway	53	53	True
+Pathway::PC7_7788	TCR signaling in naïve CD8+ T cells	Pathway	53	53	True
+Pathway::WP2406_r73324	Cardiac Progenitor Differentiation	Pathway	53	53	True
+Pathway::WP2864_r79278	Apoptosis-related network due to altered Notch3 in ovarian cancer	Pathway	53	53	True
+Pathway::PC7_1689	Apoptotic execution phase	Pathway	52	52	True
+Pathway::PC7_1812	Assembly of collagen fibrils and other multimeric structures	Pathway	52	52	True
+Pathway::PC7_5517	Mitochondrial protein import	Pathway	52	52	True
+Pathway::PC7_7493	Signaling events mediated by PTP1B	Pathway	52	52	True
+Pathway::PC7_7764	Synthesis of substrates in N-glycan biosythesis	Pathway	52	52	True
+Pathway::PC7_7795	TGF-beta receptor signaling	Pathway	52	52	True
+Pathway::PC7_8709	Vif-mediated degradation of APOBEC3G	Pathway	52	52	True
+Pathway::WP3286_r84312	Copper homeostasis	Pathway	52	52	True
+Pathway::WP363_r78571	Wnt Signaling Pathway Netpath	Pathway	52	52	True
+Pathway::PC7_1691	Aquaporin-mediated transport	Pathway	51	51	True
+Pathway::PC7_4000	G-protein beta:gamma signalling	Pathway	51	51	True
+Pathway::PC7_5551	Muscle contraction	Pathway	51	51	True
+Pathway::PC7_5989	Nuclear Receptor transcription pathway	Pathway	51	51	True
+Pathway::PC7_6147	PI Metabolism	Pathway	51	51	True
+Pathway::PC7_7494	Signaling events mediated by Stem cell factor receptor (c-Kit)	Pathway	51	51	True
+Pathway::PC7_7661	Stabilization of p53	Pathway	51	51	True
+Pathway::PC7_8625	Ubiquitin Mediated Degradation of Phosphorylated Cdc25A	Pathway	51	51	True
+Pathway::WP2267_r78595	Synaptic Vesicle Pathway	Pathway	51	51	True
+Pathway::PC7_1664	Angiopoietin receptor Tie2-mediated signaling	Pathway	50	50	True
+Pathway::PC7_1693	Arachidonic acid metabolism	Pathway	50	50	True
+Pathway::PC7_1859	Autodegradation of the E3 ubiquitin ligase COP1	Pathway	50	50	True
+Pathway::PC7_2440	Calcineurin-regulated NFAT-dependent transcription in lymphocytes	Pathway	50	50	True
+Pathway::PC7_3046	Defensins	Pathway	50	50	True
+Pathway::PC7_4970	Lipid and lipoprotein metabolism	Pathway	50	50	True
+Pathway::PC7_5967	Non-coding RNA Metabolism	Pathway	50	50	True
+Pathway::PC7_5985	Nuclear Envelope Breakdown	Pathway	50	50	True
+Pathway::PC7_5993	Nucleotide Excision Repair	Pathway	50	50	True
+Pathway::PC7_5995	Nucleotide-binding domain, leucine rich repeat containing receptor (NLR) signaling pathways	Pathway	50	50	True
+Pathway::PC7_8345	Transport of Mature mRNA derived from an Intron-Containing Transcript	Pathway	50	50	True
+Pathway::PC7_8766	Vpu mediated degradation of CD4	Pathway	50	50	True
+Pathway::WP107_r78489	Translation Factors	Pathway	51	50	True
+Pathway::WP1533_r82707	Vitamin B12 Metabolism	Pathway	51	50	True
+Pathway::PC7_1630	Amino acid and oligopeptide SLC transporters	Pathway	49	49	True
+Pathway::PC7_2265	CDK-mediated phosphorylation and removal of Cdc6	Pathway	49	49	True
+Pathway::PC7_2541	Chaperonin-mediated protein folding	Pathway	49	49	True
+Pathway::PC7_2569	Chondroitin sulfate/dermatan sulfate metabolism	Pathway	49	49	True
+Pathway::PC7_3980	FoxO family signaling	Pathway	49	49	True
+Pathway::PC7_4053	GPVI-mediated activation cascade	Pathway	49	49	True
+Pathway::PC7_6315	Packaging Of Telomere Ends	Pathway	49	49	True
+Pathway::PC7_6915	Regulation of ornithine decarboxylase (ODC)	Pathway	49	49	True
+Pathway::PC7_8627	Ubiquitin-dependent degradation of Cyclin D	Pathway	49	49	True
+Pathway::WP286_r78583	IL-3 Signaling Pathway	Pathway	49	49	True
+Pathway::WP2946_r83779	Imatinib Resistance in Chronic Myeloid Leukemia	Pathway	49	49	True
+Pathway::WP534_r78585	Glycolysis and Gluconeogenesis	Pathway	49	49	True
+Pathway::PC7_2535	Ceramide signaling pathway	Pathway	48	48	True
+Pathway::PC7_2706	Cross-presentation of soluble exogenous antigens (endosomes)	Pathway	48	48	True
+Pathway::PC7_3015	Deadenylation-dependent mRNA decay	Pathway	48	48	True
+Pathway::PC7_3416	EPH-ephrin mediated repulsion of cells	Pathway	48	48	True
+Pathway::PC7_3972	Formation of the ternary complex, and subsequently, the 43S complex	Pathway	48	48	True
+Pathway::PC7_3996	G beta:gamma signalling through PI3Kgamma	Pathway	48	48	True
+Pathway::PC7_4440	Hedgehog signaling events mediated by Gli proteins	Pathway	48	48	True
+Pathway::PC7_6542	Posttranslational regulation of adherens junction stability and dissassembly	Pathway	48	48	True
+Pathway::PC7_6897	Regulation of activated PAK-2p34 by proteasome mediated degradation	Pathway	48	48	True
+Pathway::WP2848_r80009	Differentiation Pathway	Pathway	48	48	True
+Pathway::WP3584_r84776	Mecp2 and Associated Rett Syndrome	Pathway	48	48	True
+Pathway::WP410_r84683	Diurnally Regulated Genes with Circadian Orthologs	Pathway	48	48	True
+Pathway::PC7_1698	Arf6 trafficking events	Pathway	47	47	True
+Pathway::PC7_3875	Fanconi anemia pathway	Pathway	47	47	True
+Pathway::PC7_4336	HDMs demethylate histones	Pathway	47	47	True
+Pathway::PC7_4637	IL6-mediated signaling events	Pathway	47	47	True
+Pathway::PC7_4657	IRE1alpha activates chaperones	Pathway	47	47	True
+Pathway::PC7_4779	Interleukin-2 signaling	Pathway	47	47	True
+Pathway::PC7_5783	NOTCH1 Intracellular Domain Regulates Transcription	Pathway	47	47	True
+Pathway::PC7_5983	Notch-mediated HES/HEY network	Pathway	47	47	True
+Pathway::PC7_8681	Validated transcriptional targets of deltaNp63 isoforms	Pathway	47	47	True
+Pathway::WP2203_r78549	TSLP Signaling Pathway	Pathway	47	47	True
+Pathway::WP2637_r80029	Structural Pathway of Interleukin 1 (IL-1)	Pathway	47	47	True
+Pathway::PC7_4466	Hexose uptake	Pathway	46	46	True
+Pathway::PC7_4742	Inositol phosphate metabolism	Pathway	46	46	True
+Pathway::PC7_6189	PLK1 signaling events	Pathway	46	46	True
+Pathway::PC7_6569	Presenilin action in Notch and Wnt signaling	Pathway	46	46	True
+Pathway::PC7_6795	RNA Polymerase I Transcription Initiation	Pathway	46	46	True
+Pathway::PC7_6894	Regulation of RhoA activity	Pathway	46	46	True
+Pathway::PC7_7851	TNF receptor signaling pathway 	Pathway	46	46	True
+Pathway::WP2586_r79995	Aryl Hydrocarbon Receptor	Pathway	46	46	True
+Pathway::WP2873_r79696	Aryl Hydrocarbon Receptor Pathway	Pathway	46	46	True
+Pathway::WP28_r71888	Selenium Metabolism and Selenoproteins	Pathway	47	46	True
+Pathway::WP465_r79226	Tryptophan metabolism	Pathway	46	46	True
+Pathway::PC7_10400	a6b1 and a6b4 Integrin signaling	Pathway	45	45	True
+Pathway::PC7_2624	Class I PI3K signaling events	Pathway	45	45	True
+Pathway::PC7_3995	G alpha (z) signalling events	Pathway	45	45	True
+Pathway::PC7_4001	G-protein mediated events	Pathway	45	45	True
+Pathway::PC7_4745	Insulin Pathway	Pathway	45	45	True
+Pathway::PC7_4761	Integrin-linked kinase signaling	Pathway	45	45	True
+Pathway::PC7_5825	NRAGE signals death through JNK	Pathway	45	45	True
+Pathway::PC7_6561	Pre-NOTCH Expression and Processing	Pathway	45	45	True
+Pathway::PC7_6670	Pyruvate metabolism and Citric Acid (TCA) cycle	Pathway	45	45	True
+Pathway::PC7_6958	RhoA signaling pathway	Pathway	45	45	True
+Pathway::PC7_7449	Signaling by FGFR mutants	Pathway	45	45	True
+Pathway::PC7_8321	Transcription-coupled NER (TC-NER)	Pathway	45	45	True
+Pathway::PC7_8323	Transcriptional activation of mitochondrial biogenesis	Pathway	45	45	True
+Pathway::PC7_8786	XBP1(S) activates chaperone genes	Pathway	45	45	True
+Pathway::WP268_r70096	Notch Signaling Pathway	Pathway	45	45	True
+Pathway::PC7_3852	FOXA1 transcription factor network	Pathway	44	44	True
+Pathway::PC7_3853	FOXA2 and FOXA3 transcription factor networks	Pathway	44	44	True
+Pathway::PC7_3864	FRS2-mediated cascade	Pathway	44	44	True
+Pathway::PC7_4008	G2/M Checkpoints	Pathway	44	44	True
+Pathway::PC7_4780	Interleukin-3, 5 and GM-CSF signaling	Pathway	44	44	True
+Pathway::PC7_6177	PLC beta mediated events	Pathway	44	44	True
+Pathway::PC7_7503	Signalling to ERKs	Pathway	44	44	True
+Pathway::WP1591_r84699	Heart Development	Pathway	44	44	True
+Pathway::WP1971_r82939	Integrated Cancer Pathway	Pathway	44	44	True
+Pathway::WP2332_r79525	Interleukin-11 Signaling Pathway	Pathway	44	44	True
+Pathway::PC7_2080	Beta3 integrin cell surface interactions	Pathway	43	43	True
+Pathway::PC7_4368	HIV Transcription Initiation	Pathway	43	43	True
+Pathway::PC7_4556	IFN-gamma pathway	Pathway	43	43	True
+Pathway::PC7_4792	Ion transport by P-type ATPases	Pathway	43	43	True
+Pathway::PC7_4806	Iron uptake and transport	Pathway	43	43	True
+Pathway::PC7_4938	LKB1 signaling events	Pathway	43	43	True
+Pathway::PC7_6098	PAR1-mediated thrombin signaling events	Pathway	43	43	True
+Pathway::PC7_8701	Vasopressin regulates renal water homeostasis via Aquaporins	Pathway	43	43	True
+Pathway::PC7_8763	Voltage gated Potassium channels	Pathway	43	43	True
+Pathway::WP364_r83783	IL-6 signaling pathway	Pathway	43	43	True
+Pathway::WP405_r73594	Eukaryotic Transcription Initiation	Pathway	44	43	True
+Pathway::WP716_r83589	Vitamin A and Carotenoid Metabolism	Pathway	43	43	True
+Pathway::PC7_12899	tRNA Aminoacylation	Pathway	42	42	True
+Pathway::PC7_2012	BMP receptor signaling	Pathway	42	42	True
+Pathway::PC7_2634	Cleavage of Growing Transcript in the Termination Region	Pathway	42	42	True
+Pathway::PC7_3806	FCERI mediated MAPK activation	Pathway	43	42	True
+Pathway::PC7_3855	FOXM1 transcription factor network	Pathway	42	42	True
+Pathway::PC7_3959	Formation of HIV elongation complex in the absence of HIV Tat	Pathway	42	42	True
+Pathway::PC7_4158	Glucagon-like Peptide-1 (GLP1) regulates insulin secretion	Pathway	42	42	True
+Pathway::PC7_5884	Netrin-1 signaling	Pathway	42	42	True
+Pathway::PC7_5891	Neurotransmitter Release Cycle	Pathway	42	42	True
+Pathway::PC7_5968	Non-integrin membrane-ECM interactions	Pathway	42	42	True
+Pathway::PC7_7660	Stabilization and expansion of the E-cadherin adherens junction	Pathway	42	42	True
+Pathway::PC7_8609	U12 Dependent Splicing	Pathway	42	42	True
+Pathway::PC7_8639	Urokinase-type plasminogen activator (uPA) and uPAR-mediated signaling	Pathway	42	42	True
+Pathway::WP2036_r84527	TWEAK Signaling Pathway	Pathway	42	42	True
+Pathway::WP2804_r79882	Hair Follicle Development: Induction (Part 1 of 3)	Pathway	42	42	True
+Pathway::WP314_r80438	FAS pathway and Stress induction of HSP regulation	Pathway	42	42	True
+Pathway::WP466_r79981	DNA Replication	Pathway	42	42	True
+Pathway::WP49_r78543	IL-2 Signaling Pathway	Pathway	42	42	True
+Pathway::PC7_1539	Activation of NMDA receptor upon glutamate binding and postsynaptic events	Pathway	41	41	True
+Pathway::PC7_1624	Amine ligand-binding receptors	Pathway	41	41	True
+Pathway::PC7_1856	Aurora B signaling	Pathway	41	41	True
+Pathway::PC7_3421	EPHB-mediated forward signaling	Pathway	41	41	True
+Pathway::PC7_3649	Elastic fibre formation	Pathway	41	41	True
+Pathway::PC7_3699	ErbB2/ErbB3 signaling events	Pathway	41	41	True
+Pathway::PC7_3960	Formation of HIV-1 elongation complex containing HIV-1 Tat	Pathway	41	41	True
+Pathway::PC7_6507	Plasma membrane estrogen receptor signaling	Pathway	41	41	True
+Pathway::PC7_6948	Retinoid metabolism and transport	Pathway	41	41	True
+Pathway::PC7_8325	Transcriptional activity of SMAD2/SMAD3:SMAD4 heterotrimer	Pathway	41	41	True
+Pathway::PC7_8710	Viral Messenger RNA Synthesis	Pathway	41	41	True
+Pathway::WP1433_r83527	NOD pathway	Pathway	41	41	True
+Pathway::PC7_1550	Activation of gene expression by SREBF (SREBP)	Pathway	40	40	True
+Pathway::PC7_2064	Beta defensins	Pathway	40	40	True
+Pathway::PC7_2095	Binding and Uptake of Ligands by Scavenger Receptors	Pathway	41	40	True
+Pathway::PC7_4211	Glucose transport	Pathway	40	40	True
+Pathway::PC7_4778	Interleukin-1 signaling	Pathway	40	40	True
+Pathway::PC7_5876	Negative regulation of FGFR signaling	Pathway	40	40	True
+Pathway::PC7_7495	Signaling events mediated by TCPTP	Pathway	40	40	True
+Pathway::PC7_8424	Triglyceride Biosynthesis	Pathway	40	40	True
+Pathway::WP127_r78498	IL-5 Signaling Pathway	Pathway	40	40	True
+Pathway::WP2516_r84490	ATM Signaling Pathway	Pathway	40	40	True
+Pathway::WP2849_r84764	Hematopoietic Stem Cell Differentiation	Pathway	40	40	True
+Pathway::PC7_1213	ATR signaling pathway	Pathway	39	39	True
+Pathway::PC7_2622	Class C/3 (Metabotropic glutamate/pheromone receptors)	Pathway	40	39	True
+Pathway::PC7_3324	Downstream TCR signaling	Pathway	41	39	True
+Pathway::PC7_3420	EPHB forward signaling	Pathway	39	39	True
+Pathway::PC7_4276	Glycosphingolipid metabolism	Pathway	39	39	True
+Pathway::PC7_5991	Nuclear signaling by ERBB4	Pathway	39	39	True
+Pathway::PC7_6807	RNA Polymerase III Abortive And Retractive Initiation	Pathway	39	39	True
+Pathway::PC7_7490	Signaling events mediated by HDAC Class III	Pathway	39	39	True
+Pathway::PC7_7499	Signaling events regulated by Ret tyrosine kinase	Pathway	39	39	True
+Pathway::WP2526_r82681	PDGF Pathway	Pathway	39	39	True
+Pathway::WP524_r72112	G13 Signaling Pathway	Pathway	39	39	True
+Pathway::PC7_1533	Activation of GABAB receptors	Pathway	38	38	True
+Pathway::PC7_1688	Apoptotic cleavage of cellular proteins	Pathway	38	38	True
+Pathway::PC7_2372	CXCR3-mediated signaling events	Pathway	38	38	True
+Pathway::PC7_2530	Cellular response to heat stress	Pathway	38	38	True
+Pathway::PC7_2669	Collagen degradation	Pathway	38	38	True
+Pathway::PC7_2832	Cyclin D associated events in G1	Pathway	38	38	True
+Pathway::PC7_4783	Internalization of ErbB1	Pathway	38	38	True
+Pathway::PC7_4785	Intrinsic Pathway for Apoptosis	Pathway	38	38	True
+Pathway::PC7_5999	O-glycosylation of TSR domain-containing proteins	Pathway	38	38	True
+Pathway::PC7_6891	Regulation of RAC1 activity	Pathway	38	38	True
+Pathway::PC7_7489	Signaling events mediated by HDAC Class II	Pathway	38	38	True
+Pathway::PC7_7718	Syndecan-1-mediated signaling events	Pathway	38	38	True
+Pathway::PC7_8360	Transport of vitamins, nucleosides, and related molecules	Pathway	38	38	True
+Pathway::WP170_r71083	Nuclear Receptors	Pathway	38	38	True
+Pathway::WP2371_r84649	Parkinsons Disease Pathway	Pathway	38	38	True
+Pathway::WP2447_r84415	Amyotrophic lateral sclerosis (ALS)	Pathway	38	38	True
+Pathway::WP383_r80200	Striated Muscle Contraction	Pathway	38	38	True
+Pathway::PC7_1522	Activation of ATR in response to replication stress	Pathway	37	37	True
+Pathway::PC7_2008	BMAL1:CLOCK,NPAS2 activates circadian gene expression	Pathway	37	37	True
+Pathway::PC7_2672	Complement cascade	Pathway	39	37	True
+Pathway::PC7_4038	GMCSF-mediated signaling events	Pathway	37	37	True
+Pathway::PC7_4611	IL2 signaling events mediated by PI3K	Pathway	37	37	True
+Pathway::PC7_4614	IL23-mediated signaling events	Pathway	37	37	True
+Pathway::PC7_6511	Platelet Aggregation (Plug Formation)	Pathway	37	37	True
+Pathway::PC7_6533	Post NMDA receptor activation events	Pathway	37	37	True
+Pathway::PC7_8679	Validated transcriptional targets of AP1 family members Fra1 and Fra2	Pathway	37	37	True
+Pathway::WP619_r71168	Type II interferon signaling (IFNG)	Pathway	37	37	True
+Pathway::PC7_2090	Bile acid and bile salt metabolism	Pathway	36	36	True
+Pathway::PC7_2255	CD40/CD40L signaling	Pathway	36	36	True
+Pathway::PC7_3360	E-cadherin signaling in the nascent adherens junction	Pathway	36	36	True
+Pathway::PC7_3958	Formation of Fibrin Clot (Clotting Cascade)	Pathway	36	36	True
+Pathway::PC7_5673	N-cadherin signaling events	Pathway	36	36	True
+Pathway::PC7_6180	PLCG1 events in ERBB2 signaling	Pathway	36	36	True
+Pathway::PC7_7719	Syndecan-2-mediated signaling events	Pathway	36	36	True
+Pathway::PC7_8346	Transport of Mature mRNAs Derived from Intronless Transcripts	Pathway	36	36	True
+Pathway::PC7_8361	Transport to the Golgi and subsequent modification	Pathway	36	36	True
+Pathway::PC7_8430	Trk receptor signaling mediated by PI3K and PLC-gamma	Pathway	36	36	True
+Pathway::PC7_967	ABC-family proteins mediated transport	Pathway	36	36	True
+Pathway::WP1471_r82750	TOR Signaling	Pathway	36	36	True
+Pathway::WP3529_r84285	Zinc homeostasis	Pathway	36	36	True
+Pathway::WP500_r63201	Glycogen Metabolism	Pathway	36	36	True
+Pathway::PC7_1697	Arf6 signaling events	Pathway	35	35	True
+Pathway::PC7_2625	Class I PI3K signaling events mediated by Akt	Pathway	35	35	True
+Pathway::PC7_3386	EGFR interacts with phospholipase C-gamma	Pathway	35	35	True
+Pathway::PC7_3700	ErbB4 signaling events	Pathway	35	35	True
+Pathway::PC7_3798	FAS (CD95) signaling pathway	Pathway	35	35	True
+Pathway::PC7_5698	NCAM1 interactions	Pathway	35	35	True
+Pathway::PC7_6178	PLC-gamma1 signalling	Pathway	35	35	True
+Pathway::PC7_7500	Signaling mediated by p38-alpha and p38-beta	Pathway	35	35	True
+Pathway::PC7_8344	Transport of Mature mRNA Derived from an Intronless Transcript	Pathway	35	35	True
+Pathway::PC7_1203	ATM pathway	Pathway	34	34	True
+Pathway::PC7_3418	EPHA-mediated growth cone collapse	Pathway	34	34	True
+Pathway::PC7_4156	Global Genomic NER (GG-NER)	Pathway	34	34	True
+Pathway::PC7_4341	HIF-2-alpha transcription factor network	Pathway	34	34	True
+Pathway::PC7_4588	IL1-mediated signaling events	Pathway	34	34	True
+Pathway::PC7_4639	IL8- and CXCR2-mediated signaling events	Pathway	34	34	True
+Pathway::PC7_4766	Interactions of Rev with host cellular proteins	Pathway	34	34	True
+Pathway::PC7_4768	Interactions of Vpr with host cellular proteins	Pathway	34	34	True
+Pathway::PC7_4949	Latent infection of Homo sapiens with Mycobacterium tuberculosis	Pathway	34	34	True
+Pathway::PC7_6810	RNA Polymerase III Transcription Initiation	Pathway	34	34	True
+Pathway::PC7_7504	Signalling to RAS	Pathway	34	34	True
+Pathway::PC7_8431	Trk receptor signaling mediated by the MAPK pathway	Pathway	34	34	True
+Pathway::PC7_8666	VEGFR2 mediated cell proliferation	Pathway	34	34	True
+Pathway::WP143_r79783	Fatty Acid Beta Oxidation	Pathway	34	34	True
+Pathway::WP299_r78587	Nuclear Receptors in Lipid Metabolism and Toxicity	Pathway	34	34	True
+Pathway::WP313_r79946	Signaling of Hepatocyte Growth Factor Receptor	Pathway	34	34	True
+Pathway::WP400_r72084	p38 MAPK Signaling Pathway	Pathway	34	34	True
+Pathway::PC7_11357	deactivation of the beta-catenin transactivating complex	Pathway	33	33	True
+Pathway::PC7_1599	Alpha4 beta1 integrin signaling events	Pathway	33	33	True
+Pathway::PC7_1670	Antigen activates B Cell Receptor (BCR) leading to generation of second messengers	Pathway	34	33	True
+Pathway::PC7_2924	DAG and IP3 signaling	Pathway	33	33	True
+Pathway::PC7_3361	E2F mediated regulation of DNA replication	Pathway	33	33	True
+Pathway::PC7_3417	EPHA forward signaling	Pathway	33	33	True
+Pathway::PC7_4157	Glucagon signaling in metabolic regulation	Pathway	33	33	True
+Pathway::PC7_4370	HIV-1 Nef: Negative effector of Fas and TNF-alpha	Pathway	33	33	True
+Pathway::PC7_5332	Metabolism of steroid hormones and vitamin D	Pathway	33	33	True
+Pathway::PC7_5878	Negative regulators of RIG-I/MDA5 signaling	Pathway	33	33	True
+Pathway::PC7_5988	Nuclear Pore Complex (NPC) Disassembly	Pathway	33	33	True
+Pathway::PC7_6534	Post-Elongation Processing of Intron-Containing pre-mRNA	Pathway	33	33	True
+Pathway::PC7_6652	Purine metabolism	Pathway	33	33	True
+Pathway::PC7_6892	Regulation of Ras family activation	Pathway	33	33	True
+Pathway::PC7_7434	Sialic acid metabolism	Pathway	33	33	True
+Pathway::PC7_7751	Synthesis of PIPs at the plasma membrane	Pathway	33	33	True
+Pathway::PC7_8055	TRAF6 mediated IRF7 activation	Pathway	33	33	True
+Pathway::PC7_8231	The phototransduction cascade	Pathway	33	33	True
+Pathway::PC7_8358	Transport of the SLBP Dependant Mature mRNA	Pathway	33	33	True
+Pathway::WP1601_r84700	Fluoropyrimidine Activity	Pathway	33	33	True
+Pathway::WP2197_r74852	Endothelin Pathways	Pathway	33	33	True
+Pathway::WP244_r78506	Alpha 6 Beta 4 signaling pathway	Pathway	33	33	True
+Pathway::WP58_r80015	Monoamine GPCRs	Pathway	33	33	True
+Pathway::PC7_10557	amb2 Integrin signaling	Pathway	32	32	True
+Pathway::PC7_1535	Activation of Kainate Receptors upon glutamate binding	Pathway	32	32	True
+Pathway::PC7_1536	Activation of Matrix Metalloproteinases	Pathway	32	32	True
+Pathway::PC7_2251	CD28 co-stimulation	Pathway	32	32	True
+Pathway::PC7_2956	DNA strand elongation	Pathway	32	32	True
+Pathway::PC7_3424	EPO signaling pathway	Pathway	32	32	True
+Pathway::PC7_3968	Formation of the Early Elongation Complex	Pathway	32	32	True
+Pathway::PC7_4693	Inactivation, recovery and regulation of the phototransduction cascade	Pathway	32	32	True
+Pathway::PC7_4876	Keratan sulfate/keratin metabolism	Pathway	32	32	True
+Pathway::PC7_5885	Netrin-mediated signaling events	Pathway	32	32	True
+Pathway::PC7_5969	Noncanonical Wnt signaling pathway	Pathway	32	32	True
+Pathway::PC7_6898	Regulation of beta-cell development	Pathway	32	32	True
+Pathway::PC7_6952	Rev-mediated nuclear export of HIV RNA	Pathway	32	32	True
+Pathway::PC7_7267	SHC1 events in ERBB2 signaling	Pathway	32	32	True
+Pathway::PC7_7477	Signaling by Robo receptor	Pathway	32	32	True
+Pathway::PC7_7649	Sphingolipid de novo biosynthesis	Pathway	32	32	True
+Pathway::PC7_7721	Syndecan-4-mediated signaling events	Pathway	32	32	True
+Pathway::PC7_7796	TGF-beta receptor signaling activates SMADs	Pathway	32	32	True
+Pathway::PC7_8264	Thrombin signalling through proteinase activated receptors (PARs)	Pathway	32	32	True
+Pathway::PC7_8359	Transport of the SLBP independent Mature mRNA	Pathway	32	32	True
+Pathway::WP2875_r79890	Constitutive Androstane Receptor Pathway	Pathway	32	32	True
+Pathway::WP3414_r82252	Initiation of transcription and translation elongation at the HIV-1 LTR	Pathway	32	32	True
+Pathway::WP34_r72115	Ovarian Infertility Genes	Pathway	32	32	True
+Pathway::WP666_r68893	Hypothetical Network for Drug Addiction	Pathway	32	32	True
+Pathway::WP727_r79969	Monoamine Transport	Pathway	32	32	True
+Pathway::PC7_11463	disassembly of the destruction complex and recruitment of AXIN to the membrane	Pathway	31	31	True
+Pathway::PC7_1598	Alpha-synuclein signaling	Pathway	31	31	True
+Pathway::PC7_1632	Amino acid transport across the plasma membrane	Pathway	31	31	True
+Pathway::PC7_1855	Aurora A signaling	Pathway	31	31	True
+Pathway::PC7_3653	Elongation arrest and recovery	Pathway	31	31	True
+Pathway::PC7_3775	Export of Viral Ribonucleoproteins from Nucleus	Pathway	31	31	True
+Pathway::PC7_4162	Gluconeogenesis	Pathway	31	31	True
+Pathway::PC7_4219	Glutathione conjugation	Pathway	32	31	True
+Pathway::PC7_4414	HS-GAG biosynthesis	Pathway	31	31	True
+Pathway::PC7_4786	Inwardly rectifying K+ channels	Pathway	31	31	True
+Pathway::PC7_4994	Lissencephaly gene (LIS1) in neuronal migration and development	Pathway	31	31	True
+Pathway::PC7_5779	NOD1/2 Signaling Pathway	Pathway	31	31	True
+Pathway::PC7_5970	Nongenotropic Androgen signaling	Pathway	31	31	True
+Pathway::PC7_5990	Nuclear import of Rev protein	Pathway	31	31	True
+Pathway::PC7_6066	Osteopontin-mediated events	Pathway	31	31	True
+Pathway::PC7_6916	Regulation of p38-alpha and p38-beta	Pathway	31	31	True
+Pathway::PC7_7435	Signal amplification	Pathway	31	31	True
+Pathway::PC7_7472	Signaling by NOTCH2	Pathway	31	31	True
+Pathway::PC7_7682	Striated Muscle Contraction	Pathway	31	31	True
+Pathway::PC7_8765	Vpr-mediated nuclear import of PICs	Pathway	31	31	True
+Pathway::WP2112_r63216	IL17 signaling pathway	Pathway	31	31	True
+Pathway::WP2363_r84552	Gastric Cancer Network 2	Pathway	31	31	True
+Pathway::WP2525_r80205	Trans-sulfuration and one carbon metabolism	Pathway	32	31	True
+Pathway::WP2828_r79529	Bladder Cancer	Pathway	31	31	True
+Pathway::PC7_1554	Activation of the pre-replicative complex	Pathway	30	30	True
+Pathway::PC7_1573	Adherens junctions interactions	Pathway	30	30	True
+Pathway::PC7_1623	Amine compound SLC transporters	Pathway	30	30	True
+Pathway::PC7_2392	Ca-dependent events	Pathway	30	30	True
+Pathway::PC7_4062	GRB2 events in ERBB2 signaling	Pathway	30	30	True
+Pathway::PC7_4104	Gap junction trafficking and regulation	Pathway	30	30	True
+Pathway::PC7_4115	Generation of second messenger molecules	Pathway	32	30	True
+Pathway::PC7_4159	Glucagon-type ligand receptors	Pathway	30	30	True
+Pathway::PC7_4215	Glutamate Binding, Activation of AMPA Receptors and Synaptic Plasticity	Pathway	30	30	True
+Pathway::PC7_4574	IGF1 pathway	Pathway	30	30	True
+Pathway::PC7_4593	IL12 signaling mediated by STAT4	Pathway	30	30	True
+Pathway::PC7_4612	IL2 signaling events mediated by STAT5	Pathway	30	30	True
+Pathway::PC7_4992	Lipoprotein metabolism	Pathway	30	30	True
+Pathway::PC7_5078	MAPK targets/ Nuclear events mediated by MAP kinases	Pathway	30	30	True
+Pathway::PC7_5537	Molecules associated with elastic fibres	Pathway	30	30	True
+Pathway::PC7_5867	Nectin adhesion pathway	Pathway	30	30	True
+Pathway::PC7_6047	Oncogene Induced Senescence	Pathway	30	30	True
+Pathway::PC7_6375	Pausing and recovery of Tat-mediated HIV elongation	Pathway	30	30	True
+Pathway::PC7_6796	RNA Polymerase I Transcription Termination	Pathway	30	30	True
+Pathway::PC7_6878	Regulation of CDC42 activity	Pathway	30	30	True
+Pathway::PC7_6946	Retinoic acid receptors-mediated signaling	Pathway	30	30	True
+Pathway::PC7_7452	Signaling by FGFR1 mutants	Pathway	30	30	True
+Pathway::PC7_8276	Tight junction interactions	Pathway	30	30	True
+Pathway::WP129_r72054	Matrix Metalloproteinases	Pathway	30	30	True
+Pathway::WP2855_r79211	Dopaminergic Neurogenesis	Pathway	30	30	True
+Pathway::WP2870_r79555	Extracellular vesicle-mediated signaling in recipient cells	Pathway	30	30	True
+Pathway::WP408_r78546	Oxidative Stress	Pathway	30	30	True
+Pathway::WP453_r80206	Inflammatory Response Pathway	Pathway	30	30	True
+Pathway::WP98_r72088	Prostaglandin Synthesis and Regulation	Pathway	30	30	True
+Pathway::PC7_12266	p38 MAPK signaling pathway	Pathway	29	29	True
+Pathway::PC7_1516	Activated NOTCH1 Transmits Signal to the Nucleus	Pathway	29	29	True
+Pathway::PC7_1817	Association of TriC/CCT with target proteins during biosynthesis	Pathway	29	29	True
+Pathway::PC7_2078	Beta2 integrin cell surface interactions	Pathway	29	29	True
+Pathway::PC7_2276	CDO in myogenesis	Pathway	29	29	True
+Pathway::PC7_2335	CREB phosphorylation through the activation of Ras	Pathway	29	29	True
+Pathway::PC7_2458	Calcium signaling in the CD4+ TCR pathway	Pathway	29	29	True
+Pathway::PC7_3776	Extension of Telomeres	Pathway	29	29	True
+Pathway::PC7_4751	Insulin-mediated glucose transport	Pathway	29	29	True
+Pathway::PC7_4765	Interaction between L1 and Ankyrins	Pathway	29	29	True
+Pathway::PC7_5707	NEP/NS2 Interacts with the Cellular Export Machinery	Pathway	29	29	True
+Pathway::PC7_6564	Pre-NOTCH Transcription and Translation	Pathway	29	29	True
+Pathway::PC7_6792	RNA Polymerase I Promoter Escape	Pathway	29	29	True
+Pathway::PC7_6882	Regulation of Glucokinase by Glucokinase Regulatory Protein	Pathway	29	29	True
+Pathway::PC7_7262	SHC-mediated cascade	Pathway	29	29	True
+Pathway::PC7_7313	SMAD2/SMAD3:SMAD4 heterotrimer regulates transcription	Pathway	29	29	True
+Pathway::PC7_8330	Transferrin endocytosis and recycling	Pathway	29	29	True
+Pathway::PC7_8347	Transport of Ribonucleoproteins into the Host Nucleus	Pathway	29	29	True
+Pathway::PC7_8665	VEGFR1 specific signals	Pathway	29	29	True
+Pathway::PC7_8798	YAP1- and WWTR1 (TAZ)-stimulated gene expression	Pathway	29	29	True
+Pathway::WP2012_r82900	miRs in Muscle Cell Differentiation	Pathway	29	29	True
+Pathway::WP2583_r84488	T-Cell Receptor and Co-stimulatory Signaling	Pathway	29	29	True
+Pathway::WP3298_r84382	Melatonin metabolism and effects	Pathway	29	29	True
+Pathway::WP422_r72129	MAPK Cascade	Pathway	29	29	True
+Pathway::WP430_r82344	Statin Pathway	Pathway	29	29	True
+Pathway::PC7_12069	mRNA Capping	Pathway	28	28	True
+Pathway::PC7_1577	Adrenaline,noradrenaline inhibits insulin secretion	Pathway	28	28	True
+Pathway::PC7_1883	BARD1 signaling events	Pathway	28	28	True
+Pathway::PC7_2394	CaM pathway	Pathway	28	28	True
+Pathway::PC7_2685	Cooperation of Prefoldin and TriC/CCT in actin and tubulin folding	Pathway	28	28	True
+Pathway::PC7_3349	Dual incision reaction in TC-NER	Pathway	28	28	True
+Pathway::PC7_3805	FCERI mediated Ca+2 mobilization	Pathway	29	28	True
+Pathway::PC7_4103	Gap junction trafficking	Pathway	28	28	True
+Pathway::PC7_4638	IL8- and CXCR1-mediated signaling events	Pathway	28	28	True
+Pathway::PC7_4775	Interleukin receptor SHC signaling	Pathway	28	28	True
+Pathway::PC7_5882	Nephrin/Neph1 signaling in the kidney podocyte	Pathway	28	28	True
+Pathway::PC7_6143	PERK regulates gene expression	Pathway	28	28	True
+Pathway::PC7_6175	PKB-mediated events	Pathway	28	28	True
+Pathway::PC7_6310	PTM: gamma carboxylation, hypusine formation and arylsulfatase activation	Pathway	28	28	True
+Pathway::PC7_6870	Reelin signaling pathway	Pathway	28	28	True
+Pathway::PC7_7268	SHC1 events in ERBB4 signaling	Pathway	28	28	True
+Pathway::PC7_7742	Synthesis of PA	Pathway	28	28	True
+Pathway::PC7_8234	The role of Nef in HIV-1 replication and disease pathogenesis	Pathway	28	28	True
+Pathway::PC7_8667	VEGFR2 mediated vascular permeability	Pathway	28	28	True
+Pathway::PC7_8783	Wnt signaling network	Pathway	28	28	True
+Pathway::WP2361_r84551	Gastric Cancer Network 1	Pathway	29	28	True
+Pathway::WP241_r83818	One Carbon Metabolism	Pathway	28	28	True
+Pathway::WP2643_r74251	Nanoparticle-mediated activation of receptor signaling	Pathway	28	28	True
+Pathway::PC7_12079	mTOR signalling	Pathway	27	27	True
+Pathway::PC7_3083	Detoxification of Reactive Oxygen Species	Pathway	27	27	True
+Pathway::PC7_3666	Endosomal Sorting Complex Required For Transport (ESCRT)	Pathway	27	27	True
+Pathway::PC7_3999	G-protein activation	Pathway	27	27	True
+Pathway::PC7_4269	Glycolysis	Pathway	27	27	True
+Pathway::PC7_4619	IL3-mediated signaling events	Pathway	27	27	True
+Pathway::PC7_4757	Integrin alphaIIb beta3 signaling	Pathway	27	27	True
+Pathway::PC7_4874	Keratan sulfate biosynthesis	Pathway	27	27	True
+Pathway::PC7_6566	Prefoldin mediated transfer of substrate to CCT/TriC	Pathway	27	27	True
+Pathway::PC7_6618	Prolonged ERK activation events	Pathway	27	27	True
+Pathway::PC7_6813	RNA Polymerase III Transcription Initiation From Type 3 Promoter	Pathway	27	27	True
+Pathway::PC7_7422	Sema4D in semaphorin signaling	Pathway	27	27	True
+Pathway::PC7_7736	Synthesis of IP3 and IP4 in the cytosol	Pathway	27	27	True
+Pathway::PC7_7755	Synthesis of bile acids and bile salts	Pathway	27	27	True
+Pathway::WP2035_r78536	FSH signaling pathway	Pathway	27	27	True
+Pathway::PC7_1104	ALK1 signaling events	Pathway	26	26	True
+Pathway::PC7_2927	DARPP-32 events	Pathway	26	26	True
+Pathway::PC7_3323	Downregulation of TGF-beta receptor signaling	Pathway	26	26	True
+Pathway::PC7_3385	EGFR downregulation	Pathway	26	26	True
+Pathway::PC7_3678	Ephrin B reverse signaling	Pathway	26	26	True
+Pathway::PC7_4284	Glypican 1 network	Pathway	26	26	True
+Pathway::PC7_4618	IL27-mediated signaling events	Pathway	26	26	True
+Pathway::PC7_4747	Insulin processing	Pathway	26	26	True
+Pathway::PC7_4748	Insulin receptor recycling	Pathway	26	26	True
+Pathway::PC7_4759	Integrin family cell surface interactions	Pathway	26	26	True
+Pathway::PC7_4887	Kinesins	Pathway	26	26	True
+Pathway::PC7_6789	RNA Pol II CTD phosphorylation and interaction with CE	Pathway	26	26	True
+Pathway::PC7_6811	RNA Polymerase III Transcription Initiation From Type 1 Promoter	Pathway	26	26	True
+Pathway::PC7_6828	RXR and RAR heterodimerization with other nuclear receptor	Pathway	26	26	True
+Pathway::PC7_6868	Recycling pathway of L1	Pathway	26	26	True
+Pathway::PC7_6885	Regulation of IFNA signaling	Pathway	26	26	True
+Pathway::PC7_7041	S1P2 pathway	Pathway	26	26	True
+Pathway::PC7_7462	Signaling by Leptin	Pathway	26	26	True
+Pathway::PC7_7778	TAK1 activates NFkB by phosphorylation and activation of IKKs complex	Pathway	26	26	True
+Pathway::PC7_8771	WNT ligand biogenesis and trafficking	Pathway	26	26	True
+Pathway::PC7_8803	ZBP1(DAI) mediated induction of type I IFNs	Pathway	26	26	True
+Pathway::WP2878_r79689	PPAR Alpha Pathway	Pathway	26	26	True
+Pathway::WP530_r79331	Cytokines and Inflammatory Response	Pathway	27	26	True
+Pathway::WP581_r67199	EPO Receptor Signaling	Pathway	26	26	True
+Pathway::WP698_r79224	Glucuronidation	Pathway	26	26	True
+Pathway::PC7_1181	ATF4 activates genes	Pathway	25	25	True
+Pathway::PC7_1524	Activation of BH3-only proteins	Pathway	25	25	True
+Pathway::PC7_1532	Activation of G protein gated Potassium channels	Pathway	25	25	True
+Pathway::PC7_1558	Acyl chain remodelling of PC	Pathway	25	25	True
+Pathway::PC7_1601	Alpha9 beta1 integrin signaling events	Pathway	25	25	True
+Pathway::PC7_2035	Basigin interactions	Pathway	25	25	True
+Pathway::PC7_2171	C-MYC pathway	Pathway	25	25	True
+Pathway::PC7_2531	Cellular response to hypoxia	Pathway	25	25	True
+Pathway::PC7_3633	Effects of PIP2 hydrolysis	Pathway	25	25	True
+Pathway::PC7_3901	Fertilization	Pathway	25	25	True
+Pathway::PC7_3983	Frs2-mediated activation	Pathway	25	25	True
+Pathway::PC7_4002	G0 and Early G1	Pathway	25	25	True
+Pathway::PC7_5339	Metal ion SLC transporters	Pathway	25	25	True
+Pathway::PC7_6539	Post-translational modification: synthesis of GPI-anchored proteins	Pathway	25	25	True
+Pathway::PC7_6812	RNA Polymerase III Transcription Initiation From Type 2 Promoter	Pathway	25	25	True
+Pathway::PC7_6818	RORA activates circadian gene expression	Pathway	25	25	True
+Pathway::PC7_7042	S1P3 pathway	Pathway	25	25	True
+Pathway::PC7_7264	SHC-related events	Pathway	25	25	True
+Pathway::PC7_7265	SHC-related events triggered by IGF1R	Pathway	25	25	True
+Pathway::PC7_8061	TRAIL signaling pathway	Pathway	25	25	True
+Pathway::PC7_8066	TRP channels	Pathway	25	25	True
+Pathway::PC7_8155	Termination of O-glycan biosynthesis	Pathway	26	25	True
+Pathway::PC7_8668	VEGFR3 signaling in lymphatic endothelium	Pathway	25	25	True
+Pathway::PC7_965	A tetrasaccharide linker sequence is required for GAG synthesis	Pathway	25	25	True
+Pathway::PC7_983	ADP signalling through P2Y purinoceptor 1	Pathway	25	25	True
+Pathway::WP1528_r78581	Physiological and Pathological Hypertrophy  of the Heart	Pathway	25	25	True
+Pathway::WP205_r80223	IL-7 Signaling Pathway	Pathway	25	25	True
+Pathway::WP26_r79950	Signal Transduction of S1P Receptor	Pathway	25	25	True
+Pathway::WP2895_r79216	Differentiation of white and brown adipocyte   	Pathway	25	25	True
+Pathway::PC7_1669	Antigen Presentation: Folding, assembly and peptide loading of class I MHC	Pathway	24	24	True
+Pathway::PC7_2124	Budding and maturation of HIV virion	Pathway	24	24	True
+Pathway::PC7_2912	Cytosolic tRNA aminoacylation	Pathway	24	24	True
+Pathway::PC7_3663	Endogenous TLR signaling	Pathway	24	24	True
+Pathway::PC7_3874	Fanconi Anemia pathway	Pathway	24	24	True
+Pathway::PC7_4306	Growth hormone receptor signaling	Pathway	24	24	True
+Pathway::PC7_4587	IKK complex recruitment mediated by RIP1	Pathway	24	24	True
+Pathway::PC7_4965	Ligand-gated ion channel transport	Pathway	24	24	True
+Pathway::PC7_5047	Lysosome Vesicle Biogenesis	Pathway	24	24	True
+Pathway::PC7_5948	Nitric oxide stimulates guanylate cyclase	Pathway	24	24	True
+Pathway::PC7_5987	Nuclear Events (kinase and transcription factor activation)	Pathway	24	24	True
+Pathway::PC7_6517	Plexin-D1 Signaling	Pathway	24	24	True
+Pathway::PC7_6663	Pyrimidine metabolism	Pathway	24	24	True
+Pathway::PC7_6669	Pyruvate metabolism	Pathway	24	24	True
+Pathway::PC7_6777	REV-ERBA represses gene expression	Pathway	24	24	True
+Pathway::PC7_6995	Role of phospholipids in phagocytosis	Pathway	25	24	True
+Pathway::PC7_7423	Sema4D induced cell migration and growth-cone collapse	Pathway	24	24	True
+Pathway::PC7_7625	Smooth Muscle Contraction	Pathway	24	24	True
+Pathway::PC7_7758	Synthesis of bile acids and bile salts via 7alpha-hydroxycholesterol	Pathway	24	24	True
+Pathway::PC7_8057	TRAF6 mediated NF-kB activation	Pathway	24	24	True
+Pathway::PC7_8716	Visual signal transduction: Rods	Pathway	24	24	True
+Pathway::WP1539_r79949	Angiogenesis	Pathway	24	24	True
+Pathway::WP2865_r81650	IL1 and megakaryotyces in obesity	Pathway	24	24	True
+Pathway::WP325_r71223	Triacylglyceride Synthesis	Pathway	24	24	True
+Pathway::PC7_1127	APC-Cdc20 mediated degradation of Nek2A	Pathway	23	23	True
+Pathway::PC7_1163	ARMS-mediated activation	Pathway	23	23	True
+Pathway::PC7_1224	Abortive elongation of HIV-1 transcript in the absence of Tat	Pathway	23	23	True
+Pathway::PC7_1559	Acyl chain remodelling of PE	Pathway	23	23	True
+Pathway::PC7_2467	Canonical NF-kappaB pathway	Pathway	23	23	True
+Pathway::PC7_3319	Double-Strand Break Repair	Pathway	23	23	True
+Pathway::PC7_3322	Downregulation of SMAD2/3:SMAD4 transcriptional activity	Pathway	23	23	True
+Pathway::PC7_3664	Endogenous sterols	Pathway	23	23	True
+Pathway::PC7_3818	FGFR ligand binding and activation	Pathway	23	23	True
+Pathway::PC7_4947	Laminin interactions	Pathway	23	23	True
+Pathway::PC7_5444	MicroRNA (miRNA) biogenesis	Pathway	23	23	True
+Pathway::PC7_6535	Post-Elongation Processing of Intronless pre-mRNA	Pathway	23	23	True
+Pathway::PC7_6814	RNA Polymerase III Transcription Termination	Pathway	23	23	True
+Pathway::PC7_6880	Regulation of Complement cascade	Pathway	24	23	True
+Pathway::PC7_7442	Signaling by BMP	Pathway	23	23	True
+Pathway::PC7_7492	Signaling events mediated by PRL	Pathway	23	23	True
+Pathway::PC7_7498	Signaling events mediated by the Hedgehog family	Pathway	23	23	True
+Pathway::PC7_7703	Sulfur amino acid metabolism	Pathway	23	23	True
+Pathway::PC7_8138	Telomere C-strand (Lagging Strand) Synthesis	Pathway	23	23	True
+Pathway::PC7_8267	Thromboxane signalling through TP receptor	Pathway	23	23	True
+Pathway::PC7_8633	Uptake and actions of bacterial toxins	Pathway	23	23	True
+Pathway::PC7_8715	Visual signal transduction: Cones	Pathway	23	23	True
+Pathway::WP167_r82702	Eicosanoid Synthesis	Pathway	24	23	True
+Pathway::WP262_r84487	EBV LMP1 signaling	Pathway	23	23	True
+Pathway::WP334_r79716	GPCRs, Class B Secretin-like	Pathway	23	23	True
+Pathway::WP712_r78491	Estrogen signaling pathway	Pathway	23	23	True
+Pathway::PC7_2360	CTLA4 inhibitory signaling	Pathway	22	22	True
+Pathway::PC7_2533	Cellular roles of Anthrax toxin	Pathway	22	22	True
+Pathway::PC7_2565	Cholesterol biosynthesis	Pathway	22	22	True
+Pathway::PC7_2829	Cyclin A/B1 associated events during G2/M transition	Pathway	22	22	True
+Pathway::PC7_3014	Deadenylation of mRNA	Pathway	22	22	True
+Pathway::PC7_3807	FCERI mediated NF-kB activation	Pathway	23	22	True
+Pathway::PC7_4417	HSF1-dependent transactivation	Pathway	22	22	True
+Pathway::PC7_4694	Incretin synthesis, secretion, and inactivation	Pathway	22	22	True
+Pathway::PC7_4784	Intrinsic Pathway	Pathway	22	22	True
+Pathway::PC7_5881	Nephrin interactions	Pathway	22	22	True
+Pathway::PC7_7263	SHC-mediated signalling	Pathway	22	22	True
+Pathway::PC7_7266	SHC1 events in EGFR signaling	Pathway	22	22	True
+Pathway::PC7_7506	Signalling to p38 via RIT and RIN	Pathway	22	22	True
+Pathway::PC7_8228	The canonical retinoid cycle in rods (twilight vision)	Pathway	22	22	True
+Pathway::WP100_r74146	Glutathione metabolism	Pathway	23	22	True
+Pathway::WP1424_r83526	Globo Sphingolipid Metabolism	Pathway	22	22	True
+Pathway::WP1584_r81779	Type II diabetes mellitus	Pathway	22	22	True
+Pathway::WP272_r84876	Blood Clotting Cascade	Pathway	22	22	True
+Pathway::WP2911_r83020	miRNA targets in ECM and membrane receptors	Pathway	22	22	True
+Pathway::WP357_r70641	Fatty Acid Biosynthesis	Pathway	22	22	True
+Pathway::WP3599_r84770	Transcription factor regulation in adipogenesis	Pathway	22	22	True
+Pathway::WP545_r82142	Complement Activation	Pathway	22	22	True
+Pathway::PC7_1129	APC/C:Cdc20 mediated degradation of Cyclin B	Pathway	21	21	True
+Pathway::PC7_12267	p38 signaling mediated by MAPKAP kinases	Pathway	21	21	True
+Pathway::PC7_12487	regulation of FZD by ubiquitination	Pathway	21	21	True
+Pathway::PC7_2252	CD28 dependent PI3K/Akt signaling	Pathway	21	21	True
+Pathway::PC7_3359	E-cadherin signaling in keratinocytes	Pathway	21	21	True
+Pathway::PC7_3434	ERK/MAPK targets	Pathway	21	21	True
+Pathway::PC7_3974	Formation of tubulin folding intermediates by CCT/TriC	Pathway	21	21	True
+Pathway::PC7_4061	GRB2 events in EGFR signaling	Pathway	21	21	True
+Pathway::PC7_4216	Glutamate Neurotransmitter Release Cycle	Pathway	21	21	True
+Pathway::PC7_4415	HS-GAG degradation	Pathway	21	21	True
+Pathway::PC7_4946	Lagging Strand Synthesis	Pathway	21	21	True
+Pathway::PC7_5518	Mitochondrial tRNA aminoacylation	Pathway	21	21	True
+Pathway::PC7_5874	Nef-mediates down modulation of cell surface receptors by recruiting them to clathrin adapters	Pathway	21	21	True
+Pathway::PC7_6128	PD-1 signaling	Pathway	23	21	True
+Pathway::PC7_6140	PDGFR-alpha signaling pathway	Pathway	21	21	True
+Pathway::PC7_6403	Peroxisomal lipid metabolism	Pathway	21	21	True
+Pathway::PC7_6570	Presynaptic function of Kainate receptors	Pathway	21	21	True
+Pathway::PC7_6787	RIP-mediated NFkB activation via ZBP1	Pathway	21	21	True
+Pathway::PC7_6887	Regulation of IGF Activity by IGFBP	Pathway	21	21	True
+Pathway::PC7_7341	SOS-mediated signalling	Pathway	21	21	True
+Pathway::PC7_7438	Signal transduction by L1	Pathway	21	21	True
+Pathway::PC7_7652	Sphingosine 1-phosphate (S1P) pathway	Pathway	21	21	True
+Pathway::PC7_7720	Syndecan-3-mediated signaling events	Pathway	21	21	True
+Pathway::PC7_7740	Synthesis of Leukotrienes (LT) and Eoxins (EX)	Pathway	21	21	True
+Pathway::PC7_8327	Transcriptional regulation of pluripotent stem cells	Pathway	21	21	True
+Pathway::PC7_984	ADP signalling through P2Y purinoceptor 12	Pathway	21	21	True
+Pathway::WP1602_r78486	Nicotine Activity on Dopaminergic Neurons	Pathway	21	21	True
+Pathway::WP2533_r84117	Glycerophospholipid Biosynthetic Pathway	Pathway	21	21	True
+Pathway::WP691_r79986	Tamoxifen metabolism	Pathway	21	21	True
+Pathway::PC7_1695	Arf1 pathway	Pathway	20	20	True
+Pathway::PC7_2468	Canonical Wnt signaling pathway	Pathway	20	20	True
+Pathway::PC7_2568	Chondroitin sulfate biosynthesis	Pathway	20	20	True
+Pathway::PC7_2651	Cobalamin (Cbl, vitamin B12) transport and metabolism	Pathway	20	20	True
+Pathway::PC7_3348	Dual incision reaction in GG-NER	Pathway	20	20	True
+Pathway::PC7_3997	G beta:gamma signalling through PLC beta	Pathway	20	20	True
+Pathway::PC7_4214	Glucuronidation	Pathway	20	20	True
+Pathway::PC7_4725	Inflammasomes	Pathway	20	20	True
+Pathway::PC7_5678	N-glycan antennae elongation in the medial/trans-Golgi	Pathway	20	20	True
+Pathway::PC7_5788	NOTCH2 Activation and Transmission of Signal to the Nucleus	Pathway	20	20	True
+Pathway::PC7_6173	PKA-mediated phosphorylation of CREB	Pathway	20	20	True
+Pathway::PC7_6883	Regulation of HSF1-mediated heat shock response	Pathway	20	20	True
+Pathway::PC7_6900	Regulation of cytoplasmic and nuclear SMAD2/3 signaling	Pathway	20	20	True
+Pathway::PC7_6904	Regulation of gene expression in beta cells	Pathway	20	20	True
+Pathway::PC7_7459	Signaling by Hippo	Pathway	20	20	True
+Pathway::PC7_7717	Syndecan interactions	Pathway	20	20	True
+Pathway::PC7_8790	Xenobiotics	Pathway	20	20	True
+Pathway::WP1422_r79871	Sphingolipid Metabolism	Pathway	20	20	True
+Pathway::WP497_r72142	Urea cycle and metabolism of amino groups	Pathway	20	20	True
+Pathway::WP516_r71358	Hypertrophy Model	Pathway	20	20	True
+Pathway::WP732_r80010	Serotonin Receptor 2 and ELK-SRF/GATA4 signaling	Pathway	20	20	True
+Pathway::PC7_1581	Aflatoxin activation and detoxification	Pathway	19	19	True
+Pathway::PC7_2032	Base Excision Repair	Pathway	19	19	True
+Pathway::PC7_2610	Citric acid cycle (TCA cycle)	Pathway	19	19	True
+Pathway::PC7_3419	EPHA2 forward signaling	Pathway	19	19	True
+Pathway::PC7_3679	Ephrin signaling	Pathway	19	19	True
+Pathway::PC7_3878	Fatty Acyl-CoA Biosynthesis	Pathway	19	19	True
+Pathway::PC7_4019	GABA synthesis, release, reuptake and degradation	Pathway	19	19	True
+Pathway::PC7_4101	Gap junction assembly	Pathway	19	19	True
+Pathway::PC7_4540	Hypoxic and oxygen homeostasis regulation of HIF-1-alpha	Pathway	19	19	True
+Pathway::PC7_4739	Initial triggering of complement	Pathway	21	19	True
+Pathway::PC7_5328	Metabolism of nitric oxide	Pathway	19	19	True
+Pathway::PC7_5535	Mitotic Spindle Checkpoint	Pathway	19	19	True
+Pathway::PC7_5848	Na+/Cl- dependent neurotransmitter transporters	Pathway	19	19	True
+Pathway::PC7_6067	Other semaphorin interactions	Pathway	19	19	True
+Pathway::PC7_6171	PKA activation	Pathway	19	19	True
+Pathway::PC7_6513	Platelet calcium homeostasis	Pathway	19	19	True
+Pathway::PC7_6537	Post-chaperonin tubulin folding pathway	Pathway	19	19	True
+Pathway::PC7_6638	Prostacyclin signalling through prostacyclin receptor	Pathway	19	19	True
+Pathway::PC7_6852	Ras activation uopn Ca2+ infux through NMDA receptor	Pathway	19	19	True
+Pathway::PC7_7040	S1P1 pathway	Pathway	19	19	True
+Pathway::PC7_7392	Scavenging by Class A Receptors	Pathway	19	19	True
+Pathway::PC7_7451	Signaling by FGFR1 fusion mutants	Pathway	19	19	True
+Pathway::PC7_7464	Signaling by NODAL	Pathway	19	19	True
+Pathway::PC7_7487	Signaling by constitutively active EGFR	Pathway	19	19	True
+Pathway::PC7_7743	Synthesis of PC	Pathway	19	19	True
+Pathway::PC7_7767	Synthesis, secretion, and inactivation of Glucagon-like Peptide-1 (GLP-1)	Pathway	19	19	True
+Pathway::WP1742_r71700	TP53 Network	Pathway	19	19	True
+Pathway::WP247_r74422	Small Ligand GPCRs	Pathway	19	19	True
+Pathway::WP2879_r79602	Farnesoid X Receptor  Pathway	Pathway	19	19	True
+Pathway::WP3287_r84570	Overview of nanoparticle effects	Pathway	19	19	True
+Pathway::WP384_r67054	Apoptosis Modulation by HSP70	Pathway	19	19	True
+Pathway::WP391_r71373	Mitochondrial Gene Expression	Pathway	19	19	True
+Pathway::WP404_r68960	Nucleotide Metabolism	Pathway	19	19	True
+Pathway::WP734_r74438	Serotonin Receptor 4/6/7 and NR3C Signaling	Pathway	19	19	True
+Pathway::PC7_11143	cGMP effects	Pathway	18	18	True
+Pathway::PC7_1534	Activation of IRF3/IRF7 mediated by TBK1/IKK epsilon	Pathway	18	18	True
+Pathway::PC7_2671	Common Pathway	Pathway	18	18	True
+Pathway::PC7_3062	Degradation of beta catenin	Pathway	18	18	True
+Pathway::PC7_3315	Dopamine Neurotransmitter Release Cycle	Pathway	18	18	True
+Pathway::PC7_4691	Inactivation of APC/C via direct inhibition of the APC/C complex	Pathway	18	18	True
+Pathway::PC7_5975	Norepinephrine Neurotransmitter Release Cycle	Pathway	18	18	True
+Pathway::PC7_6086	Oxygen-dependent proline hydroxylation of Hypoxia-inducible Factor Alpha	Pathway	18	18	True
+Pathway::PC7_6463	Phosphorylation of CD3 and TCR zeta chains	Pathway	20	18	True
+Pathway::PC7_6562	Pre-NOTCH Processing in Golgi	Pathway	18	18	True
+Pathway::PC7_6808	RNA Polymerase III Chain Elongation	Pathway	18	18	True
+Pathway::PC7_6919	Regulation of signaling by CBL	Pathway	18	18	True
+Pathway::PC7_7723	Synthesis and interconversion of nucleotide di- and triphosphates	Pathway	18	18	True
+Pathway::PC7_7748	Synthesis of PIPs at the Golgi membrane	Pathway	18	18	True
+Pathway::PC7_8275	Tie2 Signaling	Pathway	18	18	True
+Pathway::WP697_r80025	Estrogen metabolism	Pathway	18	18	True
+Pathway::PC7_10442	activated TAK1 mediates p38 MAPK activation	Pathway	17	17	True
+Pathway::PC7_1232	Acetylcholine Neurotransmitter Release Cycle	Pathway	17	17	True
+Pathway::PC7_1518	Activated point mutants of FGFR2	Pathway	17	17	True
+Pathway::PC7_1560	Acyl chain remodelling of PG	Pathway	17	17	True
+Pathway::PC7_1562	Acyl chain remodelling of PS	Pathway	17	17	True
+Pathway::PC7_2072	Beta-catenin phosphorylation cascade	Pathway	17	17	True
+Pathway::PC7_2081	Beta5 beta6 beta7 and beta8 integrin cell surface interactions	Pathway	17	17	True
+Pathway::PC7_2117	Branched-chain amino acid catabolism	Pathway	17	17	True
+Pathway::PC7_2164	Butyrate Response Factor 1 (BRF1) destabilizes mRNA	Pathway	17	17	True
+Pathway::PC7_2333	CREB phosphorylation through the activation of CaMKII	Pathway	17	17	True
+Pathway::PC7_2576	Chylomicron-mediated lipid transport	Pathway	17	17	True
+Pathway::PC7_2684	Conversion from APC/C:Cdc20 to APC/C:Cdh1 in late anaphase	Pathway	17	17	True
+Pathway::PC7_3671	Energy dependent regulation of mTOR by LKB1-AMPK	Pathway	17	17	True
+Pathway::PC7_3957	Formation of ATP by chemiosmotic coupling	Pathway	17	17	True
+Pathway::PC7_4006	G1/S-Specific Transcription	Pathway	17	17	True
+Pathway::PC7_4105	Gap-filling DNA repair synthesis and ligation in GG-NER	Pathway	17	17	True
+Pathway::PC7_4488	Homologous Recombination Repair	Pathway	17	17	True
+Pathway::PC7_4862	KSRP destabilizes mRNA	Pathway	17	17	True
+Pathway::PC7_6172	PKA activation in glucagon signalling	Pathway	17	17	True
+Pathway::PC7_6467	Phosphorylation of the APC/C	Pathway	17	17	True
+Pathway::PC7_6516	Platelet sensitization by LDL	Pathway	17	17	True
+Pathway::PC7_6532	Porphyrin metabolism	Pathway	17	17	True
+Pathway::PC7_6747	RAF/MAP kinase cascade	Pathway	17	17	True
+Pathway::PC7_6928	Removal of DNA patch containing abasic residue	Pathway	17	17	True
+Pathway::PC7_7766	Synthesis, secretion, and deacylation of Ghrelin	Pathway	17	17	True
+Pathway::PC7_8429	Tristetraprolin (TTP) destabilizes mRNA	Pathway	17	17	True
+Pathway::PC7_8629	Unblocking of NMDA receptor, glutamate binding and activation	Pathway	17	17	True
+Pathway::PC7_8856	Zinc transporters	Pathway	17	17	True
+Pathway::PC7_968	ABCA transporters in lipid homeostasis	Pathway	17	17	True
+Pathway::WP2289_r78511	Drug Induction of Bile Acid Pathway	Pathway	17	17	True
+Pathway::WP22_r79264	IL-9 Signaling Pathway	Pathway	17	17	True
+Pathway::WP3413_r82217	NOTCH1 regulation of human endothelial cell calcification	Pathway	17	17	True
+Pathway::WP368_r79271	Mitochondrial LC-Fatty Acid Beta-Oxidation	Pathway	17	17	True
+Pathway::WP554_r84372	ACE Inhibitor Pathway	Pathway	17	17	True
+Pathway::WP78_r70014	TCA Cycle	Pathway	17	17	True
+Pathway::PC7_12285	p75NTR signals via NF-kB	Pathway	16	16	True
+Pathway::PC7_1561	Acyl chain remodelling of PI	Pathway	16	16	True
+Pathway::PC7_1625	Amine-derived hormones	Pathway	16	16	True
+Pathway::PC7_1631	Amino acid synthesis and interconversion (transamination)	Pathway	16	16	True
+Pathway::PC7_2347	CRMPs in Sema3A signaling	Pathway	16	16	True
+Pathway::PC7_2528	Cell-extracellular matrix interactions	Pathway	16	16	True
+Pathway::PC7_2584	Circadian rhythm pathway	Pathway	16	16	True
+Pathway::PC7_2911	Cytosolic sulfonation of small molecules	Pathway	16	16	True
+Pathway::PC7_3962	Formation of Senescence-Associated Heterochromatin Foci (SAHF)	Pathway	16	16	True
+Pathway::PC7_4265	Glycogen breakdown (glycogenolysis)	Pathway	16	16	True
+Pathway::PC7_4497	Hyaluronan metabolism	Pathway	16	16	True
+Pathway::PC7_4819	JNK (c-Jun kinases) phosphorylation and activation mediated by activated human TAK1	Pathway	16	16	True
+Pathway::PC7_5188	MMR	Pathway	16	16	True
+Pathway::PC7_5323	Metabolism of Angiotensinogen to Angiotensins	Pathway	16	16	True
+Pathway::PC7_5996	Nucleotide-like (purinergic) receptors	Pathway	16	16	True
+Pathway::PC7_6519	Polo-like kinase mediated events	Pathway	16	16	True
+Pathway::PC7_6596	Processive synthesis on the lagging strand	Pathway	16	16	True
+Pathway::PC7_6848	Rap1 signalling	Pathway	16	16	True
+Pathway::PC7_6866	Recycling of bile acids and salts	Pathway	16	16	True
+Pathway::PC7_6888	Regulation of KIT signaling	Pathway	16	16	True
+Pathway::PC7_6917	Regulation of pyruvate dehydrogenase (PDH) complex	Pathway	16	16	True
+Pathway::PC7_7372	STING mediated induction of host immune responses	Pathway	16	16	True
+Pathway::PC7_7421	Sema3A PAK dependent Axon repulsion	Pathway	16	16	True
+Pathway::PC7_7659	Spry regulation of FGF signaling	Pathway	16	16	True
+Pathway::PC7_7762	Synthesis of glycosylphosphatidylinositol (GPI)	Pathway	16	16	True
+Pathway::PC7_7797	TGF-beta receptor signaling in EMT (epithelial to mesenchymal transition)	Pathway	16	16	True
+Pathway::PC7_8059	TRAF6 mediated induction of TAK1 complex	Pathway	16	16	True
+Pathway::PC7_8312	Trafficking of GluR2-containing AMPA receptors	Pathway	16	16	True
+Pathway::PC7_8338	Translocation of ZAP-70 to Immunological synapse	Pathway	18	16	True
+Pathway::WP12_r81176	Osteoclast Signaling	Pathway	16	16	True
+Pathway::WP1946_r79691	Cori Cycle	Pathway	16	16	True
+Pathway::WP2011_r75253	SREBF and miR33 in cholesterol and lipid homeostasis	Pathway	16	16	True
+Pathway::WP206_r68882	Fatty Acid Omega Oxidation	Pathway	16	16	True
+Pathway::WP2291_r68922	Deregulation of Rab and Rab Effector Genes in Bladder Cancer	Pathway	16	16	True
+Pathway::WP2435_r80008	Quercetin and Nf-kB/ AP-1 Induced Cell Apoptosis	Pathway	16	16	True
+Pathway::WP2453_r80143	TCA Cycle and PDHc	Pathway	16	16	True
+Pathway::WP2916_r79908	Interactome of polycomb repressive complex 2 (PRC2) 	Pathway	16	16	True
+Pathway::WP47_r78542	Hedgehog Signaling Pathway	Pathway	16	16	True
+Pathway::WP53_r67360	ID signaling pathway	Pathway	16	16	True
+Pathway::WP692_r69031	Sulfation Biotransformation Reaction	Pathway	17	16	True
+Pathway::PC7_12076	mRNA decay by 5' to 3' exoribonuclease	Pathway	15	15	True
+Pathway::PC7_12188	negative regulation of TCF-dependent signaling by WNT ligand antagonists	Pathway	15	15	True
+Pathway::PC7_12264	p130Cas linkage to MAPK signaling for integrins	Pathway	15	15	True
+Pathway::PC7_1523	Activation of BAD and translocation to mitochondria	Pathway	15	15	True
+Pathway::PC7_1696	Arf6 downstream pathway	Pathway	15	15	True
+Pathway::PC7_1818	Association of licensing factors with the pre-replicative complex	Pathway	15	15	True
+Pathway::PC7_3072	Depolymerisation of the Nuclear Lamina	Pathway	15	15	True
+Pathway::PC7_3646	Eicosanoid ligand-binding receptors	Pathway	15	15	True
+Pathway::PC7_3697	ErbB receptor signaling network	Pathway	15	15	True
+Pathway::PC7_3883	Fatty acids	Pathway	15	15	True
+Pathway::PC7_4063	GRB2:SOS provides linkage to MAPK signaling for Integrins	Pathway	15	15	True
+Pathway::PC7_4267	Glycogen synthesis	Pathway	15	15	True
+Pathway::PC7_4335	HDL-mediated lipid transport	Pathway	15	15	True
+Pathway::PC7_4941	LPA4-mediated signaling events	Pathway	15	15	True
+Pathway::PC7_5329	Metabolism of polyamines	Pathway	15	15	True
+Pathway::PC7_5509	Mismatch repair (MMR) directed by MSH2:MSH3 (MutSbeta)	Pathway	15	15	True
+Pathway::PC7_5510	Mismatch repair (MMR) directed by MSH2:MSH6 (MutSalpha)	Pathway	15	15	True
+Pathway::PC7_5513	Mitochondrial Fatty Acid Beta-Oxidation	Pathway	15	15	True
+Pathway::PC7_5665	N-Glycan antennae elongation	Pathway	15	15	True
+Pathway::PC7_5835	NRIF signals cell death from the nucleus	Pathway	15	15	True
+Pathway::PC7_6099	PAR4-mediated thrombin signaling events	Pathway	15	15	True
+Pathway::PC7_6394	Peptide hormone biosynthesis	Pathway	15	15	True
+Pathway::PC7_6616	Prolactin receptor signaling	Pathway	15	15	True
+Pathway::PC7_6908	Regulation of innate immune responses to cytosolic DNA	Pathway	15	15	True
+Pathway::PC7_6933	Repair synthesis for gap-filling by DNA polymerase in TC-NER	Pathway	15	15	True
+Pathway::PC7_7707	Sumoylation by RanBP2 regulates transcriptional repression	Pathway	15	15	True
+Pathway::PC7_7757	Synthesis of bile acids and bile salts via 27-hydroxycholesterol	Pathway	15	15	True
+Pathway::PC7_7765	Synthesis of very long-chain fatty acyl-CoAs	Pathway	15	15	True
+Pathway::PC7_8676	Validated nuclear estrogen receptor beta network	Pathway	15	15	True
+Pathway::PC7_8776	WNT5A-dependent internalization of FZD4	Pathway	15	15	True
+Pathway::WP1545_r84697	miRNAs involved in DNA damage response	Pathway	15	15	True
+Pathway::WP197_r81059	Cholesterol Biosynthesis	Pathway	15	15	True
+Pathway::WP3_r79527	Transcriptional activation by NRF2	Pathway	15	15	True
+Pathway::WP501_r79715	GPCRs, Class C Metabotropic glutamate, pheromone	Pathway	15	15	True
+Pathway::WP550_r81207	Biogenic Amine Synthesis	Pathway	15	15	True
+Pathway::PC7_11234	cell division	Pathway	14	14	True
+Pathway::PC7_1231	Acetylcholine Binding And Downstream Events	Pathway	14	14	True
+Pathway::PC7_1547	Activation of Rac	Pathway	14	14	True
+Pathway::PC7_1850	Attenuation phase	Pathway	14	14	True
+Pathway::PC7_1851	Atypical NF-kappaB pathway	Pathway	14	14	True
+Pathway::PC7_2348	CS/DS degradation	Pathway	14	14	True
+Pathway::PC7_2680	Constitutive Signaling by NOTCH1 HD Domain Mutants	Pathway	14	14	True
+Pathway::PC7_2928	DCC mediated attractive signaling	Pathway	14	14	True
+Pathway::PC7_3016	Death Receptor Signalling	Pathway	14	14	True
+Pathway::PC7_3629	Early Phase of HIV Life Cycle	Pathway	14	14	True
+Pathway::PC7_3819	FGFR1 ligand binding and activation	Pathway	14	14	True
+Pathway::PC7_4301	Golgi Cisternae Pericentriolar Stack Reorganization	Pathway	14	14	True
+Pathway::PC7_4628	IL5-mediated signaling events	Pathway	14	14	True
+Pathway::PC7_4820	JNK signaling in the CD4+ TCR pathway	Pathway	14	14	True
+Pathway::PC7_4951	Leading Strand Synthesis	Pathway	14	14	True
+Pathway::PC7_6593	Processing of Intronless Pre-mRNAs	Pathway	14	14	True
+Pathway::PC7_6853	Ras signaling in the CD4+ TCR pathway	Pathway	14	14	True
+Pathway::PC7_6860	Receptor-ligand binding initiates the second proteolytic cleavage of Notch receptor	Pathway	14	14	True
+Pathway::PC7_6874	Regulation of AMPK activity via LKB1	Pathway	14	14	True
+Pathway::PC7_6886	Regulation of IFNG signaling	Pathway	14	14	True
+Pathway::PC7_6931	Removal of the Flap Intermediate	Pathway	14	14	True
+Pathway::PC7_7043	S1P4 pathway	Pathway	14	14	True
+Pathway::PC7_7249	SEMA3A-Plexin repulsion signaling by inhibiting Integrin adhesion	Pathway	14	14	True
+Pathway::PC7_7436	Signal attenuation	Pathway	14	14	True
+Pathway::PC7_7753	Synthesis of Prostaglandins (PG) and Thromboxanes (TX)	Pathway	14	14	True
+Pathway::PC7_7756	Synthesis of bile acids and bile salts via 24-hydroxycholesterol	Pathway	14	14	True
+Pathway::PC7_8053	TRAF3-dependent IRF activation pathway	Pathway	14	14	True
+Pathway::WP229_r68389	Irinotecan Pathway	Pathway	14	14	True
+Pathway::WP322_r79496	Osteoblast Signaling	Pathway	14	14	True
+Pathway::PC7_1063	AKT phosphorylates targets in the cytosol	Pathway	13	13	True
+Pathway::PC7_12268	p38MAPK events	Pathway	13	13	True
+Pathway::PC7_12283	p75NTR recruits signalling complexes	Pathway	13	13	True
+Pathway::PC7_12488	repression of WNT target genes	Pathway	13	13	True
+Pathway::PC7_1531	Activation of DNA fragmentation factor	Pathway	13	13	True
+Pathway::PC7_1572	Adenylate cyclase inhibitory pathway	Pathway	13	13	True
+Pathway::PC7_1580	Advanced glycosylation endproduct receptor signaling	Pathway	13	13	True
+Pathway::PC7_2909	Cytosolic iron-sulfur cluster assembly	Pathway	13	13	True
+Pathway::PC7_2942	DEx/H-box helicases activate type I IFN and inflammatory cytokines production	Pathway	13	13	True
+Pathway::PC7_2957	DNA-PK pathway in nonhomologous end joining	Pathway	13	13	True
+Pathway::PC7_3284	Dissolution of Fibrin Clot	Pathway	13	13	True
+Pathway::PC7_3320	Downregulation of ERBB2:ERBB3 signaling	Pathway	13	13	True
+Pathway::PC7_3825	FGFR2c ligand binding and activation	Pathway	13	13	True
+Pathway::PC7_3829	FGFR4 ligand binding and activation	Pathway	13	13	True
+Pathway::PC7_4014	GABA A receptor activation	Pathway	13	13	True
+Pathway::PC7_4271	Glycoprotein hormones	Pathway	13	13	True
+Pathway::PC7_4660	IRF3-mediated induction of type I IFN	Pathway	13	13	True
+Pathway::PC7_4690	Import of palmitoyl-CoA into the mitochondrial matrix	Pathway	13	13	True
+Pathway::PC7_4740	Initiation of Nuclear Envelope Reformation	Pathway	13	13	True
+Pathway::PC7_5680	N-glycan trimming in the ER and Calnexin/Calreticulin cycle	Pathway	13	13	True
+Pathway::PC7_5709	NF-kB is activated and signals survival	Pathway	13	13	True
+Pathway::PC7_5776	NICD traffics to nucleus	Pathway	13	13	True
+Pathway::PC7_6061	Organic cation/anion/zwitterion transport	Pathway	13	13	True
+Pathway::PC7_6510	Platelet Adhesion to exposed collagen	Pathway	13	13	True
+Pathway::PC7_6654	Purine salvage	Pathway	13	13	True
+Pathway::PC7_6950	Retrograde neurotrophin signalling	Pathway	13	13	True
+Pathway::PC7_7437	Signal regulatory protein (SIRP) family interactions	Pathway	13	13	True
+Pathway::PC7_7440	Signaling by Activin	Pathway	13	13	True
+Pathway::PC7_7749	Synthesis of PIPs at the early endosome membrane	Pathway	13	13	True
+Pathway::PC7_7768	Synthesis, secretion, and inactivation of Glucose-dependent Insulinotropic Polypeptide (GIP)	Pathway	13	13	True
+Pathway::PC7_8227	The activation of arylsulfatases	Pathway	13	13	True
+Pathway::PC7_8310	Trafficking and processing of endosomal TLR	Pathway	13	13	True
+Pathway::PC7_8634	Uptake and function of anthrax toxins	Pathway	13	13	True
+Pathway::PC7_8775	WNT5A-dependent internalization of FZD2, FZD5 and ROR2	Pathway	13	13	True
+Pathway::WP1423_r79812	Ganglio Sphingolipid Metabolism	Pathway	13	13	True
+Pathway::WP1434_r78545	Osteopontin Signaling	Pathway	13	13	True
+Pathway::WP186_r68935	Homologous recombination	Pathway	13	13	True
+Pathway::WP1992_r78296	TarBasePathway	Pathway	14	13	True
+Pathway::WP2029_r82903	Cell Differentiation - Index	Pathway	13	13	True
+Pathway::WP2436_r71387	Dopamine metabolism	Pathway	13	13	True
+Pathway::WP2881_r79603	Estrogen Receptor Pathway	Pathway	13	13	True
+Pathway::PC7_1190	ATF6-alpha activates chaperones	Pathway	12	12	True
+Pathway::PC7_1529	Activation of Ca-permeable Kainate Receptor	Pathway	12	12	True
+Pathway::PC7_1810	Assembly Of The HIV Virion	Pathway	12	12	True
+Pathway::PC7_2091	Bile salt and organic anion SLC transporters	Pathway	12	12	True
+Pathway::PC7_2253	CD28 dependent Vav1 pathway	Pathway	12	12	True
+Pathway::PC7_2508	Caspase-mediated cleavage of cytoskeletal proteins	Pathway	12	12	True
+Pathway::PC7_2704	Creation of C4 and C2 activators	Pathway	13	12	True
+Pathway::PC7_3433	ERK activation	Pathway	12	12	True
+Pathway::PC7_3437	ERKs are inactivated	Pathway	12	12	True
+Pathway::PC7_3647	Eicosanoids	Pathway	12	12	True
+Pathway::PC7_3808	FCGR activation	Pathway	13	12	True
+Pathway::PC7_3826	FGFR3 ligand binding and activation	Pathway	12	12	True
+Pathway::PC7_4416	HSF1 activation	Pathway	12	12	True
+Pathway::PC7_4491	Hormone-sensitive lipase (HSL)-mediated triacylglycerol hydrolysis	Pathway	12	12	True
+Pathway::PC7_4498	Hyaluronan uptake and degradation	Pathway	12	12	True
+Pathway::PC7_4736	Inhibition of replication initiation of damaged DNA by RB1/E2F1	Pathway	12	12	True
+Pathway::PC7_4875	Keratan sulfate degradation	Pathway	12	12	True
+Pathway::PC7_5508	Miscellaneous substrates	Pathway	12	12	True
+Pathway::PC7_5708	NF-kB activation through FADD/RIP-1 pathway mediated by caspase-8 and -10	Pathway	12	12	True
+Pathway::PC7_5789	NOTCH2 intracellular domain regulates transcription	Pathway	12	12	True
+Pathway::PC7_6094	P2Y receptors	Pathway	12	12	True
+Pathway::PC7_6142	PECAM1 interactions	Pathway	12	12	True
+Pathway::PC7_6373	Passive transport by Aquaporins	Pathway	12	12	True
+Pathway::PC7_6571	Presynaptic nicotinic acetylcholine receptors	Pathway	12	12	True
+Pathway::PC7_6595	Processive synthesis on the C-strand of the telomere	Pathway	12	12	True
+Pathway::PC7_6661	Pyrimidine catabolism	Pathway	12	12	True
+Pathway::PC7_6937	Resolution of AP sites via the single-nucleotide replacement pathway	Pathway	12	12	True
+Pathway::PC7_6955	Reversible hydration of carbon dioxide	Pathway	12	12	True
+Pathway::PC7_7396	Scavenging of heme from plasma	Pathway	13	12	True
+Pathway::PC7_7432	Serotonin receptors	Pathway	12	12	True
+Pathway::PC7_7744	Synthesis of PE	Pathway	12	12	True
+Pathway::PC7_8132	Tandem pore domain potassium channels	Pathway	12	12	True
+Pathway::PC7_8208	Tetrahydrobiopterin (BH4) synthesis, recycling, salvage and regulation	Pathway	12	12	True
+Pathway::PC7_8226	The NLRP3 inflammasome	Pathway	12	12	True
+Pathway::PC7_8722	Vitamin B5 (pantothenate) metabolism	Pathway	12	12	True
+Pathway::WP106_r74147	Alanine and aspartate metabolism	Pathway	12	12	True
+Pathway::WP1425_r74390	BMP Signalling and Regulation	Pathway	12	12	True
+Pathway::WP2007_r69751	Iron metabolism in placenta	Pathway	12	12	True
+Pathway::WP2290_r79988	RalA downstream regulated genes	Pathway	12	12	True
+Pathway::WP3301_r81279	MFAP5-mediated ovarian cancer cell motility and invasiveness	Pathway	12	12	True
+Pathway::PC7_10508	alpha-linolenic (omega3) and linoleic (omega6) acid metabolism	Pathway	11	11	True
+Pathway::PC7_1105	ALK2 signaling events	Pathway	11	11	True
+Pathway::PC7_12075	mRNA decay by 3' to 5' exoribonuclease	Pathway	11	11	True
+Pathway::PC7_12080	mTORC1-mediated signalling	Pathway	11	11	True
+Pathway::PC7_1553	Activation of the phototransduction cascade	Pathway	11	11	True
+Pathway::PC7_1600	Alpha6 beta4 integrin-ligand interactions	Pathway	11	11	True
+Pathway::PC7_1658	Androgen biosynthesis	Pathway	11	11	True
+Pathway::PC7_1687	Apoptotic cleavage of cell adhesion proteins	Pathway	11	11	True
+Pathway::PC7_2103	Biotin transport and metabolism	Pathway	11	11	True
+Pathway::PC7_2264	CDC6 association with the ORC:origin complex	Pathway	11	11	True
+Pathway::PC7_2379	CYP2E1 reactions	Pathway	11	11	True
+Pathway::PC7_2460	Calnexin/calreticulin cycle	Pathway	11	11	True
+Pathway::PC7_2673	Condensation of Prometaphase Chromosomes	Pathway	11	11	True
+Pathway::PC7_2703	Creatine metabolism	Pathway	11	11	True
+Pathway::PC7_2968	DSCAM interactions	Pathway	11	11	True
+Pathway::PC7_3071	Depolarization of the Presynaptic Terminal Triggers the Opening of Calcium Channels	Pathway	11	11	True
+Pathway::PC7_3077	Dermatan sulfate biosynthesis	Pathway	11	11	True
+Pathway::PC7_3667	Endosomal/Vacuolar pathway	Pathway	11	11	True
+Pathway::PC7_3703	Establishment of Sister Chromatid Cohesion	Pathway	11	11	True
+Pathway::PC7_3822	FGFR1c ligand binding and activation	Pathway	11	11	True
+Pathway::PC7_3868	Facilitative Na+-independent glucose transporters	Pathway	11	11	True
+Pathway::PC7_4100	Gamma-carboxylation, transport, and amino-terminal cleavage of proteins	Pathway	11	11	True
+Pathway::PC7_4258	Glutathione synthesis and recycling	Pathway	11	11	True
+Pathway::PC7_4443	Heme biosynthesis	Pathway	11	11	True
+Pathway::PC7_4469	Highly calcium permeable postsynaptic nicotinic acetylcholine receptors	Pathway	11	11	True
+Pathway::PC7_4781	Interleukin-6 signaling	Pathway	11	11	True
+Pathway::PC7_4782	Interleukin-7 signaling	Pathway	11	11	True
+Pathway::PC7_5909	Nicotinate metabolism	Pathway	11	11	True
+Pathway::PC7_6653	Purine ribonucleoside monophosphate biosynthesis	Pathway	11	11	True
+Pathway::PC7_6863	Recruitment of NuMA to mitotic centrosomes	Pathway	11	11	True
+Pathway::PC7_7288	SLBP Dependent Processing of Replication-Dependent Histone Pre-mRNAs	Pathway	11	11	True
+Pathway::PC7_7473	Signaling by NOTCH3	Pathway	11	11	True
+Pathway::PC7_7474	Signaling by NOTCH4	Pathway	11	11	True
+Pathway::PC7_7501	Signaling mediated by p38-gamma and p38-delta	Pathway	11	11	True
+Pathway::PC7_7735	Synthesis of IP2, IP, and Ins in the cytosol	Pathway	11	11	True
+Pathway::PC7_8056	TRAF6 mediated IRF7 activation in TLR7/8 or 9 signaling	Pathway	11	11	True
+Pathway::PC7_8357	Transport of organic anions	Pathway	11	11	True
+Pathway::PC7_8432	Tryptophan catabolism	Pathway	11	11	True
+Pathway::PC7_8632	Unwinding of DNA	Pathway	11	11	True
+Pathway::WP1455_r68965	Serotonin Transporter Activity	Pathway	11	11	True
+Pathway::WP1991_r82940	SRF and miRs in Smooth Muscle Differentiation and Proliferation	Pathway	11	11	True
+Pathway::WP2854_r79970	Gene regulatory network modelling somitogenesis 	Pathway	11	11	True
+Pathway::WP80_r68938	Nucleotide GPCRs	Pathway	11	11	True
+Pathway::PC7_1189	ATF6-alpha activates chaperone genes	Pathway	10	10	True
+Pathway::PC7_1221	Abacavir transport and metabolism	Pathway	10	10	True
+Pathway::PC7_1233	Acetylcholine regulates insulin secretion	Pathway	10	10	True
+Pathway::PC7_1544	Activation of PPARGC1A (PGC-1alpha) by phosphorylation	Pathway	10	10	True
+Pathway::PC7_1551	Activation of the AP-1 family of transcription factors	Pathway	10	10	True
+Pathway::PC7_1571	Adenylate cyclase activating pathway	Pathway	10	10	True
+Pathway::PC7_1596	Alpha-defensins	Pathway	10	10	True
+Pathway::PC7_2034	Base-free sugar-phosphate removal via the single-nucleotide replacement pathway	Pathway	10	10	True
+Pathway::PC7_2324	COPI Mediated Transport	Pathway	10	10	True
+Pathway::PC7_2441	Calcitonin-like ligand receptors	Pathway	10	10	True
+Pathway::PC7_2507	Caspase-8 activation by cleavage	Pathway	10	10	True
+Pathway::PC7_2647	Clostridium neurotoxicity	Pathway	10	10	True
+Pathway::PC7_2661	Cohesin Loading onto Chromatin	Pathway	10	10	True
+Pathway::PC7_3363	E2F-enabled inhibition of pre-replication complex formation	Pathway	10	10	True
+Pathway::PC7_3435	ERK1 activation	Pathway	10	10	True
+Pathway::PC7_3756	Ethanol oxidation	Pathway	10	10	True
+Pathway::PC7_4042	GP1b-IX-V activation signalling	Pathway	10	10	True
+Pathway::PC7_4102	Gap junction degradation	Pathway	10	10	True
+Pathway::PC7_4490	Hormone ligand-binding receptors	Pathway	10	10	True
+Pathway::PC7_4653	IRAK1 recruits IKK complex	Pathway	10	10	True
+Pathway::PC7_4655	IRAK2 mediated activation of TAK1 complex	Pathway	10	10	True
+Pathway::PC7_4764	Interaction With The Zona Pellucida	Pathway	10	10	True
+Pathway::PC7_5124	MASTL Facilitates Mitotic Progression	Pathway	10	10	True
+Pathway::PC7_5308	Membrane binding and targetting of GAG proteins	Pathway	10	10	True
+Pathway::PC7_5373	Methylation	Pathway	10	10	True
+Pathway::PC7_5873	Nef mediated downregulation of MHC class I complex cell surface expression	Pathway	10	10	True
+Pathway::PC7_5883	Netrin mediated repulsion signals	Pathway	10	10	True
+Pathway::PC7_6053	Opsins	Pathway	10	10	True
+Pathway::PC7_6200	POU5F1 (OCT4), SOX2, NANOG activate genes related to proliferation	Pathway	10	10	True
+Pathway::PC7_6649	Purine catabolism	Pathway	10	10	True
+Pathway::PC7_6869	Reduction of cytosolic Ca++ levels	Pathway	10	10	True
+Pathway::PC7_6871	Regulated proteolysis of p75NTR	Pathway	10	10	True
+Pathway::PC7_6893	Regulation of Rheb GTPase activity by AMPK	Pathway	10	10	True
+Pathway::PC7_6920	Regulation of signaling by NODAL	Pathway	10	10	True
+Pathway::PC7_6921	Regulation of the Fanconi anemia pathway	Pathway	10	10	True
+Pathway::PC7_6932	Removal of the Flap Intermediate from the C-strand	Pathway	10	10	True
+Pathway::PC7_6947	Retinoid cycle disease events	Pathway	10	10	True
+Pathway::PC7_6993	Role of DCC in regulating apoptosis	Pathway	10	10	True
+Pathway::PC7_6996	Role of second messengers in netrin-1 signaling	Pathway	10	10	True
+Pathway::PC7_7289	SLBP independent Processing of Histone Pre-mRNAs	Pathway	10	10	True
+Pathway::PC7_7750	Synthesis of PIPs at the late endosome membrane	Pathway	10	10	True
+Pathway::PC7_7763	Synthesis of pyrophosphates in the cytosol	Pathway	10	10	True
+Pathway::PC7_8064	TRIF-mediated programmed cell death	Pathway	10	10	True
+Pathway::PC7_8659	VEGF and VEGFR signaling network	Pathway	10	10	True
+Pathway::PC7_8834	Zinc influx into cells by the SLC39 gene family	Pathway	10	10	True
+Pathway::WP1531_r82221	Vitamin D Metabolism	Pathway	10	10	True
+Pathway::WP2113_r70107	Type III interferon signaling	Pathway	10	10	True
+Pathway::WP2333_r72015	Trans-sulfuration pathway	Pathway	11	10	True
+Pathway::WP2874_r82709	Liver X Receptor Pathway	Pathway	10	10	True
+Pathway::WP496_r69016	Steroid Biosynthesis	Pathway	10	10	True
+Pathway::PC7_1064	AKT phosphorylates targets in the nucleus	Pathway	9	9	True
+Pathway::PC7_11470	eNOS activation	Pathway	9	9	True
+Pathway::PC7_12284	p75NTR regulates axonogenesis	Pathway	9	9	True
+Pathway::PC7_1578	Adrenoceptors	Pathway	9	9	True
+Pathway::PC7_2089	Bicarbonate transporters	Pathway	9	9	True
+Pathway::PC7_2301	CHL1 interactions	Pathway	9	9	True
+Pathway::PC7_2325	COPII (Coat Protein 2) Mediated Vesicle Transport	Pathway	9	9	True
+Pathway::PC7_2391	Ca activated K+ channels	Pathway	9	9	True
+Pathway::PC7_2707	Crosslinking of collagen fibrils	Pathway	9	9	True
+Pathway::PC7_3166	Digestion of dietary carbohydrate	Pathway	9	9	True
+Pathway::PC7_3283	Displacement of DNA glycosylase by APE1	Pathway	9	9	True
+Pathway::PC7_3384	EGFR Transactivation by Gastrin	Pathway	9	9	True
+Pathway::PC7_3392	EGFR-dependent Endothelin signaling events	Pathway	9	9	True
+Pathway::PC7_3436	ERK2 activation	Pathway	9	9	True
+Pathway::PC7_3632	Effects of Botulinum toxin	Pathway	9	9	True
+Pathway::PC7_3652	Elevation of cytosolic Ca2+ levels	Pathway	9	9	True
+Pathway::PC7_3701	Erythrocytes take up carbon dioxide and release oxygen	Pathway	9	9	True
+Pathway::PC7_3953	Folding of actin by CCT/TriC	Pathway	9	9	True
+Pathway::PC7_3964	Formation of annular gap junctions	Pathway	9	9	True
+Pathway::PC7_4009	G2/M DNA damage checkpoint	Pathway	9	9	True
+Pathway::PC7_4099	Gamma-carboxylation of protein precursors	Pathway	9	9	True
+Pathway::PC7_4468	Highly calcium permeable nicotinic acetylcholine receptors	Pathway	9	9	True
+Pathway::PC7_4692	Inactivation of Cdc42 and Rac	Pathway	9	9	True
+Pathway::PC7_4755	Integration of provirus	Pathway	9	9	True
+Pathway::PC7_5048	Lysosphingolipid and LPA receptors	Pathway	9	9	True
+Pathway::PC7_5325	Metabolism of folate and pterines	Pathway	9	9	True
+Pathway::PC7_5516	Mitochondrial iron-sulfur cluster biogenesis	Pathway	9	9	True
+Pathway::PC7_5869	Nef Mediated CD4 Down-regulation	Pathway	9	9	True
+Pathway::PC7_6443	Phenylalanine and tyrosine catabolism	Pathway	9	9	True
+Pathway::PC7_6567	Pregnenolone biosynthesis	Pathway	9	9	True
+Pathway::PC7_6588	Processing and activation of SUMO	Pathway	9	9	True
+Pathway::PC7_6640	Prostanoid ligand receptors	Pathway	9	9	True
+Pathway::PC7_6664	Pyrimidine salvage reactions	Pathway	9	9	True
+Pathway::PC7_6903	Regulation of gene expression by Hypoxia-inducible Factor	Pathway	9	9	True
+Pathway::PC7_6929	Removal of aminoterminal propeptides from gamma-carboxylated proteins	Pathway	9	9	True
+Pathway::PC7_6991	Role of Abl in Robo-Slit signaling	Pathway	9	9	True
+Pathway::PC7_7049	S6K1-mediated signalling	Pathway	9	9	True
+Pathway::PC7_7623	Small interfering RNA (siRNA) biogenesis	Pathway	9	9	True
+Pathway::PC7_7644	Sodium/Calcium exchangers	Pathway	9	9	True
+Pathway::PC7_7645	Sodium/Proton exchangers	Pathway	9	9	True
+Pathway::PC7_7726	Synthesis of (16-20)-hydroxyeicosatetraenoic acids (HETE)	Pathway	9	9	True
+Pathway::PC7_8356	Transport of nucleotide sugars	Pathway	9	9	True
+Pathway::PC7_8444	Type I hemidesmosome assembly	Pathway	9	9	True
+Pathway::PC7_8635	Urea cycle	Pathway	9	9	True
+Pathway::PC7_966	A third proteolytic cleavage releases NICD	Pathway	9	9	True
+Pathway::WP288_r80026	NLR Proteins	Pathway	9	9	True
+Pathway::WP3585_r84793	Cytosine methylation	Pathway	9	9	True
+Pathway::WP3601_r84331	Composition of Lipid Particles	Pathway	9	9	True
+Pathway::WP531_r69021	Mismatch repair	Pathway	9	9	True
+Pathway::WP561_r72035	Heme Biosynthesis	Pathway	9	9	True
+Pathway::WP696_r72081	Benzo(a)pyrene metabolism	Pathway	9	9	True
+Pathway::WP704_r79563	Methylation Pathways	Pathway	9	9	True
+Pathway::PC7_10399	a4b7 Integrin signaling	Pathway	8	8	True
+Pathway::PC7_12149	mitochondrial fatty acid beta-oxidation of saturated fatty acids	Pathway	8	8	True
+Pathway::PC7_1626	Amino Acid conjugation	Pathway	8	8	True
+Pathway::PC7_1867	Axonal growth inhibition (RHOA activation)	Pathway	8	8	True
+Pathway::PC7_1994	BH3-only proteins associate with and inactivate anti-apoptotic BCL-2 members	Pathway	8	8	True
+Pathway::PC7_2033	Base-Excision Repair, AP Site Formation	Pathway	8	8	True
+Pathway::PC7_2073	Beta-oxidation of pristanoyl-CoA	Pathway	8	8	True
+Pathway::PC7_2539	ChREBP activates metabolic gene expression	Pathway	8	8	True
+Pathway::PC7_2659	Coenzyme A biosynthesis	Pathway	8	8	True
+Pathway::PC7_2705	Cross-presentation of particulate exogenous antigens (phagosomes)	Pathway	8	8	True
+Pathway::PC7_3064	Degradation of cysteine and homocysteine	Pathway	8	8	True
+Pathway::PC7_3321	Downregulation of ERBB4 signaling	Pathway	8	8	True
+Pathway::PC7_3680	EphrinA-EPHA pathway	Pathway	8	8	True
+Pathway::PC7_3877	Fatty Acids bound to GPR40 (FFAR1) regulate insulin secretion	Pathway	8	8	True
+Pathway::PC7_3975	Formyl peptide receptors bind formyl peptides and many other ligands	Pathway	8	8	True
+Pathway::PC7_4160	Glucocorticoid biosynthesis	Pathway	8	8	True
+Pathway::PC7_4286	Glypican 3 network	Pathway	8	8	True
+Pathway::PC7_4494	HuR stabilizes mRNA	Pathway	8	8	True
+Pathway::PC7_4530	Hydrolysis of LPC	Pathway	8	8	True
+Pathway::PC7_5045	Lysine catabolism	Pathway	8	8	True
+Pathway::PC7_5871	Nef and signal transduction	Pathway	8	8	True
+Pathway::PC7_5877	Negative regulation of the PI3K/AKT network	Pathway	8	8	True
+Pathway::PC7_5889	Neurotransmitter Clearance In The Synaptic Cleft	Pathway	8	8	True
+Pathway::PC7_6055	Orexin and neuropeptides FF and QRFP bind to their respective receptors	Pathway	8	8	True
+Pathway::PC7_6059	Organic anion transporters	Pathway	8	8	True
+Pathway::PC7_6060	Organic cation transport	Pathway	8	8	True
+Pathway::PC7_6849	Rapid glucocorticoid signaling	Pathway	8	8	True
+Pathway::PC7_6865	Recruitment of repair and signaling proteins to double-strand breaks	Pathway	8	8	True
+Pathway::PC7_6867	Recycling of eIF2:GDP	Pathway	8	8	True
+Pathway::PC7_6901	Regulation of cytoskeletal remodeling and cell spreading by IPP complex components	Pathway	8	8	True
+Pathway::PC7_6905	Regulation of gene expression in early pancreatic precursor cells	Pathway	8	8	True
+Pathway::PC7_6924	Relaxin receptors	Pathway	8	8	True
+Pathway::PC7_7044	S1P5 pathway	Pathway	8	8	True
+Pathway::PC7_7424	Sema4D mediated inhibition of cell attachment and migration	Pathway	8	8	True
+Pathway::PC7_7646	Sperm Motility And Taxes	Pathway	8	8	True
+Pathway::PC7_7745	Synthesis of PG	Pathway	8	8	True
+Pathway::PC7_7761	Synthesis of epoxy (EET) and dihydroxyeicosatrienoic acids (DHET)	Pathway	8	8	True
+Pathway::PC7_8274	Thyroxine biosynthesis	Pathway	8	8	True
+Pathway::PC7_8350	Transport of fatty acids	Pathway	8	8	True
+Pathway::PC7_8351	Transport of gamma-carboxylated protein precursors from the endoplasmic reticulum to the Golgi apparatus	Pathway	8	8	True
+Pathway::PC7_8660	VEGF binds to VEGFR leading to receptor dimerization	Pathway	8	8	True
+Pathway::PC7_8725	Vitamin C (ascorbate) metabolism	Pathway	8	8	True
+Pathway::PC7_8773	WNT mediated activation of DVL	Pathway	8	8	True
+Pathway::WP136_r80005	Phase I biotransformations, non P450	Pathway	8	8	True
+Pathway::WP1559_r84698	TFs Regulate miRNAs related to cardiac hypertrophy	Pathway	8	8	True
+Pathway::WP1589_r82223	Folate-Alcohol and Cancer Pathway	Pathway	9	8	True
+Pathway::WP1604_r74317	Codeine and Morphine Metabolism	Pathway	8	8	True
+Pathway::WP1995_r69910	Effects of Nitric Oxide	Pathway	8	8	True
+Pathway::WP237_r78497	Glucocorticoid & Mineralcorticoid Metabolism	Pathway	8	8	True
+Pathway::WP2485_r70025	NAD Biosynthesis II (from tryptophan)	Pathway	8	8	True
+Pathway::WP3407_r81707	FTO Obesity Variant Mechanism	Pathway	8	8	True
+Pathway::PC7_11039	binding of TCF/LEF:CTNNB1 to target gene promoters	Pathway	7	7	True
+Pathway::PC7_1538	Activation of NIMA Kinases NEK9, NEK6, NEK7	Pathway	7	7	True
+Pathway::PC7_1657	Anchoring fibril formation	Pathway	7	7	True
+Pathway::PC7_1690	Apoptotic factor-mediated response	Pathway	7	7	True
+Pathway::PC7_1849	Attachment of GPI anchor to uPAR	Pathway	7	7	True
+Pathway::PC7_2331	CREB phosphorylation	Pathway	7	7	True
+Pathway::PC7_2332	CREB phosphorylation through the activation of Adenylate Cyclase	Pathway	7	7	True
+Pathway::PC7_2517	Cation-coupled Chloride cotransporters	Pathway	7	7	True
+Pathway::PC7_2631	Clearance of Nuclear Envelope Membranes from Chromatin	Pathway	7	7	True
+Pathway::PC7_2678	Conjugation of salicylate with glycine	Pathway	7	7	True
+Pathway::PC7_2683	Constitutive Signaling by NOTCH1 t(7;9)(NOTCH1:M1580_K2555) Translocation Mutant	Pathway	7	7	True
+Pathway::PC7_3827	FGFR3b ligand binding and activation	Pathway	7	7	True
+Pathway::PC7_4470	Highly sodium permeable acetylcholine nicotinic receptors	Pathway	7	7	True
+Pathway::PC7_4487	Homologous DNA pairing and strand exchange	Pathway	7	7	True
+Pathway::PC7_4744	Inositol transporters	Pathway	7	7	True
+Pathway::PC7_4777	Interleukin-1 processing	Pathway	7	7	True
+Pathway::PC7_5139	MEK activation	Pathway	7	7	True
+Pathway::PC7_5546	Multifunctional anion exchangers	Pathway	7	7	True
+Pathway::PC7_5868	Nectin/Necl trans heterodimerization	Pathway	7	7	True
+Pathway::PC7_5870	Nef Mediated CD8 Down-regulation	Pathway	7	7	True
+Pathway::PC7_5886	Neurofascin interactions	Pathway	7	7	True
+Pathway::PC7_5984	NrCAM interactions	Pathway	7	7	True
+Pathway::PC7_610	2-LTR circle formation	Pathway	7	7	True
+Pathway::PC7_6202	PP2A-mediated dephosphorylation of key metabolic factors	Pathway	7	7	True
+Pathway::PC7_6538	Post-transcriptional silencing by small RNAs	Pathway	7	7	True
+Pathway::PC7_6907	Regulation of gene expression in late stage (branching morphogenesis) pancreatic bud precursor cells	Pathway	7	7	True
+Pathway::PC7_6925	Release of Hh-Np from the secreting cell	Pathway	7	7	True
+Pathway::PC7_8154	Terminal pathway of complement	Pathway	7	7	True
+Pathway::PC7_8233	The retinoid cycle in cones (daylight vision)	Pathway	7	7	True
+Pathway::PC7_8355	Transport of nucleosides and free purine and pyrimidine bases across the plasma membrane	Pathway	7	7	True
+Pathway::PC7_8621	Ubiquinol biosynthesis	Pathway	7	7	True
+Pathway::PC7_8726	Vitamin D (calciferol) metabolism	Pathway	7	7	True
+Pathway::PC7_8833	Zinc efflux and compartmentalization by the SLC30 family	Pathway	7	7	True
+Pathway::WP134_r82700	Pentose Phosphate Pathway	Pathway	7	7	True
+Pathway::WP2276_r63194	Glial Cell Differentiation	Pathway	7	7	True
+Pathway::WP2596_r72724	Gastric acid production	Pathway	7	7	True
+Pathway::WP2942_r84388	DDX1 as a regulatory component of the Drosha microprocessor	Pathway	7	7	True
+Pathway::WP3297_r83780	EV release from cardiac cells and their functional effects	Pathway	7	7	True
+Pathway::WP3300_r81234	Dual hijack model of Vif in HIV infection	Pathway	7	7	True
+Pathway::WP3593_r84853	miR-148a/miR-31/FIH1/HIF1α-Notch signaling in glioblastoma 	Pathway	7	7	True
+Pathway::WP438_r80022	Non-homologous end joining	Pathway	7	7	True
+Pathway::WP528_r79855	Acetylcholine Synthesis	Pathway	7	7	True
+Pathway::WP678_r71506	Arachidonate Epoxygenase / Epoxide Hydrolase	Pathway	7	7	True
+Pathway::WP699_r70509	Aflatoxin B1 metabolism	Pathway	7	7	True
+Pathway::PC7_12150	mitochondrial fatty acid beta-oxidation of unsaturated fatty acids	Pathway	6	6	True
+Pathway::PC7_12282	p75NTR negatively regulates cell cycle via SC1	Pathway	6	6	True
+Pathway::PC7_1528	Activation of C3 and C5	Pathway	7	6	True
+Pathway::PC7_1548	Activation of TRKA receptors	Pathway	6	6	True
+Pathway::PC7_1556	Acyl chain remodeling of CL	Pathway	6	6	True
+Pathway::PC7_1606	Alternative NF-kappaB pathway	Pathway	6	6	True
+Pathway::PC7_1813	Assembly of the ORC complex at the origin of replication	Pathway	6	6	True
+Pathway::PC7_2074	Beta-oxidation of very long chain fatty acids	Pathway	6	6	True
+Pathway::PC7_2334	CREB phosphorylation through the activation of CaMKK	Pathway	6	6	True
+Pathway::PC7_2461	Cam-PDE 1 activation	Pathway	6	6	True
+Pathway::PC7_2629	Classical antibody-mediated complement activation	Pathway	7	6	True
+Pathway::PC7_2955	DNA replication initiation	Pathway	6	6	True
+Pathway::PC7_3425	ER Quality Control Compartment (ERQC)	Pathway	6	6	True
+Pathway::PC7_3681	EphrinB-EPHB pathway	Pathway	6	6	True
+Pathway::PC7_3824	FGFR2b ligand binding and activation	Pathway	6	6	True
+Pathway::PC7_3902	Fibronectin matrix formation	Pathway	6	6	True
+Pathway::PC7_4444	Heme degradation	Pathway	6	6	True
+Pathway::PC7_4658	IRF3 mediated activation of type 1 IFN	Pathway	6	6	True
+Pathway::PC7_4661	IRS activation	Pathway	6	6	True
+Pathway::PC7_4888	Klotho-mediated ligand binding	Pathway	6	6	True
+Pathway::PC7_4921	LDL endocytosis	Pathway	6	6	True
+Pathway::PC7_4952	Lectin pathway of complement activation	Pathway	6	6	True
+Pathway::PC7_4968	Linoleic acid (LA) metabolism	Pathway	6	6	True
+Pathway::PC7_5360	Methionine salvage pathway	Pathway	6	6	True
+Pathway::PC7_5504	Mineralocorticoid biosynthesis	Pathway	6	6	True
+Pathway::PC7_5538	Molybdenum cofactor biosynthesis	Pathway	6	6	True
+Pathway::PC7_5689	NADE modulates death signalling	Pathway	6	6	True
+Pathway::PC7_5847	Na+-dependent glucose transporters	Pathway	6	6	True
+Pathway::PC7_5971	Nonhomologous End-joining (NHEJ)	Pathway	6	6	True
+Pathway::PC7_6135	PDGF receptor signaling network	Pathway	6	6	True
+Pathway::PC7_6455	Phosphate bond hydrolysis by NUDT proteins	Pathway	6	6	True
+Pathway::PC7_6464	Phosphorylation of Emi1	Pathway	6	6	True
+Pathway::PC7_6563	Pre-NOTCH Processing in the Endoplasmic Reticulum	Pathway	6	6	True
+Pathway::PC7_6572	Presynaptic phase of homologous DNA pairing and strand exchange	Pathway	6	6	True
+Pathway::PC7_6660	Pyrimidine biosynthesis	Pathway	6	6	True
+Pathway::PC7_6826	RSK activation	Pathway	6	6	True
+Pathway::PC7_6927	Release of eIF4E	Pathway	6	6	True
+Pathway::PC7_7385	SUMO is proteolytically processed	Pathway	6	6	True
+Pathway::PC7_7386	SUMO is transferred from E1 to E2 (UBE2I, UBC9)	Pathway	6	6	True
+Pathway::PC7_7394	Scavenging by Class F Receptors	Pathway	6	6	True
+Pathway::PC7_7727	Synthesis of 12-eicosatetraenoic acid derivatives	Pathway	6	6	True
+Pathway::PC7_7728	Synthesis of 15-eicosatetraenoic acid derivatives	Pathway	6	6	True
+Pathway::PC7_7729	Synthesis of 5-eicosatetraenoic acids	Pathway	6	6	True
+Pathway::PC7_7741	Synthesis of Lipoxins (LX)	Pathway	6	6	True
+Pathway::PC7_7852	TNF signaling	Pathway	6	6	True
+Pathway::PC7_8060	TRAIL signaling	Pathway	6	6	True
+Pathway::PC7_8140	Telomere Extension By Telomerase	Pathway	6	6	True
+Pathway::PC7_8342	Transport and synthesis of PAPS	Pathway	6	6	True
+Pathway::PC7_8703	Vasopressin-like receptors	Pathway	6	6	True
+Pathway::PC7_8761	Vitamins	Pathway	6	6	True
+Pathway::WP1600_r70113	Nicotine Metabolism	Pathway	6	6	True
+Pathway::WP1981_r70955	Thyroxine (Thyroid Hormone) Production	Pathway	6	6	True
+Pathway::WP2249_r84646	Metastatic brain tumor	Pathway	6	6	True
+Pathway::WP2338_r78504	miRNA Biogenesis	Pathway	6	6	True
+Pathway::WP3595_r84854	mir-124 predicted interactions with cell cycle and differentiation 	Pathway	6	6	True
+Pathway::WP694_r67062	Arylamine metabolism	Pathway	6	6	True
+Pathway::PC7_1119	AMPK inhibits chREBP transcriptional activation activity	Pathway	5	5	True
+Pathway::PC7_1135	APOBEC3G mediated resistance to HIV-1 infection	Pathway	5	5	True
+Pathway::PC7_1200	ATM mediated phosphorylation of repair proteins	Pathway	5	5	True
+Pathway::PC7_12187	negative regulation of TCF-dependent signaling by DVL-interacting proteins	Pathway	5	5	True
+Pathway::PC7_1219	Abacavir metabolism	Pathway	5	5	True
+Pathway::PC7_1220	Abacavir transmembrane transport	Pathway	5	5	True
+Pathway::PC7_1546	Activation of RAS in B cells	Pathway	5	5	True
+Pathway::PC7_1549	Activation of caspases through apoptosome-mediated cleavage	Pathway	5	5	True
+Pathway::PC7_1557	Acyl chain remodeling of DAG and TAG	Pathway	5	5	True
+Pathway::PC7_1815	Assembly of the RAD51-ssDNA nucleoprotein complex	Pathway	5	5	True
+Pathway::PC7_1857	Aurora C signaling	Pathway	5	5	True
+Pathway::PC7_2066	Beta oxidation of decanoyl-CoA to octanoyl-CoA-CoA	Pathway	5	5	True
+Pathway::PC7_2067	Beta oxidation of hexanoyl-CoA to butanoyl-CoA	Pathway	5	5	True
+Pathway::PC7_2068	Beta oxidation of lauroyl-CoA to decanoyl-CoA-CoA	Pathway	5	5	True
+Pathway::PC7_2395	CaMK IV-mediated phosphorylation of CREB	Pathway	5	5	True
+Pathway::PC7_2544	Chk1/Chk2(Cds1) mediated inactivation of Cyclin B:Cdk1 complex	Pathway	5	5	True
+Pathway::PC7_2626	Class IB PI3K non-lipid kinase events	Pathway	5	5	True
+Pathway::PC7_2636	Cleavage of the damaged pyrimidine	Pathway	5	5	True
+Pathway::PC7_2675	Conjugation of benzoate with glycine	Pathway	5	5	True
+Pathway::PC7_2831	Cyclin B2 mediated events	Pathway	5	5	True
+Pathway::PC7_3167	Digestion of dietary lipid	Pathway	5	5	True
+Pathway::PC7_3282	Disinhibition of SNARE formation	Pathway	5	5	True
+Pathway::PC7_3318	Dopamine receptors	Pathway	5	5	True
+Pathway::PC7_3650	Electric Transmission Across Gap Junctions	Pathway	5	5	True
+Pathway::PC7_3778	Extrinsic Pathway	Pathway	5	5	True
+Pathway::PC7_3820	FGFR1b ligand binding and activation	Pathway	5	5	True
+Pathway::PC7_3876	FasL/ CD95L signaling	Pathway	5	5	True
+Pathway::PC7_3903	Ficolins bind to repetitive carbohydrate structures on the target cell surface	Pathway	5	5	True
+Pathway::PC7_4007	G2 Phase	Pathway	5	5	True
+Pathway::PC7_4010	G2/M DNA replication checkpoint	Pathway	5	5	True
+Pathway::PC7_4064	GRB7 events in ERBB2 signaling	Pathway	5	5	True
+Pathway::PC7_4093	Galactose catabolism	Pathway	5	5	True
+Pathway::PC7_4283	Glyoxylate metabolism	Pathway	5	5	True
+Pathway::PC7_4482	Histidine catabolism	Pathway	5	5	True
+Pathway::PC7_4493	Host Interactions with Influenza Factors	Pathway	5	5	True
+Pathway::PC7_4945	LRR FLII-interacting protein 1 (LRRFIP1) activates type I IFN production	Pathway	5	5	True
+Pathway::PC7_4961	Leukotriene receptors	Pathway	5	5	True
+Pathway::PC7_5024	Loss of Function of FBXW7 in Cancer and NOTCH1 Signaling	Pathway	5	5	True
+Pathway::PC7_5550	Muscarinic acetylcholine receptors	Pathway	5	5	True
+Pathway::PC7_5679	N-glycan trimming and elongation in the cis-Golgi	Pathway	5	5	True
+Pathway::PC7_5773	NGF-independant TRKA activation	Pathway	5	5	True
+Pathway::PC7_5782	NOSTRIN mediated eNOS trafficking	Pathway	5	5	True
+Pathway::PC7_5907	Nicotinamide salvaging	Pathway	5	5	True
+Pathway::PC7_6058	Organic anion transport	Pathway	5	5	True
+Pathway::PC7_6174	PKA-mediated phosphorylation of key metabolic factors	Pathway	5	5	True
+Pathway::PC7_6191	PLK3 signaling events	Pathway	5	5	True
+Pathway::PC7_6620	Propionyl-CoA catabolism	Pathway	5	5	True
+Pathway::PC7_6745	RAF activation	Pathway	5	5	True
+Pathway::PC7_6906	Regulation of gene expression in endocrine-committed (NEUROG3+) progenitor cells	Pathway	5	5	True
+Pathway::PC7_7048	S6K1 signalling	Pathway	5	5	True
+Pathway::PC7_7307	SMAC binds to IAPs	Pathway	5	5	True
+Pathway::PC7_7384	SUMO is conjugated to E1 (UBA2:SAE1)	Pathway	5	5	True
+Pathway::PC7_7393	Scavenging by Class B Receptors	Pathway	5	5	True
+Pathway::PC7_7431	Serotonin and melatonin biosynthesis	Pathway	5	5	True
+Pathway::PC7_7642	Sodium-coupled phosphate cotransporters	Pathway	5	5	True
+Pathway::PC7_7643	Sodium-coupled sulphate, di- and tri-carboxylate transporters	Pathway	5	5	True
+Pathway::PC7_7647	Sperm:Oocyte Membrane Binding	Pathway	5	5	True
+Pathway::PC7_7701	Sulfide oxidation to sulfate	Pathway	5	5	True
+Pathway::PC7_7732	Synthesis of Dolichyl-phosphate	Pathway	5	5	True
+Pathway::PC7_7733	Synthesis of GDP-mannose	Pathway	5	5	True
+Pathway::PC7_7754	Synthesis of UDP-N-acetyl-glucosamine	Pathway	5	5	True
+Pathway::PC7_8093	Tachykinin receptors bind tachykinins	Pathway	5	5	True
+Pathway::PC7_8306	Toxicity of botulinum toxin type D (BoNT/D)	Pathway	5	5	True
+Pathway::PC7_8721	Vitamin B2 (riboflavin) metabolism	Pathway	5	5	True
+Pathway::WP2542_r70621	Sulindac Metabolic Pathway	Pathway	5	5	True
+Pathway::WP2597_r78485	Secretion of Hydrochloric Acid in Parietal Cells	Pathway	5	5	True
+Pathway::WP2805_r81654	RNA interference	Pathway	5	5	True
+Pathway::WP2868_r78079	TCA Cycle Nutrient Utilization and Invasiveness of Ovarian Cancer	Pathway	5	5	True
+Pathway::WP311_r68921	Synthesis and Degradation of Ketone Bodies	Pathway	5	5	True
+Pathway::WP3596_r84855	miR-517 relationship with ARCN1 and USP1	Pathway	5	5	True
+Pathway::WP688_r84769	Catalytic cycle of mammalian Flavin-containing MonoOxygenases (FMOs)	Pathway	5	5	True
+Pathway::PC7_1065	AKT-mediated inactivation of FOXO1A	Pathway	4	4	True
+Pathway::PC7_12070	mRNA Editing	Pathway	4	4	True
+Pathway::PC7_1210	ATP sensitive Potassium channels	Pathway	4	4	True
+Pathway::PC7_1223	Abnormal metabolism in phenylketonuria	Pathway	4	4	True
+Pathway::PC7_1520	Activation of AMPA receptors	Pathway	4	4	True
+Pathway::PC7_1525	Activation of BID and translocation to mitochondria	Pathway	4	4	True
+Pathway::PC7_1530	Activation of CaMK IV	Pathway	4	4	True
+Pathway::PC7_1540	Activation of NOXA and translocation to mitochondria	Pathway	4	4	True
+Pathway::PC7_1543	Activation of PKB	Pathway	4	4	True
+Pathway::PC7_1545	Activation of PUMA and translocation to mitochondria	Pathway	4	4	True
+Pathway::PC7_1565	Adenosine P1 receptors	Pathway	4	4	True
+Pathway::PC7_1597	Alpha-oxidation of phytanate	Pathway	4	4	True
+Pathway::PC7_1607	Alternative complement activation	Pathway	4	4	True
+Pathway::PC7_1622	Amine Oxidase reactions	Pathway	4	4	True
+Pathway::PC7_1667	Antagonism of Activin by Follistatin	Pathway	4	4	True
+Pathway::PC7_1814	Assembly of the RAD50-MRE11-NBS1 complex at DNA double-strand breaks	Pathway	4	4	True
+Pathway::PC7_1820	Astrocytic Glutamate-Glutamine Uptake And Metabolism	Pathway	4	4	True
+Pathway::PC7_1868	Axonal growth stimulation	Pathway	4	4	True
+Pathway::PC7_2096	Binding and entry of HIV virion	Pathway	4	4	True
+Pathway::PC7_2505	Carnitine synthesis	Pathway	4	4	True
+Pathway::PC7_2516	Catecholamine biosynthesis	Pathway	4	4	True
+Pathway::PC7_2627	Class II GLUTs	Pathway	4	4	True
+Pathway::PC7_2628	Classical Kir channels	Pathway	4	4	True
+Pathway::PC7_3981	Free fatty acid receptors	Pathway	5	4	True
+Pathway::PC7_4318	HCN channels	Pathway	4	4	True
+Pathway::PC7_4480	Histamine receptors	Pathway	4	4	True
+Pathway::PC7_4496	Hyaluronan biosynthesis and export	Pathway	4	4	True
+Pathway::PC7_4541	Hypusinylation	Pathway	4	4	True
+Pathway::PC7_5016	Localization of the PINCH-ILK-PARVIN complex to focal adhesions	Pathway	4	4	True
+Pathway::PC7_5512	Mitochondrial ABC transporters	Pathway	4	4	True
+Pathway::PC7_5769	NGF processing	Pathway	4	4	True
+Pathway::PC7_5888	Neurophilin interactions with VEGF and VEGFR	Pathway	4	4	True
+Pathway::PC7_6073	Oxidative demethylation of DNA	Pathway	4	4	True
+Pathway::PC7_6465	Phosphorylation of proteins involved in G1/S transition by active Cyclin E:Cdk2 complexes	Pathway	4	4	True
+Pathway::PC7_6508	Plasmalogen biosynthesis	Pathway	4	4	True
+Pathway::PC7_6520	Polo-like kinase signaling events in the cell cycle	Pathway	4	4	True
+Pathway::PC7_6592	Processing of DNA ends prior to end rejoining	Pathway	4	4	True
+Pathway::PC7_6643	Proteoglycan syndecan-mediated signaling events	Pathway	4	4	True
+Pathway::PC7_6644	Proton-coupled monocarboxylate transport	Pathway	4	4	True
+Pathway::PC7_6646	Proton/oligonucleotide cotransporters	Pathway	4	4	True
+Pathway::PC7_6855	Reactions specific to the complex N-glycan synthesis pathway	Pathway	4	4	True
+Pathway::PC7_6879	Regulation of Commissural axon pathfinding by Slit and Robo	Pathway	4	4	True
+Pathway::PC7_6951	Reuptake of GABA	Pathway	4	4	True
+Pathway::PC7_7261	SHC activation	Pathway	4	4	True
+Pathway::PC7_7395	Scavenging by Class H Receptors	Pathway	4	4	True
+Pathway::PC7_7738	Synthesis of IPs in the nucleus	Pathway	4	4	True
+Pathway::PC7_7739	Synthesis of Ketone Bodies	Pathway	4	4	True
+Pathway::PC7_8303	Toxicity of botulinum toxin type A (BoNT/A)	Pathway	4	4	True
+Pathway::PC7_8318	Transcription from mitochondrial promoters	Pathway	4	4	True
+Pathway::PC7_8720	Vitamin B1 (thiamin) metabolism	Pathway	4	4	True
+Pathway::WP1603_r78574	Nicotine Activity on Chromaffin Cells	Pathway	4	4	True
+Pathway::WP1941_r73548	Peroxisomal beta-oxidation of tetracosanoyl-CoA	Pathway	4	4	True
+Pathway::WP2253_r74520	Pilocytic astrocytoma	Pathway	4	4	True
+Pathway::WP2491_r73891	Diclofenac Metabolic Pathway	Pathway	4	4	True
+Pathway::WP2889_r79753	Oxytocin signaling	Pathway	4	4	True
+Pathway::WP3302_r81679	eIF5A regulation in response to inhibition of the nuclear export system	Pathway	4	4	True
+Pathway::WP521_r63156	Amino acid conjugation of benzoic acid	Pathway	4	4	True
+Pathway::WP690_r72132	Polyol Pathway	Pathway	4	4	True
+Pathway::WP733_r74441	Serotonin Receptor 2 and STAT3 Signaling	Pathway	4	4	True
+Pathway::PC7_11020	betaKlotho-mediated ligand binding	Pathway	3	3	True
+Pathway::PC7_1103	ALK1 pathway	Pathway	3	3	True
+Pathway::PC7_1526	Activation of BIM and translocation to mitochondria	Pathway	3	3	True
+Pathway::PC7_1527	Activation of BMF and translocation to mitochondria	Pathway	3	3	True
+Pathway::PC7_1576	Adrenaline signalling through Alpha-2 adrenergic receptor	Pathway	3	3	True
+Pathway::PC7_1602	AlphaE beta7 integrin cell surface interactions	Pathway	3	3	True
+Pathway::PC7_1692	Arachidonate production from DAG	Pathway	3	3	True
+Pathway::PC7_1860	Autointegration results in viral DNA circles	Pathway	3	3	True
+Pathway::PC7_2065	Beta oxidation of butanoyl-CoA to acetyl-CoA	Pathway	3	3	True
+Pathway::PC7_2069	Beta oxidation of myristoyl-CoA to lauroyl-CoA	Pathway	3	3	True
+Pathway::PC7_2071	Beta oxidation of palmitoyl-CoA to myristoyl-CoA	Pathway	3	3	True
+Pathway::PC7_2118	Breakdown of the nuclear lamina	Pathway	3	3	True
+Pathway::PC7_2536	Ceramide signalling	Pathway	3	3	True
+Pathway::PC7_2632	Clearance of dopamine	Pathway	3	3	True
+Pathway::PC7_2635	Cleavage of the damaged purine	Pathway	3	3	True
+Pathway::PC7_2946	DNA Damage Bypass	Pathway	3	3	True
+Pathway::PC7_2948	DNA Damage Reversal	Pathway	3	3	True
+Pathway::PC7_3358	E-cadherin signaling events	Pathway	3	3	True
+Pathway::PC7_3651	Electron transport from NADPH to Ferredoxin	Pathway	3	3	True
+Pathway::PC7_3677	Ephrin A reverse signaling	Pathway	3	3	True
+Pathway::PC7_3821	FGFR1c and Klotho ligand binding and activation	Pathway	3	3	True
+Pathway::PC7_3845	FMO oxidises nucleophiles	Pathway	3	3	True
+Pathway::PC7_3849	FOXA transcription factor networks	Pathway	3	3	True
+Pathway::PC7_3965	Formation of apoptosome	Pathway	3	3	True
+Pathway::PC7_3971	Formation of the active cofactor, UDP-glucuronate	Pathway	3	3	True
+Pathway::PC7_4287	Glypican pathway	Pathway	3	3	True
+Pathway::PC7_4532	Hydroxycarboxylic acid-binding receptors	Pathway	3	3	True
+Pathway::PC7_4734	Inhibition of TSC complex formation by PKB	Pathway	3	3	True
+Pathway::PC7_4750	Insulin-like Growth Factor-2 mRNA Binding Proteins (IGF2BPs/IMPs/VICKZs) bind RNA	Pathway	3	3	True
+Pathway::PC7_4769	Interconversion of 2-oxoglutarate and 2-hydroxyglutarate	Pathway	3	3	True
+Pathway::PC7_4770	Interconversion of polyamines	Pathway	3	3	True
+Pathway::PC7_4884	Ketone body catabolism	Pathway	3	3	True
+Pathway::PC7_5514	Mitochondrial Uncoupling Proteins	Pathway	3	3	True
+Pathway::PC7_5519	Mitochondrial transcription initiation	Pathway	3	3	True
+Pathway::PC7_5837	NS1 Mediated Effects on Host Pathways	Pathway	3	3	True
+Pathway::PC7_6045	Oligomerization of connexins into connexons	Pathway	3	3	True
+Pathway::PC7_6085	Oxygen-dependent asparagine hydroxylation of Hypoxia-inducible Factor Alpha	Pathway	3	3	True
+Pathway::PC7_6201	POU5F1 (OCT4), SOX2, NANOG repress genes related to differentiation	Pathway	3	3	True
+Pathway::PC7_6269	PRPP biosynthesis	Pathway	3	3	True
+Pathway::PC7_6466	Phosphorylation of proteins involved in the G2/M transition by Cyclin A:Cdc2 complexes	Pathway	3	3	True
+Pathway::PC7_6555	Potassium transport channels	Pathway	3	3	True
+Pathway::PC7_6591	Processing of DNA double-strand break ends	Pathway	3	3	True
+Pathway::PC7_6615	Progressive trimming of alpha-1,2-linked mannose residues from Man9/8/7GlcNAc2 to produce Man5GlcNAc2	Pathway	3	3	True
+Pathway::PC7_6902	Regulation of gap junction activity	Pathway	3	3	True
+Pathway::PC7_6922	Regulation of thyroid hormone activity	Pathway	3	3	True
+Pathway::PC7_6956	Rhesus glycoproteins mediate ammonium transport.	Pathway	3	3	True
+Pathway::PC7_7371	STAT6-mediated induction of chemokines	Pathway	3	3	True
+Pathway::PC7_7428	Serine biosynthesis	Pathway	3	3	True
+Pathway::PC7_7441	Signaling by Aurora kinases	Pathway	3	3	True
+Pathway::PC7_7505	Signalling to STAT3	Pathway	3	3	True
+Pathway::PC7_7747	Synthesis of PIPs at the ER membrane	Pathway	3	3	True
+Pathway::PC7_7759	Synthesis of dolichyl-phosphate mannose	Pathway	3	3	True
+Pathway::PC7_8074	TWIK related potassium channel (TREK)	Pathway	3	3	True
+Pathway::PC7_8130	Tandem of pore domain in a weak inwardly rectifying K+ channels (TWIK)	Pathway	3	3	True
+Pathway::PC7_8223	The AIM2 inflammasome	Pathway	3	3	True
+Pathway::PC7_8225	The NLRP1 inflammasome	Pathway	3	3	True
+Pathway::PC7_8304	Toxicity of botulinum toxin type B (BoNT/B)	Pathway	3	3	True
+Pathway::PC7_8305	Toxicity of botulinum toxin type C (BoNT/C)	Pathway	3	3	True
+Pathway::PC7_8307	Toxicity of botulinum toxin type E (BoNT/E)	Pathway	3	3	True
+Pathway::PC7_8309	Toxicity of botulinum toxin type G (BoNT/G)	Pathway	3	3	True
+Pathway::PC7_8313	Trafficking of dietary sterols	Pathway	3	3	True
+Pathway::PC7_8445	Type II Na+/Pi cotransporters	Pathway	3	3	True
+Pathway::PC7_8762	Vitamins B6 activation to pyridoxal phosphate	Pathway	3	3	True
+Pathway::PC7_8764	Vpr-mediated induction of apoptosis by mitochondrial outer membrane permeabilization	Pathway	3	3	True
+Pathway::PC7_1230	Acetylation	Pathway	2	2	True
+Pathway::PC7_12320	phospho-PLA2 pathway	Pathway	2	2	True
+Pathway::PC7_13144	vRNP Assembly	Pathway	2	2	True
+Pathway::PC7_1519	Activation and oligomerization of BAK protein	Pathway	2	2	True
+Pathway::PC7_1541	Activation of Na-permeable Kainate Receptors	Pathway	2	2	True
+Pathway::PC7_1555	Activation, translocation and oligomerization of BAX	Pathway	2	2	True
+Pathway::PC7_1582	Agmatine biosynthesis	Pathway	2	2	True
+Pathway::PC7_1653	Amplification of signal from the kinetochores	Pathway	2	2	True
+Pathway::PC7_1811	Assembly of Viral Components at the Budding Site	Pathway	2	2	True
+Pathway::PC7_2097	Biogenic amines are oxidatively deaminated to aldehydes by MAOA and MAOB	Pathway	2	2	True
+Pathway::PC7_2173	C6 deamination of adenosine	Pathway	2	2	True
+Pathway::PC7_2633	Clearance of seratonin	Pathway	2	2	True
+Pathway::PC7_2677	Conjugation of phenylacetate with glutamine	Pathway	2	2	True
+Pathway::PC7_2890	Cysteine formation from homocysteine	Pathway	2	2	True
+Pathway::PC7_2947	DNA Damage Recognition in GG-NER	Pathway	2	2	True
+Pathway::PC7_3059	Degradation of GABA	Pathway	2	2	True
+Pathway::PC7_3674	Enzymatic degradation of Dopamine by monoamine oxidase	Pathway	2	2	True
+Pathway::PC7_3752	Estrogen biosynthesis	Pathway	2	2	True
+Pathway::PC7_3969	Formation of the Editosome	Pathway	2	2	True
+Pathway::PC7_3985	Fructose catabolism	Pathway	2	2	True
+Pathway::PC7_4013	GABA A (rho) receptor activation	Pathway	2	2	True
+Pathway::PC7_4018	GABA synthesis	Pathway	2	2	True
+Pathway::PC7_4285	Glypican 2 network	Pathway	2	2	True
+Pathway::PC7_4531	Hydrolysis of LPE	Pathway	2	2	True
+Pathway::PC7_4730	Influenza Virus Induced Apoptosis	Pathway	2	2	True
+Pathway::PC7_4731	Inhibition of HSL	Pathway	2	2	True
+Pathway::PC7_4732	Inhibition of Host mRNA Processing and RNA Silencing	Pathway	2	2	True
+Pathway::PC7_4746	Insulin effects increased synthesis of Xylulose-5-Phosphate	Pathway	2	2	True
+Pathway::PC7_4767	Interactions of Tat with host cellular proteins	Pathway	2	2	True
+Pathway::PC7_5532	Mitotic Metaphase/Anaphase Transition	Pathway	2	2	True
+Pathway::PC7_5749	NFG and proNGF binds to p75NTR	Pathway	2	2	True
+Pathway::PC7_5781	NOSIP mediated eNOS trafficking	Pathway	2	2	True
+Pathway::PC7_5872	Nef mediated downregulation of CD28 cell surface expression	Pathway	2	2	True
+Pathway::PC7_6097	PAOs oxidise polyamines to amines	Pathway	2	2	True
+Pathway::PC7_6190	PLK2 and PLK4 events	Pathway	2	2	True
+Pathway::PC7_6617	Proline catabolism	Pathway	2	2	True
+Pathway::PC7_6645	Proton-coupled neutral amino acid transporters	Pathway	2	2	True
+Pathway::PC7_6666	Pyrophosphate hydrolysis	Pathway	2	2	True
+Pathway::PC7_6926	Release of apoptotic factors from the mitochondria	Pathway	2	2	True
+Pathway::PC7_6939	Resolution of D-loop structures	Pathway	2	2	True
+Pathway::PC7_6953	Reversal of Alkylation Damage By DNA Dioxygenases	Pathway	2	2	True
+Pathway::PC7_7502	Signalling to ERK5	Pathway	2	2	True
+Pathway::PC7_7679	Sterols are 12-hydroxylated by CYP8B1	Pathway	2	2	True
+Pathway::PC7_7680	Stimulation of the cell death response by PAK-2p34	Pathway	2	2	True
+Pathway::PC7_7746	Synthesis of PI	Pathway	2	2	True
+Pathway::PC7_7752	Synthesis of PS	Pathway	2	2	True
+Pathway::PC7_8065	TRKA activation by NGF	Pathway	2	2	True
+Pathway::PC7_8075	TWIK-related alkaline pH activated K+ channel (TALK)	Pathway	2	2	True
+Pathway::PC7_8077	TWIK-releated acid-sensitive K+ channel (TASK)	Pathway	2	2	True
+Pathway::PC7_8224	The IPAF inflammasome	Pathway	2	2	True
+Pathway::PC7_8322	Transcriptional activation of cell cycle inhibitor p21	Pathway	2	2	True
+Pathway::PC7_8329	Transfer of LPS from LBP carrier to CD14	Pathway	2	2	True
+Pathway::PC7_8349	Transport of connexons to the plasma membrane	Pathway	2	2	True
+Pathway::PC7_8353	Transport of glycerol from adipocytes to the liver by Aquaporins	Pathway	2	2	True
+Pathway::PC7_8711	Viral RNP Complexes in the Host Cell Nucleus	Pathway	2	2	True
+Pathway::WP2366_r73980	Butyrate-induced histone acetylation	Pathway	2	2	True
+Pathway::WP2646_r74430	Lidocaine metabolism	Pathway	2	2	True
+Pathway::WP2816_r76465	Felbamate Metabolism	Pathway	2	2	True
+Pathway::WP2943_r83778	Hypoxia-mediated EMT and Stemness	Pathway	2	2	True
+Pathway::WP3408_r81714	Evolocumab Mechanism	Pathway	2	2	True

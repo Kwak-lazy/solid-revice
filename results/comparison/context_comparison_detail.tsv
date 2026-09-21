@@ -1,0 +1,11 @@
+metric	pathway	biological_process
+node_kind	Pathway	Biological Process
+metaedge	GpPW	GpBP
+context_nodes	1822	11381
+gene_context_edges	84372	559504
+kirc_mapped_genes	8947	14742
+subgraph_nodes	10769	26123
+subgraph_edges	84232	559044
+subgraph_context_nodes	1822	11381
+subgraph_gene_nodes	8947	14742
+context_nodes_without_kirc_gene	0	0
