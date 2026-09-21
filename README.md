@@ -31,34 +31,61 @@ Variance scoring, candidate ranking, ML and GNN stages come later
 
 ## 2. Current Pipeline
 ```text
- 1. Environment
- 2. Google Drive mount
- 3. Project paths
- 4. Hetionet loading            (download -> nodes / edges -> node & edge types)
- 5. KIRC loading
- 6. Gene ID standardization     (Ensembl -> HGNC -> Entrez -> Gene::Entrez)
- 7. Mapping validation
- 8. Context configuration       (GRAPH_CONTEXT / CONTEXT_CONFIG)
- 9. Pathway / Biological Process pipeline   (one shared implementation)
-10. Result comparison
-11. README update
-12. Google Drive backup
+ 0. Environment + Google Drive mount + project paths
+ 1. Hetionet download           (nodes.tsv / edges.sif.gz, checksum-verified)
+ 2. Load + structure            (columns, row counts)
+ 3. Node type analysis          (11 kinds)
+ 4. Identifier analysis         (Gene::Entrez, Pathway PC7/WP, Disease DOID)
+ 5. Edge type analysis          (24 metaedges)
+ 6. TCGA-KIRC download          (star_tpm + clinical, Xena -> S3 fallback)
+ 7. Gene ID standardization     (Ensembl -> HGNC -> Entrez -> Gene::Entrez)
+ 8. Mapping validation
+ 9. Context configuration       (GRAPH_CONTEXT / CONTEXT_CONFIG)
+10. Single-context run          (pandas filter -> MultiDiGraph -> drop isolates)
+11. Subgraph analysis           (node/edge counts, gene-per-context, kidney Disease)
+12. Dual-context run + comparison
+13. Result files
+14. README update
+15. Google Drive backup
+16. Summary
 ```
+
+This notebook is a revision of the original `Download_and_subgraph.ipynb`, not a
+replacement. Preserved unchanged: the download strategy, the pandas pre-filter,
+the `nx.MultiDiGraph` construction, isolate removal, the 24-metaedge glossary,
+the Pathway PC7/WP prefix analysis, the Disease DOID analysis, the kidney-disease
+report, and the TCGA barcode sample-type breakdown.
+
+Changed, and only where the new requirements demanded it:
+
+| Item | Original | Now |
+|---|---|---|
+| Gene ID matching | deferred to a separate `step4` | done in this notebook (step 7) |
+| Context layer | `GpPW` **and** `GpBP` kept together | one selected by `GRAPH_CONTEXT` |
+| Kept node kinds | 4 (Gene, Pathway, Disease, BP) | 3 (Gene, Disease + context kind) |
+| Kept edge types | 7 (fixed) | 6 (5 fixed + the context metaedge) |
+| Gene nodes | all Hetionet genes | restricted to KIRC-mapped `Gene::Entrez` |
+| Output | one `data/subgraph_*.tsv` | `results/<context>/` per context |
+| Comparison | none | automatic, into `results/comparison/` |
+| Record keeping | none | README auto-updated + Drive backup |
 
 Layout:
 
 ```text
 project/
-├── notebooks/Download_and_subgraph.ipynb   # the 12 steps, interactively
-├── config.py                               # paths, GRAPH_CONTEXT, CONTEXT_CONFIG
+├── notebooks/Download_and_subgraph.ipynb   # the 16 steps, interactively
+├── config.py                               # paths, GRAPH_CONTEXT, CONTEXT_CONFIG,
+│                                           #   KEEP node/edge sets, METAEDGE_NAMES
 ├── src/kirc_hetionet/
 │   ├── hetionet.py     # download / load / node kinds / metaedges
-│   ├── kirc.py         # KIRC expression + gene universe
+│   ├── kirc.py         # Xena download, expression, sample types, clinical
 │   ├── gene_mapping.py # Ensembl -> HGNC -> Entrez -> Gene::Entrez + validation
+│   ├── subgraph.py     # pandas filter -> MultiDiGraph -> isolates -> stats
 │   ├── context.py      # get_context_nodes / get_context_edges / experiments
 │   ├── readme_log.py   # this file, kept up to date automatically
+│   ├── report.py       # run -> README sections
 │   └── drive.py        # mount / sync / verify
-├── scripts/run_pipeline.py                 # the same 12 steps, headless
+├── scripts/run_pipeline.py                 # the same steps, headless
 ├── data/{raw,processed,external}/
 └── results/{pathway,biological_process,comparison}/
 ```
@@ -73,24 +100,40 @@ results = run_all_context_experiments()   # both contexts + comparison
 python scripts/run_pipeline.py            # the whole flow, headless
 ```
 
+Repository / branch: `Kwak-lazy/solid-revice`, branch
+`claude/determined-lovelace-mj90py`.
+
 ## 3. Data
 | Dataset | Source | Local path |
 |---|---|---|
 | Hetionet v1.0 nodes (47,031) | `raw.githubusercontent.com/hetio/hetionet` | `data/raw/hetionet-v1.0-nodes.tsv` |
-| Hetionet v1.0 edges (2,250,197) | git-lfs media endpoint, sha256-verified | `data/raw/hetionet-v1.0-edges.sif.gz` |
+| Hetionet v1.0 edges (2,250,197) | git-lfs **media** endpoint, sha256-verified | `data/raw/hetionet-v1.0-edges.sif.gz` |
 | HGNC complete set (approved) | `storage.googleapis.com/public-download-files/hgnc` | `data/raw/hgnc_complete_set.txt` |
-| KIRC expression matrix | mounted from Google Drive when available | `kirc_expression_standardized.tsv.gz` |
-| Prior-run gene coverage | shared collaborator artifact | `data/external/hetionet_genes_absent_from_kirc.tsv` |
+| TCGA-KIRC expression, `log2(TPM+1)` | UCSC Xena GDC hub (S3 fallback) | `data/raw/TCGA-KIRC.star_tpm.tsv.gz` |
+| TCGA-KIRC clinical | UCSC Xena GDC hub (S3 fallback) | `data/raw/TCGA-KIRC.clinical.tsv.gz` |
+| Prior-run gene coverage (reference) | shared collaborator artifact | `data/external/hetionet_genes_absent_from_kirc.tsv` |
 
 Hetionet node kinds (measured): Gene 20,945 · Biological Process 11,381 ·
 Side Effect 5,734 · Molecular Function 2,884 · Pathway 1,822 · Compound 1,552 ·
 Cellular Component 1,391 · Symptom 438 · Anatomy 402 · Pharmacologic Class 345 ·
 Disease 137.
 
-`data/raw/` is git-ignored: it is re-downloaded by
-`hetionet.download_hetionet()` / `hetionet.download_hgnc()`.
-`results/*/gene_context_edges.tsv` is git-ignored for size (the Biological
-Process table is ~40 MB) and is regenerated by the pipeline.
+TCGA-KIRC matrix (measured): 60,660 genes x 610 samples — 537 Primary Tumor,
+72 Solid Tissue Normal, 1 Additional New Primary. Row index is a
+version-suffixed Ensembl ID (`ENSG00000141510.17`).
+
+Download notes:
+
+- The Hetionet edge file is git-lfs. `raw.githubusercontent.com` returns a
+  133-byte LFS pointer, so the **media** endpoint is used and the payload is
+  checksum-verified.
+- Xena's official host (`gdc.xenahubs.net`) is unreachable on some networks;
+  `fetch_xena()` falls back to `gdc-hub.s3.us-east-1.amazonaws.com`, which
+  serves the same files. Both endpoints are tried in order.
+
+`data/raw/` is git-ignored and re-downloaded on demand.
+`results/*/gene_context_edges.tsv` and `results/*/subgraph_edges.tsv` are
+git-ignored for size and regenerated by the pipeline.
 
 ## 4. Gene ID Standardization
 Join key: `hetionet_gene_id` (`Gene::<entrez>`). Gene symbols are annotation only and are never used to join.
@@ -103,21 +146,21 @@ Entrez Gene ID
 Hetionet Gene::Entrez
 ```
 
-Source used in the last run: `prior_run:hetionet_genes_absent_from_kirc.tsv`  (path: `/home/user/solid-revice/data/external/hetionet_genes_absent_from_kirc.tsv`)
-Mapping path exercised: prior run (Hetionet side only)
+Source used in the last run: `kirc_expression_matrix`  (path: `/home/user/solid-revice/data/raw/TCGA-KIRC.star_tpm.tsv.gz`)
+Mapping path exercised: ensembl -> hgnc -> entrez -> hetionet
 
 | Counter | Value |
 |---|---:|
-| KIRC genes | 19,425 |
-| HGNC mapped | 19,406 |
-| Entrez mapped | 19,425 |
-| Hetionet mapped | 19,425 |
-| Unmapped | 0 |
-| Duplicated | 0 |
-| Final usable genes | 19,425 |
+| KIRC genes | 60,660 |
+| HGNC mapped | 41,981 |
+| Entrez mapped | 41,504 |
+| Hetionet mapped | 19,394 |
+| Unmapped | 41,269 |
+| Duplicated | 3 |
+| Final usable genes | 19,394 |
 | Hetionet genes | 20,945 |
-| KIRC n Hetionet intersection | 19,425 |
-| Hetionet genes without KIRC | 1,520 |
+| KIRC n Hetionet intersection | 19,394 |
+| Hetionet genes without KIRC | 1,551 |
 
 Mapping table columns: `ensembl_id`, `gene_symbol`, `entrez_id`, `hetionet_gene_id`, `hetionet_gene_symbol`, `mapping_status`.
 
@@ -158,9 +201,9 @@ Measured on 2026-09-21 from an actual pipeline run.
 |---|---:|---:|
 | Context nodes | 1,822 | 11,381 |
 | Gene-context edges | 84,372 | 559,504 |
-| KIRC mapped genes | 8,947 | 14,742 |
-| Subgraph nodes | 10,769 | 26,123 |
-| Subgraph edges | 84,232 | 559,044 |
+| KIRC mapped genes | 8,941 | 14,733 |
+| Subgraph nodes | 19,443 | 29,617 |
+| Subgraph edges | 524,265 | 999,051 |
 
 Result files:
 
@@ -183,54 +226,73 @@ Notes:
 
 - `Gene-context edges` counts every edge of the metaedge in Hetionet; `Subgraph edges` counts only those whose gene is KIRC-mapped.
 - `Subgraph nodes` = KIRC-mapped Gene nodes + the context nodes they reach.
-- `KIRC mapped genes` on this run came from the prior-run coverage artifact, not from a freshly loaded expression matrix (see section 8).
 
 ## 8. Problems / Issues
 **Standing issues** (re-checked every run; dated entries below are per-run findings.)
 
-- **The baseline `Download_and_subgraph.ipynb` was not available to build on.**
-  - Where: repository (`main` and the working branch held only `README.md`) and Google Drive.
-  - Cause: the notebook was never committed, and the Drive project folder
-    (`gene algorithm`) contains only *shortcuts* to a collaborator's files, which
-    the Drive API refuses to download. No `Download_and_subgraph*.ipynb` exists in
-    the accessible Drive at all.
-  - Resolved: worked around - the notebook was rebuilt from scratch keeping every
-    capability the original was required to have (Hetionet download, nodes/edges
-    loading, node-type check, edge-type check, KIRC loading, subgraph extraction).
-    If the original notebook still exists, diff it against `notebooks/Download_and_subgraph.ipynb`
-    before assuming this one is complete.
+- **RESOLVED (2026-09-21): the baseline `Download_and_subgraph.ipynb` is now in hand.**
+  - Where: it was missing from the repository and from the accessible Drive, so
+    the first version of this pipeline was rebuilt from the requirements alone.
+  - Cause: the notebook had never been committed, and the Drive project folder
+    (`gene algorithm`) holds only shortcuts that the Drive API refuses to download.
+  - Resolved: yes - the original was supplied directly and the notebook was rebuilt
+    **from it**. 14 of its cells are reused verbatim; the rest of its logic
+    (pandas pre-filter, MultiDiGraph, isolate removal, metaedge glossary, PC7/WP
+    and DOID analyses, Xena download with S3 fallback, TCGA sample types) is
+    preserved in `src/kirc_hetionet/`. See section 2 for the full changed/kept table.
 
-- **Gene mapping artifacts could not be re-used in this environment.**
-  - Where: `gene_mapping.find_existing_mapping_artifacts()`.
-  - Cause: `kirc_gene_mapping_all.tsv`, `kirc_hetionet_gene_nodes.tsv` and
-    `kirc_expression_standardized.tsv.gz` exist in Drive only as shortcuts
-    (`Download not allowed for file id`). The re-use path is implemented and runs
-    first, but found nothing locally.
-  - Resolved: open - it resolves itself in Colab, where the mounted Drive exposes
-    the real files and the re-use path picks them up automatically. Existing files
-    are never overwritten: a corrected mapping is written under a new filename
-    (`kirc_hetionet_gene_nodes_from_prior_run.tsv`) and explained here.
+- **RESOLVED (2026-09-21): the KIRC expression matrix is now downloaded directly.**
+  - Where: step 6 of the notebook.
+  - Cause: the earlier run could not reach TCGA/GDC and fell back to a prior run's
+    Hetionet-side gene coverage, so the Ensembl -> Entrez leg went unexercised.
+  - Resolved: yes - the original notebook's `fetch_xena()` endpoint pair was
+    adopted. `gdc.xenahubs.net` is still unreachable here, but the S3 fallback
+    `gdc-hub.s3.us-east-1.amazonaws.com` serves the same files, so the real
+    60,660 x 610 matrix now drives the mapping.
 
-- **Drive holds only part of the project until the first Colab run.**
+- **Open: 19,394 usable genes here vs 19,425 in the collaborator's prior run (-31).**
+  - Where: comparison of `data/processed/kirc_hetionet_gene_nodes.tsv` against
+    `data/external/hetionet_genes_absent_from_kirc.tsv`.
+  - Cause: not established. Likely a different annotation snapshot - this pipeline
+    joins through the current HGNC complete set restricted to `status == Approved`,
+    and the prior run's `entrez_not_in_current_hgnc` reason column suggests it
+    resolved some genes differently. It may also reflect a different TCGA-KIRC
+    release (`star_tpm` vs whatever the prior run used).
+  - Resolved: open, and deliberately **not** reconciled by hand. Neither file was
+    overwritten. Decide which annotation snapshot is authoritative before the
+    scoring stages depend on the gene set.
+
+- **Open: 22,110 KIRC genes carry an Entrez ID that has no Hetionet Gene node.**
+  - Where: `gene_mapping.validate_gene_mapping()`, `mapping_status == not_in_hetionet`.
+  - Cause: expected, not a defect. Hetionet v1.0 holds 20,945 genes while the KIRC
+    matrix covers 60,660 Ensembl features including pseudogenes, lncRNAs and
+    non-coding biotypes that Hetionet never modelled.
+  - Resolved: recorded, no action. These genes simply cannot enter a Hetionet subgraph.
+
+- **Open: 3 Ensembl IDs map to more than one Entrez ID.**
+  - Where: same validation step.
+  - Cause: the Ensembl and Entrez identifier systems are not 1:1.
+  - Resolved: recorded, not auto-corrected. The count is small enough not to affect
+    the current stage; revisit if per-gene scoring later needs a unique key.
+
+- **Open: Drive holds only part of the project until the first Colab run.**
   - Where: `KIRC_Hetionet_Project` in Google Drive.
-  - Cause: this session can reach Drive only through the API (no mount), and the
-    API takes inline content, not file paths - so only small text artifacts could
-    be pushed: `README.md`, `results/comparison/context_comparison.tsv`,
-    `results/comparison/context_comparison_detail.tsv` and
-    `notebooks/OPEN_IN_COLAB.ipynb` (a launcher). The full
-    `Download_and_subgraph.ipynb`, the source tree and the per-context result
-    tables are in the repository but not yet in Drive.
-  - Resolved: open - run `notebooks/OPEN_IN_COLAB.ipynb` (or
-    `save_project_to_drive()` from the main notebook) once in Colab; it mirrors
-    the whole project into the same folder and `verify_drive_backup()` then
-    reports `[OK]` for every entry.
+  - Cause: this session reaches Drive only through the API, which takes inline
+    content rather than file paths, so only small text artifacts could be pushed.
+  - Resolved: open - run `notebooks/OPEN_IN_COLAB.ipynb`, or `save_project_to_drive()`
+    from the main notebook, once in Colab; it mirrors the whole project and
+    `verify_drive_backup()` then reports `[OK]` for every entry.
 
 ### 2026-09-21
 
-- **KIRC expression matrix not reachable; gene coverage taken from a prior run**
-  - Where: notebook step 5-6
-  - Cause: expression matrix not mounted / not downloadable in this environment
-  - Resolved: open - re-run with the matrix mounted for real Ensembl counters
+- **3 Ensembl IDs appear on more than one row (one Ensembl -> several Entrez).**
+  - Where: gene_mapping.validate_gene_mapping()
+  - Cause: Ensembl/Entrez identifier systems are not 1:1
+  - Resolved: recorded, not auto-corrected
+- **22,110 Entrez IDs have no Hetionet Gene node.**
+  - Where: gene_mapping.validate_gene_mapping()
+  - Cause: Ensembl/Entrez identifier systems are not 1:1
+  - Resolved: recorded, not auto-corrected
 
 ## 9. Decisions
 - Gene graph join key = `Gene::Entrez` (`hetionet_gene_id`); gene symbols are annotation only.

@@ -33,6 +33,67 @@ CONTEXT_CONFIG = {
 # Every context the dual-run driver executes, in order.
 ALL_GRAPH_CONTEXTS = ["pathway", "biological_process"]
 
+# ---------------------------------------------------------------------------
+# 1b. Subgraph extraction (carried over from the original notebook)
+# ---------------------------------------------------------------------------
+# The original notebook kept 4 node types and 7 edge types at once. The only
+# change here is that the Gene->Context layer is no longer hard-wired to both
+# GpPW and GpBP: the selected context contributes exactly one of them, while
+# everything below stays as it was.
+BASE_NODE_KINDS = ["Gene", "Disease"]
+
+BASE_EDGE_TYPES = [
+    "GiG",    # Gene - interacts - Gene
+    "Gr>G",   # Gene - regulates -> Gene
+    "DaG",    # Disease - associates - Gene
+    "DuG",    # Disease - upregulates - Gene
+    "DdG",    # Disease - downregulates - Gene
+]
+
+
+def keep_node_kinds(graph_context: str) -> set:
+    """Node kinds kept in the subgraph for a context (original: 4 kinds)."""
+    return set(BASE_NODE_KINDS) | {CONTEXT_CONFIG[graph_context]["node_kind"]}
+
+
+def keep_edge_types(graph_context: str) -> set:
+    """Edge types kept in the subgraph for a context (original: 7 types)."""
+    return set(BASE_EDGE_TYPES) | {CONTEXT_CONFIG[graph_context]["metaedge"]}
+
+
+# Full metaedge glossary from the original notebook, kept for the edge-type
+# report in step 4.
+METAEDGE_NAMES = {
+    "GpBP": "Gene -> participates -> Biological Process",
+    "AeG": "Anatomy -> expresses -> Gene",
+    "Gr>G": "Gene -> regulates -> Gene",
+    "GiG": "Gene -> interacts -> Gene",
+    "CcSE": "Compound -> causes -> Side Effect",
+    "AdG": "Anatomy -> downregulates -> Gene",
+    "AuG": "Anatomy -> upregulates -> Gene",
+    "GpMF": "Gene -> participates -> Molecular Function",
+    "GpPW": "Gene -> participates -> Pathway",
+    "GpCC": "Gene -> participates -> Cellular Component",
+    "GcG": "Gene -> covaries -> Gene",
+    "CdG": "Compound -> downregulates -> Gene",
+    "CuG": "Compound -> upregulates -> Gene",
+    "DaG": "Disease -> associates -> Gene",
+    "CbG": "Compound -> binds -> Gene",
+    "DuG": "Disease -> upregulates -> Gene",
+    "DdG": "Disease -> downregulates -> Gene",
+    "CrC": "Compound -> resembles -> Compound",
+    "DlA": "Disease -> localizes -> Anatomy",
+    "DpS": "Disease -> presents -> Symptom",
+    "PCiC": "Pharmacologic Class -> includes -> Compound",
+    "CtD": "Compound -> treats -> Disease",
+    "DrD": "Disease -> resembles -> Disease",
+    "CpD": "Compound -> palliates -> Disease",
+}
+
+# KIRC in Hetionet's Disease vocabulary (found by the original notebook).
+KIRC_DISEASE_ID = "Disease::DOID:263"
+KIDNEY_DISEASE_KEYWORDS = ["kidney", "renal", "clear cell"]
+
 
 # ---------------------------------------------------------------------------
 # 2. Project layout
@@ -98,12 +159,38 @@ HETIONET_EDGES_SHA256 = (
 HETIONET_NODES_FILE = RAW_DIR / "hetionet-v1.0-nodes.tsv"
 HETIONET_EDGES_FILE = RAW_DIR / "hetionet-v1.0-edges.sif.gz"
 
+# The original notebook wrote data/nodes.tsv and data/edges.sif (uncompressed).
+# Those are still accepted so an existing checkout is not re-downloaded.
+HETIONET_NODES_ALT = [DATA_DIR / "nodes.tsv", RAW_DIR / "nodes.tsv"]
+HETIONET_EDGES_ALT = [DATA_DIR / "edges.sif", RAW_DIR / "edges.sif"]
+
 # HGNC complete set: the Ensembl -> HGNC -> Entrez bridge.
 HGNC_URL = (
     "https://storage.googleapis.com/public-download-files/hgnc/tsv/tsv/"
     "hgnc_complete_set.txt"
 )
 HGNC_FILE = RAW_DIR / "hgnc_complete_set.txt"
+
+
+# TCGA-KIRC from the UCSC Xena GDC hub.  Two endpoints are tried in order:
+# the official host first, then the S3 bucket that serves the same data on
+# networks where the official host is blocked.
+XENA_GDC_HOSTS = [
+    "https://gdc.xenahubs.net/download",
+    "https://gdc-hub.s3.us-east-1.amazonaws.com/download",
+]
+KIRC_EXPRESSION_FILE_NAME = "TCGA-KIRC.star_tpm.tsv.gz"  # log2(TPM + 1)
+KIRC_CLINICAL_FILE_NAME = "TCGA-KIRC.clinical.tsv.gz"
+KIRC_EXPRESSION_FILE = RAW_DIR / KIRC_EXPRESSION_FILE_NAME
+KIRC_CLINICAL_FILE = RAW_DIR / KIRC_CLINICAL_FILE_NAME
+
+# TCGA barcode field 4 = sample type.
+TCGA_SAMPLE_TYPES = {
+    "01": "Primary Tumor",
+    "05": "Additional - New Primary",
+    "06": "Metastatic",
+    "11": "Solid Tissue Normal",
+}
 
 
 # ---------------------------------------------------------------------------

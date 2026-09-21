@@ -16,7 +16,7 @@ import pandas as pd
 
 import config
 
-from . import hetionet
+from . import hetionet, subgraph as subgraph_mod
 
 # The shared result schema for every context (config section 8 of the spec).
 GENE_CONTEXT_COLUMNS = [
@@ -87,6 +87,7 @@ def run_context_experiment(
     edges: pd.DataFrame = None,
     write: bool = True,
     verbose: bool = True,
+    build_subgraph: bool = True,
 ) -> dict:
     """Run the full Gene -> Context extraction for one context.
 
@@ -153,24 +154,40 @@ def run_context_experiment(
         ["n_genes_kirc", "context_id"], ascending=[False, True]
     ).reset_index(drop=True)
 
-    # ---- subgraph node table (genes + contexts actually connected) --------
-    gene_part = (
-        gene_nodes[gene_nodes["hetionet_gene_id"].isin(sub_gene_ids)]
-        .rename(
-            columns={
-                "hetionet_gene_id": "node_id",
-                "hetionet_gene_symbol": "node_name",
-            }
-        )[["node_id", "node_name"]]
-        .assign(node_kind="Gene")
-    )
-    context_part = (
-        context_nodes[context_nodes["id"].isin(sub_context_ids)]
-        .rename(columns={"id": "node_id", "name": "node_name", "kind": "node_kind"})[
+    # ---- NetworkX subgraph (the original notebook's extraction) -----------
+    # Node kinds: Gene, Disease + this context's kind.
+    # Edge types: GiG, Gr>G, DaG, DuG, DdG + this context's metaedge.
+    graph = None
+    subgraph_edges_df = None
+    if build_subgraph:
+        if verbose:
+            print("  --- subgraph extraction ---")
+        extracted = subgraph_mod.extract(
+            nodes, edges, graph_context, kirc_gene_ids=kirc_gene_ids, verbose=verbose
+        )
+        graph = extracted["graph"]
+        subgraph_nodes = extracted["nodes"].rename(
+            columns={"id": "node_id", "name": "node_name", "kind": "node_kind"}
+        )
+        subgraph_edges_df = extracted["edges"]
+    else:
+        gene_part = (
+            gene_nodes[gene_nodes["hetionet_gene_id"].isin(sub_gene_ids)]
+            .rename(
+                columns={
+                    "hetionet_gene_id": "node_id",
+                    "hetionet_gene_symbol": "node_name",
+                }
+            )[["node_id", "node_name"]]
+            .assign(node_kind="Gene")
+        )
+        context_part = context_nodes.rename(
+            columns={"id": "node_id", "name": "node_name", "kind": "node_kind"}
+        )
+        context_part = context_part[context_part["node_id"].isin(sub_context_ids)][
             ["node_id", "node_name", "node_kind"]
         ]
-    )
-    subgraph_nodes = pd.concat([gene_part, context_part], ignore_index=True)
+        subgraph_nodes = pd.concat([gene_part, context_part], ignore_index=True)
 
     summary = {
         "graph_context": graph_context,
@@ -180,13 +197,19 @@ def run_context_experiment(
         "gene_context_edges": int(len(full)),
         "kirc_mapped_genes": None if n_kirc_mapped is None else int(n_kirc_mapped),
         "subgraph_nodes": int(len(subgraph_nodes)),
-        "subgraph_edges": int(len(sub)),
+        "subgraph_edges": int(
+            len(subgraph_edges_df) if subgraph_edges_df is not None else len(sub)
+        ),
         "subgraph_context_nodes": int(len(sub_context_ids)),
         "subgraph_gene_nodes": int(len(sub_gene_ids)),
         "context_nodes_without_kirc_gene": int(
             len(context_nodes) - len(sub_context_ids)
         ),
     }
+    if graph is not None:
+        kinds = subgraph_mod.node_kind_counts(graph).set_index("kind")["n_nodes"]
+        for kind, value in kinds.items():
+            summary[f"subgraph_{kind.lower().replace(' ', '_')}_nodes"] = int(value)
 
     if verbose:
         width = max(len(k) for k in summary)
@@ -205,6 +228,11 @@ def run_context_experiment(
             "gene_context_edges": (out_dir / "gene_context_edges.tsv", sub),
             "subgraph_nodes": (out_dir / "subgraph_nodes.tsv", subgraph_nodes),
         }
+        if subgraph_edges_df is not None:
+            targets["subgraph_edges"] = (
+                out_dir / "subgraph_edges.tsv",
+                subgraph_edges_df,
+            )
         for key, (path, frame) in targets.items():
             frame.to_csv(path, sep="\t", index=False)
             outputs[key] = path
@@ -218,6 +246,8 @@ def run_context_experiment(
         "gene_context_edges": sub,
         "gene_context_edges_all": full,
         "subgraph_nodes": subgraph_nodes,
+        "subgraph_edges": subgraph_edges_df,
+        "graph": graph,
         "summary": summary,
         "outputs": outputs,
     }
@@ -232,6 +262,7 @@ def run_all_context_experiments(
     edges: pd.DataFrame = None,
     write: bool = True,
     verbose: bool = True,
+    build_subgraph: bool = True,
 ) -> dict:
     """Run every context in ``config.ALL_GRAPH_CONTEXTS`` and compare them."""
     nodes = hetionet.load_nodes() if nodes is None else nodes
@@ -246,6 +277,7 @@ def run_all_context_experiments(
             edges=edges,
             write=write,
             verbose=verbose,
+            build_subgraph=build_subgraph,
         )
 
     comparison = build_comparison(results, write=write)
@@ -282,9 +314,11 @@ def build_comparison(results: dict, write: bool = True) -> pd.DataFrame:
         comparison.to_csv(path, sep="\t", index=False)
         print(f"  [write] {path}")
 
-        detail = pd.DataFrame(
-            [results[ctx]["summary"] for ctx in contexts]
-        ).set_index("graph_context").T.reset_index(names="metric")
+        detail = (
+            pd.DataFrame([results[ctx]["summary"] for ctx in contexts])
+            .set_index("graph_context")
+            .T.reset_index(names="metric")
+        )
         detail_path = config.COMPARISON_DIR / "context_comparison_detail.tsv"
         detail.to_csv(detail_path, sep="\t", index=False)
         print(f"  [write] {detail_path}")
