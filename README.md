@@ -211,6 +211,20 @@ Notes:
     are never overwritten: a corrected mapping is written under a new filename
     (`kirc_hetionet_gene_nodes_from_prior_run.tsv`) and explained here.
 
+- **Drive holds only part of the project until the first Colab run.**
+  - Where: `KIRC_Hetionet_Project` in Google Drive.
+  - Cause: this session can reach Drive only through the API (no mount), and the
+    API takes inline content, not file paths - so only small text artifacts could
+    be pushed: `README.md`, `results/comparison/context_comparison.tsv`,
+    `results/comparison/context_comparison_detail.tsv` and
+    `notebooks/OPEN_IN_COLAB.ipynb` (a launcher). The full
+    `Download_and_subgraph.ipynb`, the source tree and the per-context result
+    tables are in the repository but not yet in Drive.
+  - Resolved: open - run `notebooks/OPEN_IN_COLAB.ipynb` (or
+    `save_project_to_drive()` from the main notebook) once in Colab; it mirrors
+    the whole project into the same folder and `verify_drive_backup()` then
+    reports `[OK]` for every entry.
+
 ### 2026-09-21
 
 - **KIRC expression matrix not reachable; gene coverage taken from a prior run**
