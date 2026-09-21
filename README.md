@@ -225,7 +225,7 @@ results/
 Notes:
 
 - `Gene-context edges` counts every edge of the metaedge in Hetionet; `Subgraph edges` counts only those whose gene is KIRC-mapped.
-- `Subgraph nodes` = KIRC-mapped Gene nodes + the context nodes they reach.
+- `Subgraph nodes` / `Subgraph edges` are the NetworkX subgraph after isolate removal: Gene + Disease + the context's nodes, joined by `GiG`, `Gr>G`, `DaG`, `DuG`, `DdG` and the context metaedge. Gene nodes are restricted to the KIRC-mapped `Gene::Entrez` set.
 
 ## 8. Problems / Issues
 **Standing issues** (re-checked every run; dated entries below are per-run findings.)

@@ -80,7 +80,10 @@ def update_readme(results, comparison, std, kirc_source, mapping_path, issues) -
         "`Subgraph edges` counts only those whose gene is KIRC-mapped."
     )
     notes.append(
-        "- `Subgraph nodes` = KIRC-mapped Gene nodes + the context nodes they reach."
+        "- `Subgraph nodes` / `Subgraph edges` are the NetworkX subgraph after "
+        "isolate removal: Gene + Disease + the context's nodes, joined by "
+        "`GiG`, `Gr>G`, `DaG`, `DuG`, `DdG` and the context metaedge. Gene nodes "
+        "are restricted to the KIRC-mapped `Gene::Entrez` set."
     )
     if kirc_source.get("source", "").startswith("prior_run"):
         notes.append(
