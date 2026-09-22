@@ -179,6 +179,22 @@ def load_collaborator_mapping(verify: bool = True) -> dict:
     }
 
 
+def representative_rows(mapping: pd.DataFrame) -> pd.DataFrame:
+    """The one row per Hetionet node, from the 60,660-row mapping table.
+
+    Filtering the table on ``hetionet_gene_id != ""`` is WRONG: the 26
+    ``duplicate_target`` rows - KIRC features that resolve to a node another
+    feature already represents - keep their ``hetionet_gene_id``. That filter
+    returns 19,451 rows for 19,425 nodes and double-counts 26 of them.
+    Select on ``mapping_status`` instead, which is what the collaborator's
+    own delivery script does.
+    """
+    reps = mapping[mapping["mapping_status"].isin(config.COLLAB_MAPPED_STATUSES)]
+    if not reps["hetionet_gene_id"].is_unique:
+        raise ValueError("representative rows are not unique per Hetionet node")
+    return reps
+
+
 def describe_collaborator_mapping(loaded: dict) -> None:
     mapping, counts = loaded["mapping"], loaded["counts"]
     print("--- collaborator gene-ID standardization (authoritative) ---")

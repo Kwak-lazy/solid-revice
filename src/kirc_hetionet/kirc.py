@@ -88,6 +88,44 @@ def load_kirc_clinical(path: Path | None = None):
     return clin
 
 
+KIRC_SURVIVAL_FILE_NAME = "TCGA-KIRC.survival.tsv.gz"
+
+
+def load_kirc_survival(path: Path | None = None, per_patient: bool = True):
+    """Load TCGA-KIRC overall survival.
+
+    Encoding, verified here against the clinical table rather than assumed
+    (the Xena metadata does not state it):
+
+      ``OS``      1 = death, 0 = censored.
+                  336/336 OS=1 are ``vital_status == Dead`` and 608/608 OS=0
+                  are ``Alive`` - an exact split, no exceptions.
+      ``OS.time`` days. Equals ``days_to_death`` for all 336 deaths and
+                  ``days_to_last_follow_up`` for all 608 censored rows.
+
+    The file carries one row per *sample*, so a patient with both a tumour and
+    a normal sample appears twice with identical survival. ``per_patient``
+    collapses to one row per ``_PATIENT``, which is what any survival model
+    needs.
+    """
+    path = (config.RAW_DIR / KIRC_SURVIVAL_FILE_NAME) if path is None else Path(path)
+    if not path.exists():
+        path = fetch_xena(KIRC_SURVIVAL_FILE_NAME, min_bytes=1_000)
+
+    surv = pd.read_csv(path, sep="\t", dtype=str)
+    surv["OS"] = pd.to_numeric(surv["OS"], errors="coerce").astype("Int64")
+    surv["OS.time"] = pd.to_numeric(surv["OS.time"], errors="coerce")
+    if per_patient:
+        surv = surv.drop_duplicates("_PATIENT").reset_index(drop=True)
+    n_event = int((surv["OS"] == 1).sum())
+    print(
+        f"[load] KIRC survival {len(surv):,} "
+        f"{'patients' if per_patient else 'rows'}, {n_event:,} deaths "
+        f"({n_event / len(surv):.1%})"
+    )
+    return surv
+
+
 def sample_type_counts(expr: pd.DataFrame) -> pd.DataFrame:
     """TCGA barcode field 4 -> sample type distribution (original step 10)."""
     codes = pd.Series(expr.columns, dtype=str).str.split("-").str[3].str[:2]

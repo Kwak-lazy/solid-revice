@@ -288,6 +288,40 @@ Notes:
   - Resolved: the original was supplied and the notebook was rebuilt from it;
     14 of its cells are reused verbatim.
 
+- **RESOLVED (2026-09-22): the survival endpoint's encoding is now established.**
+  - Where: `TCGA-KIRC.survival.tsv.gz`, loaded by `kirc.load_kirc_survival()`.
+  - Cause: the collaborator's own field guide flagged both `OS` and `OS.time` as
+    unverified - "Xena's usual convention is 1=death, 0=censored, but confirm this
+    build's ETL encoding" and "no unit stated in the metadata". Experiment 4
+    (survival validation) inverts entirely if the flag is backwards.
+  - Resolved: yes, cross-checked against the clinical table rather than assumed.
+    `OS=1` is `vital_status == Dead` for 336/336 rows and `OS=0` is `Alive` for
+    608/608 - an exact split. `OS.time` is in days: it equals `days_to_death` for
+    all 336 deaths and `days_to_last_follow_up` for all 608 censored rows. The
+    conventional reading holds. Recorded in the loader's docstring.
+
+- **Open: the survival cohort is small enough to constrain experiment 4's design.**
+  - Where: 529 of the 533 tumour patients carry survival; 173 deaths, 32.7%,
+    median follow-up 1,191 days.
+  - Cause: 173 events caps an unpenalised Cox model at roughly 17 covariates at
+    the usual 10-events-per-variable rule. The feature-set comparison as sketched
+    (k = 100 / 300 / 1000) is far past that and would overfit regardless of which
+    selection method wins.
+  - Resolved: open, needs a design decision before experiment 4 starts. The
+    workable form is to collapse each feature set into ONE score per patient
+    inside the training fold - penalised-Cox linear predictor, first PC, or mean
+    z-score - then fit Cox on that score plus stage / grade / age. That keeps the
+    events-per-variable ratio honest and still compares selection methods fairly.
+
+- **Note: `duplicate_target` rows keep their `hetionet_gene_id`.**
+  - Where: `kirc_gene_mapping_all.tsv`.
+  - Cause: by design - the 26 dropped duplicate features stay in the table for
+    traceability and retain the node id they resolved to. Filtering the table on
+    `hetionet_gene_id != ""` therefore yields 19,451 rows for 19,425 nodes.
+  - Resolved: guarded. `gene_mapping.representative_rows()` selects on
+    `mapping_status` instead and asserts uniqueness. This pipeline reads the
+    delivered node file, which is already de-duplicated, so it was never exposed.
+
 - **Open: `GSTT1` (`Gene::2952`) has no KIRC expression row.**
   - Where: the 699 genes linked to `Disease::DOID:263` (kidney cancer).
   - Cause: not a defect. GSTT1 is annotated only on a GRCh38 alternate locus, so
@@ -363,9 +397,7 @@ Notes:
 
 ### 2026-09-22
 
-- Added `config.py` with `GRAPH_CONTEXT` / `CONTEXT_CONFIG`
-- Added Gene ID standardization (Ensembl -> HGNC -> Entrez -> Hetionet)
-- Added gene mapping validation and issue reporting
-- Added the shared Gene -> Context pipeline and dual-context driver
-- Added per-context result output and automatic comparison
-- Added README progress tracking and Google Drive backup
+- Reviewed the collaborator's five build scripts; adoption confirmed unchanged
+- Verified the TCGA-KIRC survival encoding against the clinical table (OS 1=death/0=censored, OS.time in days) - the collaborator had left both open
+- Added `kirc.load_kirc_survival()` with the verified encoding documented
+- Added `gene_mapping.representative_rows()` to guard against double-counting the 26 `duplicate_target` rows
