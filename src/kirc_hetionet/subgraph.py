@@ -102,7 +102,10 @@ def build_graph(
     }
 
     G = nx.MultiDiGraph()
-    for nid in keep_node_ids:
+    # sorted(): keep_node_ids is a set, so iterating it directly makes node
+    # insertion order - and therefore every exported row order - vary between
+    # runs on identical input.
+    for nid in sorted(keep_node_ids):
         info = node_info[nid]
         G.add_node(nid, name=info["name"], kind=info["kind"])
     for row in filtered_edges.itertuples(index=False):
@@ -211,16 +214,20 @@ def kidney_disease_report(G) -> pd.DataFrame:
 # Export (original step 11)
 # ---------------------------------------------------------------------------
 def to_frames(G):
-    """Graph -> (nodes, edges) dataframes, in the original's column layout."""
+    """Graph -> (nodes, edges) dataframes, in the original's column layout.
+
+    Both frames are sorted so a re-run on identical input produces byte-identical
+    files.
+    """
     nodes_df = pd.DataFrame(
         [{"id": n, "name": d["name"], "kind": d["kind"]} for n, d in G.nodes(data=True)]
-    )
+    ).sort_values(["kind", "id"]).reset_index(drop=True)
     edges_df = pd.DataFrame(
         [
             {"source": u, "metaedge": d["metaedge"], "target": v}
             for u, v, d in G.edges(data=True)
         ]
-    )
+    ).sort_values(["metaedge", "source", "target"]).reset_index(drop=True)
     return nodes_df, edges_df
 
 

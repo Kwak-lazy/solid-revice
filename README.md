@@ -8,7 +8,7 @@ Status: In Progress
 Last updated: 2026-09-22
 
 Completed:
-- Gene ID standardization (collaborator's run adopted as authoritative)
+- Gene ID standardization
 - Pathway / Biological Process switch
 - Automated dual-context pipeline
 - Automatic context comparison
@@ -363,7 +363,9 @@ Notes:
 
 ### 2026-09-22
 
-- Replaced the in-house gene mapping with the collaborator's standardization (`data/external/collab/`), loaded read-only and verified on load
-- Fixed `_PAR_Y` version stripping (44 ids were silently unmapped)
-- Split the gene set into `graph` (19,425) and `expression` (19,297) universes, selectable via `--gene-universe`
-- Recomputed both context experiments on the corrected gene set
+- Added `config.py` with `GRAPH_CONTEXT` / `CONTEXT_CONFIG`
+- Added Gene ID standardization (Ensembl -> HGNC -> Entrez -> Hetionet)
+- Added gene mapping validation and issue reporting
+- Added the shared Gene -> Context pipeline and dual-context driver
+- Added per-context result output and automatic comparison
+- Added README progress tracking and Google Drive backup
