@@ -10,3 +10,4 @@ __pycache__/
 .ipynb_checkpoints/
 results/pathway/subgraph_edges.tsv
 results/biological_process/subgraph_edges.tsv
+data/external/collab/kirc_gene_mapping_all.tsv

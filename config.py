@@ -217,10 +217,44 @@ EXISTING_MAPPING_FILES = {
     "expression_standardized": "kirc_expression_standardized.tsv.gz",
 }
 
-# Prior-run artifact shared by a collaborator: Hetionet genes that carry no
-# KIRC feature.  Used only as a documented fallback when the KIRC expression
-# matrix itself is not reachable - see README section 8.
-SHARED_ABSENT_GENES_FILE = EXTERNAL_DIR / "hetionet_genes_absent_from_kirc.tsv"
+# ---------------------------------------------------------------------------
+# 4b. Collaborator gene-ID standardization (AUTHORITATIVE)
+# ---------------------------------------------------------------------------
+# The canonical KIRC <-> Hetionet gene mapping is produced by the
+# collaborator's standardization run (2026-09-15), not by this pipeline.
+# It bridges Ensembl -> Entrez through the GENCODE v36 *hgnc_id*, which is the
+# only route that survives Ensembl ID drift between the frozen GENCODE build
+# TCGA was quantified against and the current HGNC release.
+#
+# These files are read-only inputs.  Never regenerate or overwrite them.
+COLLAB_DIR = EXTERNAL_DIR / "collab"
+COLLAB_MAPPING_FILE = COLLAB_DIR / "kirc_gene_mapping_all.tsv"
+COLLAB_GENE_NODES_FILE = COLLAB_DIR / "kirc_hetionet_gene_nodes.tsv"
+COLLAB_ABSENT_FILE = COLLAB_DIR / "hetionet_genes_absent_from_kirc.tsv"
+COLLAB_SUMMARY_FILE = COLLAB_DIR / "kirc_gene_standardization_summary.md"
+
+# Expected counts, asserted on load so a swapped or truncated file is caught.
+COLLAB_EXPECTED = {
+    "features": 60660,          # rows in kirc_gene_mapping_all.tsv
+    "graph_nodes": 19425,       # Hetionet nodes reachable from KIRC
+    "expression_nodes": 19297,  # of those, with a non-zero expression row
+    "absent_nodes": 1520,       # Hetionet nodes with no KIRC feature
+    "hetionet_genes": 20945,
+}
+
+# mapping_status values that count as "connected to a Hetionet node".
+COLLAB_MAPPED_STATUSES = (
+    "mapped_by_hgnc_entrez",
+    "mapped_by_ncbi_merged_entrez",
+    "mapped_by_ncbi_ensembl_xref",
+)
+
+# Two different gene universes - they are NOT interchangeable.
+#   graph      : 19,425 nodes, for graph-only work (DWPC, topology)
+#   expression : 19,297 nodes, for anything that needs expression values
+GENE_UNIVERSE = "graph"
+
+SHARED_ABSENT_GENES_FILE = COLLAB_ABSENT_FILE
 
 
 # ---------------------------------------------------------------------------

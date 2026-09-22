@@ -44,6 +44,13 @@ def main() -> int:
     parser.add_argument("--no-drive", action="store_true", help="skip the Drive backup")
     parser.add_argument("--no-readme", action="store_true", help="skip the README update")
     parser.add_argument("--force-download", action="store_true")
+    parser.add_argument(
+        "--gene-universe",
+        choices=["graph", "expression"],
+        default=config.GENE_UNIVERSE,
+        help="graph = 19,425 Hetionet-connected nodes; "
+             "expression = 19,297 of those with a non-zero expression row",
+    )
     args = parser.parse_args()
 
     issues: list[dict] = []
@@ -73,70 +80,39 @@ def main() -> int:
 
     # ---- 6-7 gene ID standardization + validation -------------------------
     banner(6, "Gene ID standardization (Ensembl -> HGNC -> Entrez -> Gene::Entrez)")
-    if kirc_source["ensembl_ids"] is not None:
-        std = gene_mapping.standardize_gene_ids(kirc_source["ensembl_ids"])
-        kirc_gene_ids = sorted(set(std["usable"]["hetionet_gene_id"].dropna()))
-        mapping_path = "ensembl -> hgnc -> entrez -> hetionet"
-    elif kirc_source["hetionet_gene_ids"] is not None:
-        print(
-            "[warn] KIRC expression matrix not reachable in this environment.\n"
-            "       Falling back to the Hetionet-side gene coverage established\n"
-            "       by a prior run; the Ensembl -> Entrez leg is NOT exercised\n"
-            "       on this path, so its counters are reported as n/a."
-        )
-        issues.append(
-            {
-                "what": "KIRC expression matrix not reachable; gene coverage taken "
-                        "from a prior run instead",
-                "where": "scripts/run_pipeline.py step 5-6, kirc.resolve_kirc_genes()",
-                "cause": "TCGA/GDC hosts are blocked by this environment's egress "
-                         "policy and the Drive copies are shortcuts that the Drive "
-                         "API refuses to download",
-                "status": "open - re-run steps 6-7 in Colab with the mounted "
-                          "kirc_expression_standardized.tsv.gz to get the real "
-                          "Ensembl/HGNC/Entrez counters",
-            }
-        )
-        mapping = gene_mapping.mapping_from_hetionet_gene_nodes(
-            kirc_source["hetionet_gene_ids"]
-        )
-        banner(7, "Gene mapping validation")
-        validation = gene_mapping.validate_gene_mapping(
-            mapping,
-            het_genes=het_genes,
-            n_kirc_genes=len(kirc_source["hetionet_gene_ids"]),
-        )
-        out = config.PROCESSED_DIR / "kirc_hetionet_gene_nodes_from_prior_run.tsv"
-        mapping.to_csv(out, sep="\t", index=False)
-        print(f"[write] {out}")
-        std = {"mapping": mapping, "usable": mapping, "validation": validation,
-               "source": kirc_source["source"], "path": kirc_source["path"]}
-        kirc_gene_ids = sorted(set(mapping["hetionet_gene_id"].dropna()))
-        mapping_path = "prior run (Hetionet side only)"
-    else:
-        print("[FAIL] no KIRC gene source; the subgraph cannot be restricted to KIRC")
-        std, kirc_gene_ids, mapping_path = None, None, "unavailable"
-        issues.append(
-            {
-                "what": "No KIRC gene source available",
-                "where": "step 5",
-                "cause": "neither an expression matrix nor a prior-run artifact "
-                         "was found",
-                "status": "open",
-            }
-        )
+    std = gene_mapping.standardize_gene_ids(
+        kirc_source["ensembl_ids"], gene_universe=args.gene_universe
+    )
+    kirc_gene_ids = std["gene_ids"]
+    mapping_path = std["source"]
 
-    if std is not None and kirc_source["ensembl_ids"] is not None:
-        banner(7, "Gene mapping validation")
+    banner(7, "Gene mapping validation")
+    if std["source"].startswith("collaborator"):
+        print("  Verified on load against the expected counts in")
+        print(f"  {config.COLLAB_SUMMARY_FILE.name}: features / graph nodes /")
+        print("  expression nodes / absent nodes, plus the disjointness and")
+        print("  union checks against Hetionet's 20,945 Gene nodes. All passed.")
+        print(f"\n  gene_universe = {args.gene_universe!r} -> "
+              f"{len(kirc_gene_ids):,} genes")
+        if args.gene_universe == "graph":
+            print("  (128 of these have no non-zero expression row; use")
+            print("   --gene-universe expression for anything needing values)")
+    else:
         for issue in std["validation"]["issues"]:
-            issues.append(
-                {
-                    "what": issue,
-                    "where": "gene_mapping.validate_gene_mapping()",
-                    "cause": "Ensembl/Entrez identifier systems are not 1:1",
-                    "status": "recorded, not auto-corrected",
-                }
-            )
+            issues.append({
+                "what": issue,
+                "where": "gene_mapping.validate_gene_mapping()",
+                "cause": "Ensembl/Entrez identifier systems are not 1:1",
+                "status": "recorded, not auto-corrected",
+            })
+        issues.append({
+            "what": "In-house gene mapping used instead of the collaborator's "
+                    "standardization",
+            "where": "gene_mapping.standardize_gene_ids() fallback branch",
+            "cause": f"{config.COLLAB_MAPPING_FILE} not present",
+            "status": "open - results are provisional until the authoritative "
+                      "files are restored",
+        })
 
     # ---- 8-10 context pipeline + comparison -------------------------------
     banner(8, "Context configuration")

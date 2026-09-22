@@ -3,11 +3,11 @@ node_kind	Pathway	Biological Process
 metaedge	GpPW	GpBP
 context_nodes	1822	11381
 gene_context_edges	84372	559504
-kirc_mapped_genes	8941	14733
-subgraph_nodes	19443	29617
-subgraph_edges	524265	999051
+kirc_mapped_genes	8947	14742
+subgraph_nodes	19456	29631
+subgraph_edges	524711	999523
 subgraph_context_nodes	1822	11381
-subgraph_gene_nodes	17487	18102
+subgraph_gene_nodes	17500	18116
 context_nodes_without_kirc_gene	0	0
 subgraph_pathway_nodes	1822.0	
 subgraph_disease_nodes	134	134

@@ -33,8 +33,16 @@ _CACHE: dict[str, object] = {}
 # Helpers
 # ---------------------------------------------------------------------------
 def strip_ensembl_version(series: pd.Series) -> pd.Series:
-    """``ENSG00000134086.7`` -> ``ENSG00000134086``."""
-    return series.astype(str).str.strip().str.replace(r"\.\d+$", "", regex=True)
+    """``ENSG00000134086.7`` -> ``ENSG00000134086``.
+
+    GENCODE also emits pseudoautosomal duplicates as
+    ``ENSG00000002586.20_PAR_Y``: the version is NOT at the end of the string,
+    so a ``\.\d+$`` anchor silently leaves these 44 ids unstripped and they
+    then fail every downstream join. Strip the ``_PAR_Y`` suffix first.
+    """
+    out = series.astype(str).str.strip()
+    out = out.str.replace(r"_PAR_Y$", "", regex=True)
+    return out.str.replace(r"\.\d+$", "", regex=True)
 
 
 def _clean_entrez(series: pd.Series) -> pd.Series:
@@ -79,6 +87,117 @@ def find_existing_mapping_artifacts(extra_dirs=()) -> dict[str, Path | None]:
         print(f"  [{'FOUND ' if path else 'ABSENT'}] {name}"
               + (f"  ->  {path}" if path else ""))
     return found
+
+
+# ---------------------------------------------------------------------------
+# Collaborator standardization (authoritative)
+# ---------------------------------------------------------------------------
+def collaborator_artifacts_available() -> bool:
+    return (
+        config.COLLAB_MAPPING_FILE.exists()
+        and config.COLLAB_GENE_NODES_FILE.exists()
+    )
+
+
+def load_collaborator_mapping(verify: bool = True) -> dict:
+    """Load the collaborator's gene-ID standardization as the source of truth.
+
+    Returns ``{"mapping", "gene_nodes", "absent", "graph_gene_ids",
+    "expression_gene_ids", "counts"}``.
+
+    The mapping chain these files encode is::
+
+        KIRC Ensembl (GENCODE v36, versioned)
+          -> GENCODE gene-line hgnc_id   (primary, 38,891 features)
+          -> HGNC ensembl_gene_id lookup (fallback,  3,177 features)
+          -> current HGNC symbol + entrez_id
+          -> Gene::<entrez>, only when the node exists in Hetionet
+
+    Routing through ``hgnc_id`` rather than Ensembl ID is what makes this
+    correct: HGNC IDs are curated and stable, Ensembl gene IDs are reassigned
+    between builds. TCGA is frozen at GENCODE v36 while HGNC tracks the current
+    build, so an Ensembl-to-Ensembl join silently drops genes whose ID moved
+    (SOD2 among them).
+
+    Nothing here is regenerated or written back - these are read-only inputs.
+    """
+    mapping = pd.read_csv(
+        config.COLLAB_MAPPING_FILE, sep="\t", dtype=str, low_memory=False
+    )
+    gene_nodes = pd.read_csv(config.COLLAB_GENE_NODES_FILE, sep="\t", dtype=str)
+    absent = (
+        pd.read_csv(config.COLLAB_ABSENT_FILE, sep="\t", dtype=str)
+        if config.COLLAB_ABSENT_FILE.exists()
+        else None
+    )
+
+    is_zero = gene_nodes["all_samples_zero"].astype(str).str.lower() == "true"
+    graph_ids = sorted(set(gene_nodes["hetionet_gene_id"]))
+    expr_ids = sorted(set(gene_nodes.loc[~is_zero, "hetionet_gene_id"]))
+
+    counts = {
+        "features": len(mapping),
+        "graph_nodes": len(graph_ids),
+        "expression_nodes": len(expr_ids),
+        "absent_nodes": 0 if absent is None else len(absent),
+        "all_samples_zero": int(is_zero.sum()),
+    }
+
+    if verify:
+        exp = config.COLLAB_EXPECTED
+        problems = [
+            f"{k}: expected {exp[k]:,}, got {counts[k]:,}"
+            for k in ("features", "graph_nodes", "expression_nodes", "absent_nodes")
+            if counts[k] != exp[k]
+        ]
+        if absent is not None:
+            overlap = set(absent["hetionet_gene_id"]) & set(graph_ids)
+            if overlap:
+                problems.append(
+                    f"{len(overlap):,} nodes appear in BOTH the connected and the "
+                    "absent list"
+                )
+            union = len(set(absent["hetionet_gene_id"]) | set(graph_ids))
+            if union != exp["hetionet_genes"]:
+                problems.append(
+                    f"connected + absent = {union:,}, expected "
+                    f"{exp['hetionet_genes']:,} Hetionet Gene nodes"
+                )
+        if problems:
+            raise ValueError(
+                "Collaborator artifacts failed verification:\n  "
+                + "\n  ".join(problems)
+            )
+
+    return {
+        "mapping": mapping,
+        "gene_nodes": gene_nodes,
+        "absent": absent,
+        "graph_gene_ids": graph_ids,
+        "expression_gene_ids": expr_ids,
+        "counts": counts,
+    }
+
+
+def describe_collaborator_mapping(loaded: dict) -> None:
+    mapping, counts = loaded["mapping"], loaded["counts"]
+    print("--- collaborator gene-ID standardization (authoritative) ---")
+    print(f"  source            : {config.COLLAB_MAPPING_FILE}")
+    print(f"  KIRC features     : {counts['features']:,}")
+    print(f"  graph gene set    : {counts['graph_nodes']:,}  (Hetionet nodes)")
+    print(f"  expression set    : {counts['expression_nodes']:,}  "
+          f"(= graph - {counts['all_samples_zero']} all-zero)")
+    print(f"  absent from KIRC  : {counts['absent_nodes']:,}")
+
+    print("\n  mapping_status:")
+    for status, n in mapping["mapping_status"].value_counts().items():
+        mark = " *" if status in config.COLLAB_MAPPED_STATUSES else ""
+        print(f"    {status:<32s} {n:>8,}{mark}")
+
+    if "hgnc_match_method" in mapping.columns:
+        print("\n  hgnc_match_method (the Ensembl -> Entrez bridge):")
+        for meth, n in mapping["hgnc_match_method"].value_counts(dropna=False).items():
+            print(f"    {str(meth):<32s} {n:>8,}")
 
 
 # ---------------------------------------------------------------------------
@@ -305,13 +424,55 @@ def standardize_gene_ids(
     kirc_ensembl_ids=None,
     reuse_existing: bool = True,
     write: bool = True,
+    gene_universe: str = None,
 ) -> dict:
-    """Produce the KIRC -> Hetionet gene mapping, re-using prior output first.
+    """Resolve the KIRC -> Hetionet gene mapping.
 
-    Returns ``{"mapping", "usable", "validation", "source", "path"}`` where
-    ``usable`` holds only the rows with ``mapping_status == "mapped"``.
+    The collaborator's standardization is authoritative and is used whenever it
+    is present; this pipeline does not re-derive it. The in-house
+    Ensembl -> HGNC -> Entrez path below is a degraded fallback, kept only for
+    environments where those files are unavailable, and it is known to lose
+    genes whose Ensembl ID moved between GENCODE v36 and the current HGNC
+    release. It warns loudly rather than passing itself off as equivalent.
+
+    Returns ``{"mapping", "usable", "validation", "source", "path",
+    "graph_gene_ids", "expression_gene_ids", "gene_ids"}``. ``gene_ids`` is the
+    set selected by ``gene_universe`` ("graph" or "expression").
     """
     config.ensure_dirs()
+    gene_universe = config.GENE_UNIVERSE if gene_universe is None else gene_universe
+    if gene_universe not in ("graph", "expression"):
+        raise ValueError(
+            f"gene_universe must be 'graph' or 'expression', got {gene_universe!r}"
+        )
+
+    # ---- authoritative path -------------------------------------------
+    if reuse_existing and collaborator_artifacts_available():
+        loaded = load_collaborator_mapping()
+        describe_collaborator_mapping(loaded)
+        gene_ids = (
+            loaded["graph_gene_ids"] if gene_universe == "graph"
+            else loaded["expression_gene_ids"]
+        )
+        print(f"\n  gene_universe = {gene_universe!r} -> {len(gene_ids):,} genes")
+        print("  [keep ] collaborator files are read-only; nothing regenerated")
+        return {
+            "mapping": loaded["mapping"],
+            "usable": loaded["gene_nodes"],
+            "validation": {"counts": loaded["counts"], "issues": []},
+            "source": f"collaborator:{config.COLLAB_MAPPING_FILE.name}",
+            "path": config.COLLAB_MAPPING_FILE,
+            "graph_gene_ids": loaded["graph_gene_ids"],
+            "expression_gene_ids": loaded["expression_gene_ids"],
+            "gene_ids": gene_ids,
+        }
+
+    print(
+        "[WARN] collaborator standardization not found -> falling back to the\n"
+        "       in-house Ensembl->HGNC->Entrez join. This is NOT equivalent:\n"
+        "       it cannot follow Ensembl IDs reassigned since GENCODE v36 and\n"
+        "       drops genes (SOD2 among them). Results are provisional."
+    )
     artifacts = find_existing_mapping_artifacts()
 
     mapping = None
@@ -358,10 +519,14 @@ def standardize_gene_ids(
         )
         print(f"[write] {out_nodes}")
 
+    gene_ids = sorted(set(usable["hetionet_gene_id"].dropna()))
     return {
         "mapping": mapping,
         "usable": usable,
         "validation": validation,
         "source": source,
         "path": path,
+        "graph_gene_ids": gene_ids,
+        "expression_gene_ids": None,   # fallback cannot compute this
+        "gene_ids": gene_ids,
     }

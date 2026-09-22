@@ -1,6 +1,6 @@
 metric	pathway	biological_process
 Context nodes	1822	11381
 Gene-context edges	84372	559504
-KIRC mapped genes	8941	14733
-Subgraph nodes	19443	29617
-Subgraph edges	524265	999051
+KIRC mapped genes	8947	14742
+Subgraph nodes	19456	29631
+Subgraph edges	524711	999523
