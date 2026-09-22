@@ -78,7 +78,7 @@ def load_nodes(force_reload: bool = False) -> pd.DataFrame:
         if not config.HETIONET_NODES_FILE.exists():
             download_hetionet()
         _CACHE["nodes"] = pd.read_csv(
-            config.HETIONET_NODES_FILE, sep="\t", dtype=str
+            config.HETIONET_NODES_FILE, sep="\t", dtype=str, keep_default_na=False
         )
     return _CACHE["nodes"]
 
@@ -89,7 +89,7 @@ def load_edges(force_reload: bool = False) -> pd.DataFrame:
         if not config.HETIONET_EDGES_FILE.exists():
             download_hetionet()
         _CACHE["edges"] = pd.read_csv(
-            config.HETIONET_EDGES_FILE, sep="\t", dtype=str
+            config.HETIONET_EDGES_FILE, sep="\t", dtype=str, keep_default_na=False
         )
     return _CACHE["edges"]
 

@@ -121,12 +121,15 @@ def load_collaborator_mapping(verify: bool = True) -> dict:
 
     Nothing here is regenerated or written back - these are read-only inputs.
     """
-    mapping = pd.read_csv(
-        config.COLLAB_MAPPING_FILE, sep="\t", dtype=str, low_memory=False
-    )
-    gene_nodes = pd.read_csv(config.COLLAB_GENE_NODES_FILE, sep="\t", dtype=str)
+    # keep_default_na=False matches how the collaborator's own scripts read
+    # these files. Without it pandas turns empty cells - and any literal "NA",
+    # "None" or "null" - into NaN, so a blank current_hgnc_symbol stops being
+    # distinguishable from a symbol that happens to read "NA".
+    read = dict(sep="\t", dtype=str, keep_default_na=False)
+    mapping = pd.read_csv(config.COLLAB_MAPPING_FILE, low_memory=False, **read)
+    gene_nodes = pd.read_csv(config.COLLAB_GENE_NODES_FILE, **read)
     absent = (
-        pd.read_csv(config.COLLAB_ABSENT_FILE, sep="\t", dtype=str)
+        pd.read_csv(config.COLLAB_ABSENT_FILE, **read)
         if config.COLLAB_ABSENT_FILE.exists()
         else None
     )

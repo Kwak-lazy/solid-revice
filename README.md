@@ -104,36 +104,93 @@ Repository / branch: `Kwak-lazy/solid-revice`, branch
 `claude/determined-lovelace-mj90py`.
 
 ## 3. Data
+### Division of labour
+
+Gene-ID standardization belongs to the collaborator's pipeline; graph
+construction belongs to this one. The handoff is a fixed set of files and a
+fixed key.
+
+```text
+collaborator                                    this repo
+─────────────────────────────────────────────   ──────────────────────────────
+1  build_kirc_feature_guide.py
+     all_features.tsv (60,660)
+2  build_kirc_gene_mapping.py
+     kirc_gene_mapping_all.tsv  (hetionet cols blank)
+3-4  build_kirc_hetionet_mapping.py
+     kirc_hetionet_gene_nodes.tsv  ───────────▶  gene_mapping.load_collaborator_mapping()
+     hetionet_genes_absent_from_kirc.tsv ─────▶  (graph-only nodes)
+4-2  verify_auxiliary_candidates_ncbi.py
+     ..._verified.tsv
+5  build_kirc_standardized_outputs.py
+     kirc_expression_standardized.tsv.gz
+     kirc_sample_metadata.tsv
+     kirc_mapping_exceptions.tsv
+     kirc_gene_standardization_summary.md ────▶  (expected counts, verified on load)
+                                                 subgraph.py -> context.py
+```
+
+Join key across the boundary: **`hetionet_gene_id`** (`Gene::<entrez>`), never a
+symbol.
+
+### Handoff files (`data/external/collab/`, read-only)
+
+| File | Rows | Used for |
+|---|---:|---|
+| `kirc_hetionet_gene_nodes.tsv` | 19,425 | the gene universe; `all_samples_zero` splits it |
+| `hetionet_genes_absent_from_kirc.tsv` | 1,520 | nodes kept in the graph but carrying no expression |
+| `kirc_gene_mapping_all.tsv` | 60,660 | traceability from any Hetionet node back to its KIRC feature |
+| `kirc_gene_standardization_summary.md` | — | rules, counts and source SHA-256s, asserted on load |
+
+Produced by the collaborator but outside this handoff, so not present here:
+`kirc_expression_standardized.tsv.gz`, `kirc_sample_metadata.tsv`,
+`kirc_mapping_exceptions.tsv`, `kirc_duplicate_gene_review.tsv`,
+`kirc_auxiliary_name_candidates*.tsv`, `all_features.tsv`,
+`TCGA-KIRC.sample_labels.tsv`. The first two are needed for anything that reads
+expression values; the rest are their internal audit trail.
+
+### Shared sources - byte-identical where it matters
+
+Both pipelines download Hetionet and TCGA-KIRC independently, so they were
+checked against the SHA-256s recorded in the collaborator's summary:
+
+| Source | Match |
+|---|---|
+| `hetionet-v1.0-nodes.tsv` | identical |
+| `hetionet-v1.0-edges.sif.gz` | identical |
+| `TCGA-KIRC.star_tpm.tsv.gz` | identical |
+| `hgnc_complete_set.txt` | **differs** - theirs 2026-09-14, ours fetched later |
+
+The HGNC difference is inert: HGNC feeds only the retired in-house mapping path,
+which no longer runs. It is not an input to anything this pipeline now produces.
+
+### Reading convention
+
+The collaborator's scripts read every TSV with `keep_default_na=False`; this
+pipeline now does the same. Without it pandas turns empty cells - and any
+literal `NA`, `None` or `null` - into NaN. Hetionet's own files contain no such
+strings, but `kirc_hetionet_gene_nodes.tsv` has one row with an empty
+`current_hgnc_symbol` (`RSC1A1`, linked via NCBI cross-reference rather than
+HGNC), and keeping both sides on the same convention removes the class of bug
+rather than the one instance.
+
+### Downloaded sources
+
 | Dataset | Source | Local path |
 |---|---|---|
 | Hetionet v1.0 nodes (47,031) | `raw.githubusercontent.com/hetio/hetionet` | `data/raw/hetionet-v1.0-nodes.tsv` |
 | Hetionet v1.0 edges (2,250,197) | git-lfs **media** endpoint, sha256-verified | `data/raw/hetionet-v1.0-edges.sif.gz` |
-| HGNC complete set (approved) | `storage.googleapis.com/public-download-files/hgnc` | `data/raw/hgnc_complete_set.txt` |
 | TCGA-KIRC expression, `log2(TPM+1)` | UCSC Xena GDC hub (S3 fallback) | `data/raw/TCGA-KIRC.star_tpm.tsv.gz` |
-| TCGA-KIRC clinical | UCSC Xena GDC hub (S3 fallback) | `data/raw/TCGA-KIRC.clinical.tsv.gz` |
-| Prior-run gene coverage (reference) | shared collaborator artifact | `data/external/hetionet_genes_absent_from_kirc.tsv` |
+| TCGA-KIRC clinical / survival | UCSC Xena GDC hub (S3 fallback) | `data/raw/TCGA-KIRC.{clinical,survival}.tsv.gz` |
+| HGNC complete set | `storage.googleapis.com/public-download-files/hgnc` | `data/raw/hgnc_complete_set.txt` |
 
-Hetionet node kinds (measured): Gene 20,945 · Biological Process 11,381 ·
-Side Effect 5,734 · Molecular Function 2,884 · Pathway 1,822 · Compound 1,552 ·
-Cellular Component 1,391 · Symptom 438 · Anatomy 402 · Pharmacologic Class 345 ·
-Disease 137.
-
-TCGA-KIRC matrix (measured): 60,660 genes x 610 samples — 537 Primary Tumor,
-72 Solid Tissue Normal, 1 Additional New Primary. Row index is a
-version-suffixed Ensembl ID (`ENSG00000141510.17`).
-
-Download notes:
-
-- The Hetionet edge file is git-lfs. `raw.githubusercontent.com` returns a
-  133-byte LFS pointer, so the **media** endpoint is used and the payload is
-  checksum-verified.
-- Xena's official host (`gdc.xenahubs.net`) is unreachable on some networks;
-  `fetch_xena()` falls back to `gdc-hub.s3.us-east-1.amazonaws.com`, which
-  serves the same files. Both endpoints are tried in order.
+Measured: Hetionet Gene 20,945 · Biological Process 11,381 · Pathway 1,822 ·
+Disease 137 (+7 further kinds). TCGA-KIRC 60,660 features x 610 samples;
+537 Primary Tumor, 72 Solid Tissue Normal, 1 Additional New Primary.
 
 `data/raw/` is git-ignored and re-downloaded on demand.
 `results/*/gene_context_edges.tsv` and `results/*/subgraph_edges.tsv` are
-git-ignored for size and regenerated by the pipeline.
+git-ignored for size.
 
 ## 4. Gene ID Standardization
 Join key: `hetionet_gene_id` (`Gene::<entrez>`). Gene symbols are annotation only and are never used to join.
@@ -300,19 +357,6 @@ Notes:
     all 336 deaths and `days_to_last_follow_up` for all 608 censored rows. The
     conventional reading holds. Recorded in the loader's docstring.
 
-- **Open: the survival cohort is small enough to constrain experiment 4's design.**
-  - Where: 529 of the 533 tumour patients carry survival; 173 deaths, 32.7%,
-    median follow-up 1,191 days.
-  - Cause: 173 events caps an unpenalised Cox model at roughly 17 covariates at
-    the usual 10-events-per-variable rule. The feature-set comparison as sketched
-    (k = 100 / 300 / 1000) is far past that and would overfit regardless of which
-    selection method wins.
-  - Resolved: open, needs a design decision before experiment 4 starts. The
-    workable form is to collapse each feature set into ONE score per patient
-    inside the training fold - penalised-Cox linear predictor, first PC, or mean
-    z-score - then fit Cox on that score plus stage / grade / age. That keeps the
-    events-per-variable ratio honest and still compares selection methods fairly.
-
 - **Note: `duplicate_target` rows keep their `hetionet_gene_id`.**
   - Where: `kirc_gene_mapping_all.tsv`.
   - Cause: by design - the 26 dropped duplicate features stay in the table for
@@ -397,7 +441,6 @@ Notes:
 
 ### 2026-09-22
 
-- Reviewed the collaborator's five build scripts; adoption confirmed unchanged
-- Verified the TCGA-KIRC survival encoding against the clinical table (OS 1=death/0=censored, OS.time in days) - the collaborator had left both open
-- Added `kirc.load_kirc_survival()` with the verified encoding documented
-- Added `gene_mapping.representative_rows()` to guard against double-counting the 26 `duplicate_target` rows
+- Documented the collaborator/repo boundary and the handoff file set in section 3
+- Verified shared sources by SHA-256 against the collaborator's summary: Hetionet nodes, Hetionet edges and the KIRC matrix are byte-identical
+- Aligned TSV reading on `keep_default_na=False`, matching the collaborator's scripts
