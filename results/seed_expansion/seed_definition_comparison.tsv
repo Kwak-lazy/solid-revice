@@ -1,0 +1,4 @@
+seed_definition	n_seed	enriched_pathways	candidate_genes_pathway	enriched_bp	candidate_genes_bp
+all (DaG+DuG+DdG)	698	217	4219	861	11025
+DaG only	212	266	4216	1218	11521
+DuG/DdG only	486	43	2072	124	5351

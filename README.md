@@ -278,6 +278,12 @@ Both contexts emit the same schema: `gene_id`, `gene_symbol`, `context_id`, `con
 - [x] Biological Process experiment executed
 - [x] Automatic context comparison written to `results/comparison/context_comparison.tsv`
 
+### 2026-10-05
+
+- [x] Verified the handoff: base subgraph == original notebook output (edge sets identical); `apply_kirc_to_hetionet_subgraph.py` reproduces the delivered `output/` byte-for-byte
+- [x] Counted hop expansion from `Disease::DOID:263` and the candidate-pool filter funnel (`scripts/seed_expansion.py` -> `results/seed_expansion/`)
+- [ ] Decide seed definition, filter criteria, evaluation and the 2+ experiments
+
 ## 7. Results
 Measured on 2026-09-22 from an actual pipeline run.
 
@@ -394,6 +400,36 @@ Notes:
 - **Open: Drive holds only part of the project until the first Colab run.**
   - Resolved: open - run `notebooks/OPEN_IN_COLAB.ipynb` once in Colab.
 
+- **Open (2026-10-05): the handoff gene file is the older 19,416-gene version.**
+  - Where: `team_handoff_kirc_subgraph/kirc_hetionet_gene_nodes.tsv` vs the 19,425-gene
+    file in `data/external/collab/`.
+  - Cause: the handoff predates the NCBI verification step. It is an exact subset of the
+    final file; the 9 genes it lacks are the NCBI-linked ones (8 merged-Entrez, 1 Ensembl
+    cross-reference). Its README therefore quotes 19,416 / 19,289 where the collaborator's
+    summary says 19,425 / 19,297.
+  - Impact: negligible. Running the handoff script on both files gives identical
+    pathway, BP and seed counts; the final file adds 1 gene and 1 `DuG` edge.
+  - Resolved: open - pick one as the paper's reference and say so. The final file matches
+    the collaborator's own summary.
+
+- **Open (2026-10-05): 486 of the 698 seed genes come only from `DuG`/`DdG`.**
+  - Where: kidney-cancer (`DOID:263`) seed set; see `results/seed_expansion/`.
+  - Cause: Hetionet derives `DuG`/`DdG` from STARGEO differential-expression
+    meta-analyses, i.e. from disease-vs-normal expression, not from curated
+    disease-gene association (`DaG`). Seeds built on them are partly an expression result
+    already.
+  - Evidence it matters: enriched pathways from the `DaG`-only seed (212 genes) and the
+    `DuG`/`DdG`-only seed (486 genes) overlap at Jaccard 0.02 (BP 0.01) - they point at
+    nearly unrelated biology - and `DaG` alone reproduces 75% of the pathway and 69% of
+    the BP result from the full seed.
+  - Resolved: open - needs a decision on which edge types define the seed.
+
+- **Note (2026-10-05): all 17 known ccRCC genes checked are already seed genes.**
+  - Where: `results/seed_expansion/known_gene_check.tsv`.
+  - Consequence: a known-driver list cannot serve as held-out validation against this
+    seed; and `BAP1` has 0 pathways, `PBRM1`/`SETD2`/`KDM5C` 2 each, so the chromatin-
+    remodelling drivers are essentially unreachable through the pathway route (BP: 17-92).
+
 ### 2026-09-21
 
 - **3 Ensembl IDs appear on more than one row (one Ensembl -> several Entrez).**
@@ -444,3 +480,8 @@ Notes:
 - Documented the collaborator/repo boundary and the handoff file set in section 3
 - Verified shared sources by SHA-256 against the collaborator's summary: Hetionet nodes, Hetionet edges and the KIRC matrix are byte-identical
 - Aligned TSV reading on `keep_default_na=False`, matching the collaborator's scripts
+
+### 2026-10-05
+
+- Added `scripts/seed_expansion.py` and `results/seed_expansion/` (hop counts, filter funnels, seed-definition comparison, known-gene check)
+- Recorded three open data findings from the handoff: older gene file, expression-derived seed edges, known ccRCC genes all inside the seed

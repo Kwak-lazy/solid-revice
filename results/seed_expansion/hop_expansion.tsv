@@ -1,0 +1,20 @@
+stage	item	count
+hop 0	kidney cancer node	1
+hop 1	seed genes (DaG | DuG | DdG)	698
+hop 1	  via DaG	212
+hop 1	  via DuG	250
+hop 1	  via DdG	250
+hop 1	  DaG only (no expression-derived edge)	198
+hop 1	  DuG/DdG only (no DaG)	486
+hop 2	pathways reached via GpPW	1230
+hop 2	  seed genes with a pathway	460
+hop 2	biological processes reached via GpBP	6200
+hop 2	  seed genes with a BP	626
+hop 2	neighbouring genes (GiG | Gr>G)	8123
+hop 3	genes one further step out (neighbours of neighbours)	6587
+hop 3	candidate genes via pathway	8349
+hop 3	candidate genes via BP	14051
+hop 3	candidate genes via any of the three routes	15283
+ref	genes in graph	18080
+ref	genes with any pathway annotation	8928
+ref	genes with any BP annotation	14700
