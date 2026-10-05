@@ -489,4 +489,4 @@ Notes:
 
 ### 2026-10-05
 
-- Drive folder `2026-10-05_handoff_and_seed_analysis`: handoff README/script, output summary.json, seed-expansion script and tables, decisions.md, MANIFEST.md (sha256 of every file in both zips)
+- Added `notebooks/run_handoff_in_colab.ipynb`: runs the teammate's `apply_kirc_to_hetionet_subgraph.py` from the uploaded zip in Colab, checks the result against the handoff README's expected values and packs `output.zip`
