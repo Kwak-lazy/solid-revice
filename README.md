@@ -280,9 +280,8 @@ Both contexts emit the same schema: `gene_id`, `gene_symbol`, `context_id`, `con
 
 ### 2026-10-05
 
-- [x] Verified the handoff: base subgraph == original notebook output (edge sets identical); `apply_kirc_to_hetionet_subgraph.py` reproduces the delivered `output/` byte-for-byte
-- [x] Counted hop expansion from `Disease::DOID:263` and the candidate-pool filter funnel (`scripts/seed_expansion.py` -> `results/seed_expansion/`)
-- [ ] Decide seed definition, filter criteria, evaluation and the 2+ experiments
+- [x] Filed the handoff and seed-analysis results in Drive `BML/KIRC_Hetionet_Project/2026-10-05_handoff_and_seed_analysis` (small files only; see its MANIFEST.md)
+- [x] Wrote the experiment-decision summary to Notion and to `analysis/decisions.md` in that folder
 
 ## 7. Results
 Measured on 2026-09-22 from an actual pipeline run.
@@ -430,6 +429,13 @@ Notes:
     seed; and `BAP1` has 0 pathways, `PBRM1`/`SETD2`/`KDM5C` 2 each, so the chromatin-
     remodelling drivers are essentially unreachable through the pathway route (BP: 17-92).
 
+- **Open (2026-10-05): the handoff zips and large TSVs are not in Drive.**
+  - Where: `BML/KIRC_Hetionet_Project/2026-10-05_handoff_and_seed_analysis/`.
+  - Cause: the Drive connector accepts file content only as inline text, so the two ~5 MB
+    zips and the TSVs above ~100 KB cannot be pushed from this session.
+  - Resolved: open - drag the two zips into that folder by hand. `MANIFEST.md` lists the
+    sha256 of every file so the upload can be checked.
+
 ### 2026-09-21
 
 - **3 Ensembl IDs appear on more than one row (one Ensembl -> several Entrez).**
@@ -483,5 +489,4 @@ Notes:
 
 ### 2026-10-05
 
-- Added `scripts/seed_expansion.py` and `results/seed_expansion/` (hop counts, filter funnels, seed-definition comparison, known-gene check)
-- Recorded three open data findings from the handoff: older gene file, expression-derived seed edges, known ccRCC genes all inside the seed
+- Drive folder `2026-10-05_handoff_and_seed_analysis`: handoff README/script, output summary.json, seed-expansion script and tables, decisions.md, MANIFEST.md (sha256 of every file in both zips)
