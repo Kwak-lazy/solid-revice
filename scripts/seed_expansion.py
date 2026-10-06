@@ -56,12 +56,18 @@ def benjamini_hochberg(p):
 
 
 def enriched(members, seed, alpha=0.05):
-    """Contexts over-represented among seed genes (hypergeometric, BH-FDR)."""
+    """Contexts over-represented among seed genes (hypergeometric, BH-FDR).
+
+    BH runs over EVERY context in ``members``, not only those sharing a gene with the
+    seed: a context with no seed gene has p = 1 but was still tested. Counting only the
+    overlapping ones is looser and yields more "significant" contexts.
+    """
     universe = set().union(*members.values())
     N, n = len(universe), len(seed & universe)
     ids = [c for c in members if members[c] & seed]
     p = np.array([hypergeom.sf(len(members[c] & seed) - 1, N, len(members[c]), n) for c in ids])
-    q = benjamini_hochberg(p)
+    padded = np.concatenate([p, np.ones(len(members) - len(ids))])
+    q = benjamini_hochberg(padded)[: len(ids)]
     return {ids[i] for i in range(len(ids)) if q[i] < alpha}
 
 
@@ -161,13 +167,30 @@ def main():
 
     # how much does the seed definition matter?
     rows = []
+    sig = {}
     for label, s in (("all (DaG+DuG+DdG)", seed), ("DaG only", by_type["DaG"]),
                      ("DuG/DdG only", expr_only)):
         sp, sb = enriched(pw, s), enriched(bp, s)
+        sig[label] = (sp, sb)
         rows.append({"seed_definition": label, "n_seed": len(s),
                      "enriched_pathways": len(sp), "candidate_genes_pathway": len(candidates(pw, sp, s)),
                      "enriched_bp": len(sb), "candidate_genes_bp": len(candidates(bp, sb, s))})
     pd.DataFrame(rows).to_csv(args.out / "seed_definition_comparison.tsv", sep="\t", index=False)
+
+    def jaccard(a, b):
+        return len(a & b) / len(a | b) if a | b else 0.0
+
+    all_p, all_b = sig["all (DaG+DuG+DdG)"]
+    da_p, da_b = sig["DaG only"]
+    ex_p, ex_b = sig["DuG/DdG only"]
+    overlap = [
+        ("jaccard_enriched_pathways_DaG_only_vs_DuG/DdG_only", round(jaccard(da_p, ex_p), 3)),
+        ("jaccard_enriched_bp_DaG_only_vs_DuG/DdG_only", round(jaccard(da_b, ex_b), 3)),
+        ("share_of_all_seed_enriched_pathways_also_enriched_with_DaG_only", round(len(all_p & da_p) / len(all_p), 3)),
+        ("share_of_all_seed_enriched_bp_also_enriched_with_DaG_only", round(len(all_b & da_b) / len(all_b), 3)),
+    ]
+    pd.DataFrame(overlap, columns=["metric", "value"]).to_csv(
+        args.out / "seed_definition_overlap.tsv", sep="\t", index=False)
 
     # where do known ccRCC genes sit?
     het = pd.read_csv(args.hetionet_nodes, **READ)

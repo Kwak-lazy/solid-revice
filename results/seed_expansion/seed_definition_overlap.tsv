@@ -1,0 +1,5 @@
+metric	value
+jaccard_enriched_pathways_DaG_only_vs_DuG/DdG_only	0.015
+jaccard_enriched_bp_DaG_only_vs_DuG/DdG_only	0.01
+share_of_all_seed_enriched_pathways_also_enriched_with_DaG_only	0.731
+share_of_all_seed_enriched_bp_also_enriched_with_DaG_only	0.721

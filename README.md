@@ -422,8 +422,203 @@ Notes:
     disease-gene association (`DaG`). Seeds built on them are partly an expression result
     already.
   - Evidence it matters: enriched pathways from the `DaG`-only seed (212 genes) and the
-    `DuG`/`DdG`-only seed (486 genes) overlap at Jaccard 0.02 (BP 0.01) - they point at
-    nearly unrelated biology - and `DaG` alone reproduces 75% of the pathway and 69% of
+    `DuG`/`DdG`-only seed (486 genes) overlap at Jaccard 0.015 (BP 0.01) - they point at
+    nearly unrelated biology - and `DaG` alone reproduces 73% of the pathway and 72% of
+    the BP result from the full seed.
+  - Resolved: open - needs a decision on which edge types define the seed.
+
+- **Note (2026-10-05): all 17 known ccRCC genes checked are already seed genes.**
+  - Where: `results/seed_expansion/known_gene_check.tsv`.
+  - Consequence: a known-driver list cannot serve as held-out validation against this
+    seed; and `BAP1` has 0 pathways, `PBRM1`/`SETD2`/`KDM5C` 2 each, so the chromatin-
+    remodelling drivers are essentially unreachable through the pathway route (BP: 17-92).
+
+- **Open (2026-10-05): the handoff zips and large TSVs are not in Drive.**
+  - Where: `BML/KIRC_Hetionet_Project/2026-10-05_handoff_and_seed_analysis/`.
+  - Cause: the Drive connector accepts file content only as inline text, so the two ~5 MB
+    zips and the TSVs above ~100 KB cannot be pushed from this session.
+  - Resolved: open - drag the two zips into that folder by hand. `MANIFEST.md` lists the
+    sha256 of every file so the upload can be checked.
+
+- **Note (2026-10-06): FDR counts in the funnel tables now use the stricter denominator.**
+  - Where: `results/seed_expansion/funnel_*.tsv`, `seed_definition_comparison.tsv`,
+    `seed_definition_overlap.tsv` (`scripts/seed_expansion.py`, function `enriched`).
+  - Cause: Benjamini-Hochberg had been applied only over contexts that share at least one gene
+    with the seed (1,230 pathways, 6,200 BP). Every context is a test (1,822 / 11,381), so the
+    p-values are now padded with 1 for the contexts that have no seed gene.
+  - Effect: pathways 217 -> 182 (candidates 4,219 -> 4,123); BP 861 -> 653 (11,025 -> 10,847).
+    Seed-definition table: all 182 / 653, DaG-only 236 / 877, DuG/DdG-only 33 / 78 enriched
+    pathways / BP. The ranking order is identical under both conventions; only the cut-off moves.
+  - Resolved: yes - results regenerated; Notion page and Drive `decisions.md`, funnel and
+    seed-definition files carry the new figures. The looser counts (217 / 861) are still reported
+    next to the stricter ones by `pathway_size_correction.py`.
+
+### 2026-09-21
+
+- [x] Gene ID standardization implemented (Ensembl -> HGNC -> Entrez -> `Gene::Entrez`)
+- [x] Hetionet Gene mapping validation implemented and run
+- [x] Pathway / Biological Process configuration (`GRAPH_CONTEXT` + `CONTEXT_CONFIG`)
+- [x] Common pipeline implementation (`get_context_nodes` / `get_context_edges` / `run_context_experiment`)
+- [x] Pathway experiment executed
+- [x] Biological Process experiment executed
+- [x] Automatic context comparison written to `results/comparison/context_comparison.tsv`
+
+### 2026-09-22
+
+- [x] Gene ID standardization implemented (Ensembl -> HGNC -> Entrez -> `Gene::Entrez`)
+- [x] Hetionet Gene mapping validation implemented and run
+- [x] Pathway / Biological Process configuration (`GRAPH_CONTEXT` + `CONTEXT_CONFIG`)
+- [x] Common pipeline implementation (`get_context_nodes` / `get_context_edges` / `run_context_experiment`)
+- [x] Pathway experiment executed
+- [x] Biological Process experiment executed
+- [x] Automatic context comparison written to `results/comparison/context_comparison.tsv`
+
+### 2026-10-05
+
+- [x] Filed the handoff and seed-analysis results in Drive `BML/KIRC_Hetionet_Project/2026-10-05_handoff_and_seed_analysis` (small files only; see its MANIFEST.md)
+- [x] Wrote the experiment-decision summary to Notion and to `analysis/decisions.md` in that folder
+
+### 2026-10-06
+
+- [x] Size-corrected pathway ranking (`scripts/pathway_size_correction.py` -> `results/seed_expansion/pathway_enrichment.tsv`): fold enrichment, hypergeometric p, BH q, plus an annotation-matched null
+
+## 7. Results
+Measured on 2026-09-22 from an actual pipeline run.
+
+| Metric | Pathway | Biological Process |
+|---|---:|---:|
+| Context nodes | 1,822 | 11,381 |
+| Gene-context edges | 84,372 | 559,504 |
+| KIRC mapped genes | 8,947 | 14,742 |
+| Subgraph nodes | 19,456 | 29,631 |
+| Subgraph edges | 524,711 | 999,523 |
+
+Result files:
+
+```text
+results/
+├── pathway/
+│   ├── context_nodes.tsv
+│   ├── gene_context_edges.tsv
+│   └── subgraph_nodes.tsv
+├── biological_process/
+│   ├── context_nodes.tsv
+│   ├── gene_context_edges.tsv
+│   └── subgraph_nodes.tsv
+└── comparison/
+    ├── context_comparison.tsv
+    └── context_comparison_detail.tsv
+```
+
+Notes:
+
+- `Gene-context edges` counts every edge of the metaedge in Hetionet; `Subgraph edges` counts only those whose gene is KIRC-mapped.
+- `Subgraph nodes` / `Subgraph edges` are the NetworkX subgraph after isolate removal: Gene + Disease + the context's nodes, joined by `GiG`, `Gr>G`, `DaG`, `DuG`, `DdG` and the context metaedge. Gene nodes are restricted to the KIRC-mapped `Gene::Entrez` set.
+
+## 8. Problems / Issues
+**Standing issues** (re-checked every run; dated entries below are per-run findings.)
+
+- **RESOLVED (2026-09-22): the gene mapping is now the collaborator's standardization.**
+  - Where: `data/external/collab/`, loaded by `gene_mapping.load_collaborator_mapping()`.
+  - Cause: this pipeline had been deriving its own Ensembl -> Entrez mapping by
+    joining HGNC's `ensembl_gene_id` column. That join is wrong for TCGA data:
+    TCGA is quantified against a frozen GENCODE v36 build while HGNC tracks the
+    current Ensembl release, so every gene whose Ensembl ID was reassigned in
+    between was dropped without warning - 33 genes, **SOD2 among them**.
+  - Resolved: yes. The collaborator's files are authoritative and read-only.
+    Their chain goes Ensembl -> GENCODE v36 `hgnc_id` -> current HGNC -> Entrez,
+    which is immune to Ensembl ID drift. All 22 counts in their summary were
+    re-verified against the delivered files before adoption.
+
+- **RESOLVED (2026-09-22): `_PAR_Y` identifiers were silently dropped.**
+  - Where: `gene_mapping.strip_ensembl_version()`.
+  - Cause: the version-stripping regex anchored on `\.\d+$`, but GENCODE writes
+    pseudoautosomal duplicates as `ENSG00000002586.20_PAR_Y` - the version is not
+    at the end of the string. All 44 such ids survived unstripped and then failed
+    every join, landing in `no_hgnc` with no error.
+  - Resolved: yes, the suffix is stripped first. The bug only ever affected the
+    fallback path, which is no longer used, but it would have recurred.
+
+- **RESOLVED (2026-09-21): the KIRC expression matrix is downloaded directly.**
+  - Cause: an earlier run could not reach TCGA/GDC.
+  - Resolved: the original notebook's `fetch_xena()` endpoint pair was adopted;
+    `gdc.xenahubs.net` is still unreachable here but the S3 fallback serves the
+    same files.
+
+- **RESOLVED (2026-09-21): the baseline `Download_and_subgraph.ipynb` is in hand.**
+  - Resolved: the original was supplied and the notebook was rebuilt from it;
+    14 of its cells are reused verbatim.
+
+- **RESOLVED (2026-09-22): the survival endpoint's encoding is now established.**
+  - Where: `TCGA-KIRC.survival.tsv.gz`, loaded by `kirc.load_kirc_survival()`.
+  - Cause: the collaborator's own field guide flagged both `OS` and `OS.time` as
+    unverified - "Xena's usual convention is 1=death, 0=censored, but confirm this
+    build's ETL encoding" and "no unit stated in the metadata". Experiment 4
+    (survival validation) inverts entirely if the flag is backwards.
+  - Resolved: yes, cross-checked against the clinical table rather than assumed.
+    `OS=1` is `vital_status == Dead` for 336/336 rows and `OS=0` is `Alive` for
+    608/608 - an exact split. `OS.time` is in days: it equals `days_to_death` for
+    all 336 deaths and `days_to_last_follow_up` for all 608 censored rows. The
+    conventional reading holds. Recorded in the loader's docstring.
+
+- **Note: `duplicate_target` rows keep their `hetionet_gene_id`.**
+  - Where: `kirc_gene_mapping_all.tsv`.
+  - Cause: by design - the 26 dropped duplicate features stay in the table for
+    traceability and retain the node id they resolved to. Filtering the table on
+    `hetionet_gene_id != ""` therefore yields 19,451 rows for 19,425 nodes.
+  - Resolved: guarded. `gene_mapping.representative_rows()` selects on
+    `mapping_status` instead and asserts uniqueness. This pipeline reads the
+    delivered node file, which is already de-duplicated, so it was never exposed.
+
+- **Open: `GSTT1` (`Gene::2952`) has no KIRC expression row.**
+  - Where: the 699 genes linked to `Disease::DOID:263` (kidney cancer).
+  - Cause: not a defect. GSTT1 is annotated only on a GRCh38 alternate locus, so
+    it is absent from the primary-assembly GENCODE quantification TCGA uses. It
+    is also a well-known copy-number-variable gene.
+  - Resolved: open by design. **Graph-only experiments have 699 positives;
+    expression-based experiments have 698.** Fix the label set per experiment
+    before scoring, and state which one each result used.
+
+- **Open: the standardized expression matrix has not been delivered.**
+  - Where: `kirc_expression_standardized.tsv.gz` (19,297 x 605) exists in the
+    collaborator's run but was not among the shared files.
+  - Cause: the shared folder targets graph construction, so only the gene-node
+    files were handed over.
+  - Resolved: open. It can be reconstructed from the raw matrix plus
+    `kirc_gene_mapping_all.tsv`, except for the vial choice on 4 patients that
+    carry both `01A` and `01B` - that selection lives in the unshared
+    `kirc_sample_metadata.tsv`. Request the file rather than guessing.
+
+- **Open: 22,150 KIRC features carry an Entrez ID with no Hetionet Gene node.**
+  - Cause: expected. Hetionet v1.0 models 20,945 genes; KIRC covers 60,660
+    GENCODE features including pseudogenes, lncRNAs and other non-coding
+    biotypes Hetionet never included.
+  - Resolved: recorded, no action.
+
+- **Open: Drive holds only part of the project until the first Colab run.**
+  - Resolved: open - run `notebooks/OPEN_IN_COLAB.ipynb` once in Colab.
+
+- **Open (2026-10-05): the handoff gene file is the older 19,416-gene version.**
+  - Where: `team_handoff_kirc_subgraph/kirc_hetionet_gene_nodes.tsv` vs the 19,425-gene
+    file in `data/external/collab/`.
+  - Cause: the handoff predates the NCBI verification step. It is an exact subset of the
+    final file; the 9 genes it lacks are the NCBI-linked ones (8 merged-Entrez, 1 Ensembl
+    cross-reference). Its README therefore quotes 19,416 / 19,289 where the collaborator's
+    summary says 19,425 / 19,297.
+  - Impact: negligible. Running the handoff script on both files gives identical
+    pathway, BP and seed counts; the final file adds 1 gene and 1 `DuG` edge.
+  - Resolved: open - pick one as the paper's reference and say so. The final file matches
+    the collaborator's own summary.
+
+- **Open (2026-10-05): 486 of the 698 seed genes come only from `DuG`/`DdG`.**
+  - Where: kidney-cancer (`DOID:263`) seed set; see `results/seed_expansion/`.
+  - Cause: Hetionet derives `DuG`/`DdG` from STARGEO differential-expression
+    meta-analyses, i.e. from disease-vs-normal expression, not from curated
+    disease-gene association (`DaG`). Seeds built on them are partly an expression result
+    already.
+  - Evidence it matters: enriched pathways from the `DaG`-only seed (212 genes) and the
+    `DuG`/`DdG`-only seed (486 genes) overlap at Jaccard 0.015 (BP 0.01) - they point at
+    nearly unrelated biology - and `DaG` alone reproduces 73% of the pathway and 72% of
     the BP result from the full seed.
   - Resolved: open - needs a decision on which edge types define the seed.
 
