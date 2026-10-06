@@ -258,20 +258,23 @@ Gene --GpBP--> Biological Process
 Both contexts emit the same schema: `gene_id`, `gene_symbol`, `context_id`, `context_name`, `edge_type`, `context_type`.
 
 ## 6. Experiment Progress
-- **Open (2026-10-06): D5 filter thresholds - working choice, awaiting confirmation.**
+- **Note (2026-10-06): D3 and D5 decided - DaG-only seed, Pathway route only.**
   - Where: `scripts/candidate_filter.py`, `results/seed_expansion/d5_filter_summary.tsv`,
-    `d5_candidates_{pathway,biological_process}.tsv`.
-  - Choice: context stage q < 0.05, fold >= 2, size 10-500 (Pathway) / 10-200 (BP), seed overlap >= 3;
-    gene stage keeps genes supported by >= 2 kept contexts. Seed = all 698; DaG-only is the sensitivity run.
-  - Measured: Pathway 163 contexts -> 2,741 candidates -> 1,332 with support >= 2;
-    BP 286 contexts -> 5,246 -> 3,687. DaG-only seed keeps 221 / 445 contexts; Jaccard with the
-    all-seed set 0.488 (Pathway) / 0.341 (BP).
-  - Check: 100 random seeds of 698 annotated genes gave on average 0.01 (Pathway) / 0.05 (BP)
-    contexts with q < 0.05, so q < 0.05 needs no tightening for false-positive control (uniform
-    random seeds only; not annotation-matched).
-  - Caveats: the BP list is still 3,687 genes, so a top-k by support is needed; the top-supported
-    genes are signalling hubs (MAP2K1 65, HRAS 60, MAP2K2 55 contexts).
-  - Resolved: open - D3 (seed definition) and D7 (evaluation) are still undecided.
+    `d5_candidates_pathway.tsv`.
+  - Decision (user): seed = `DaG` genes (212); Biological Process is dropped from the experiments.
+    The all-seed set (698) stays only as a sensitivity run. `GpBP` code paths in the pipeline are
+    untouched; only the candidate filter no longer produces a BP list (the earlier BP candidate
+    file was removed).
+  - Thresholds: q < 0.05 (BH over all 1,822 Pathways), fold >= 2, size 10-500, seed overlap >= 3;
+    gene stage keeps genes supported by >= 2 kept Pathways, ranked by that support count.
+  - Measured (DaG seed): 221 Pathways -> 3,066 candidate genes -> 1,651 with support >= 2
+    (>= 3: 1,044; >= 5: 609). All-seed run: 163 Pathways -> 2,741 -> 1,332. Kept-Pathway sets of the
+    two seeds have Jaccard 0.488.
+  - Check: 100 random seeds of 698 annotated genes gave on average 0.01 Pathways with q < 0.05
+    (uniform random seeds only; not annotation-matched).
+  - Caveat: top-supported genes are signalling hubs (MAP2K1 106, PIK3R1 101, HRAS 97, AKT1 96,
+    GRB2 91 Pathways), so support count alone mixes cancer relevance with hub-ness.
+  - Still open: D7 (evaluation) and a gene-level score; BP rows in earlier tables are historical.
 
 ### 2026-09-21
 
