@@ -5,10 +5,11 @@ A pathway's raw seed count mostly reflects how big the pathway is. This script
 turns the count into an enrichment: how many seed genes the pathway holds versus
 how many a pathway of that size would hold if seeds were scattered at random.
 
-    python scripts/pathway_size_correction.py --graph-dir <handoff>/output
+    python scripts/pathway_size_correction.py --graph-dir <handoff>/output [--seed DaG|all]
 
-Writes results/seed_expansion/pathway_enrichment.tsv (one row per pathway) and
-results/seed_expansion/size_correction_summary.tsv.
+--seed DaG (default, the decided seed: 212 genes linked by DaG) writes
+results/seed_expansion/pathway_enrichment_DaG.tsv and size_correction_summary_DaG.tsv.
+--seed all (DaG|DuG|DdG, 698 genes) writes the same files without the suffix.
 
 Per pathway (K genes, k of them seeds), with N = genes that have any pathway
 annotation and n = seeds among them:
@@ -99,6 +100,7 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--graph-dir", type=Path, required=True)
     ap.add_argument("--out", type=Path, default=ROOT / "results/seed_expansion")
+    ap.add_argument("--seed", choices=("DaG", "all"), default="DaG")
     args = ap.parse_args()
     args.out.mkdir(parents=True, exist_ok=True)
 
@@ -115,8 +117,10 @@ def main():
     universe = set(pairs["g"])
     n_pathways = len(members)
 
-    seed_all = seeds_from_edges(edges, ("DaG", "DuG", "DdG"))
-    seed_da = seeds_from_edges(edges, ("DaG",))
+    seeds = {"all": seeds_from_edges(edges, ("DaG", "DuG", "DdG")), "DaG": seeds_from_edges(edges, ("DaG",))}
+    other_label = "all" if args.seed == "DaG" else "DaG"
+    seed_all, seed_other = seeds[args.seed], seeds[other_label]   # seed_all = the seed under study
+    suffix = "_DaG" if args.seed == "DaG" else ""
 
     df = enrichment(members, seed_all, universe, n_pathways)
     df_1230 = enrichment({k: v for k, v in members.items() if v & seed_all}, seed_all, universe,
@@ -143,12 +147,12 @@ def main():
     df["rank_corrected"] = np.arange(1, len(df) + 1)
     cols = ["rank_corrected", "rank_raw", "pathway_id", "pathway_name", "size", "seed_overlap",
             "expected", "fold", "p", "q", "matched_expected", "matched_fold", "matched_z"]
-    df[cols].to_csv(args.out / "pathway_enrichment.tsv", sep="\t", index=False, float_format="%.6g")
+    df[cols].to_csv(args.out / f"pathway_enrichment{suffix}.tsv", sep="\t", index=False, float_format="%.6g")
 
     # ---- summary ----
     sig = df["q"] < 0.05
     top_raw = df.nsmallest(50, "rank_raw")
-    da_df = enrichment(members, seed_da, universe, n_pathways).sort_values(["q", "p"])
+    da_df = enrichment(members, seed_other, universe, n_pathways).sort_values(["q", "p"])
     top20, top20_da = set(df.head(20)["pathway_id"]), set(da_df.head(20)["pathway_id"])
     # Annotation-matched comparison is only fair among pathways big enough for a z-score to
     # mean something: with K = 3 and 2 seeds the null sd is tiny and z explodes.
@@ -156,6 +160,7 @@ def main():
     fair_q20 = set(fair.head(20)["pathway_id"])          # df is already sorted by q
     fair_m20 = set(fair.nlargest(20, "matched_z")["pathway_id"])
     crit = sig & (df["fold"] >= 2) & df["size"].between(5, 500)
+    d5 = sig & (df["fold"] >= 2) & df["size"].between(10, 500) & (df["seed_overlap"] >= 3)
 
     def pool(ids):
         return len(set().union(*[members[x] for x in ids]) - seed_all)
@@ -175,7 +180,8 @@ def main():
         ("q<0.05_only_pathways_with_overlap", int((df_1230["q"] < 0.05).sum())),
         ("q<0.05_and_fold>=2", int((sig & (df["fold"] >= 2)).sum())),
         ("q<0.05_and_fold>=2_and_size_5-500", int((sig & (df["fold"] >= 2) & df["size"].between(5, 500)).sum())),
-        ("top20_overlap_with_DaG_only_seed", len(top20 & top20_da)),
+        ("d5_filter_q<0.05_fold>=2_size_10-500_overlap>=3", int(d5.sum())),
+        (f"top20_overlap_with_{other_label}_seed", len(top20 & top20_da)),
         ("fair_set_size_10-500_overlap>=3", len(fair)),
         ("fair_top20_overlap_q_vs_annotation_matched_z", len(fair_q20 & fair_m20)),
         ("fair_spearman_neglog10p_vs_matched_z",
@@ -185,13 +191,14 @@ def main():
         ("candidate_genes_from_raw_top10_pathways", pool(df.nsmallest(10, "rank_raw")["pathway_id"])),
         ("candidate_genes_from_corrected_top10_pathways", pool(df.head(10)["pathway_id"])),
         ("candidate_genes_from_criteria_set", pool(df[crit]["pathway_id"])),
+        ("candidate_genes_from_d5_filter_set", pool(df[d5]["pathway_id"])),
     ]
     for label, pat in KNOWN.items():
         r = df[df["pathway_name"] == pat]
         if len(r):
             S.append((f"rank_corrected_{label}", int(r["rank_corrected"].iloc[0])))
             S.append((f"rank_raw_{label}", int(r["rank_raw"].iloc[0])))
-    pd.DataFrame(S, columns=["metric", "value"]).to_csv(args.out / "size_correction_summary.tsv", sep="\t", index=False)
+    pd.DataFrame(S, columns=["metric", "value"]).to_csv(args.out / f"size_correction_summary{suffix}.tsv", sep="\t", index=False)
     print(pd.DataFrame(S, columns=["metric", "value"]).to_string(index=False))
     print(f"\nwritten -> {args.out}")
 

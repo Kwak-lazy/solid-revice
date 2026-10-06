@@ -12,7 +12,8 @@ q<0.05_all_1822_tests	182.0
 q<0.05_only_pathways_with_overlap	217.0
 q<0.05_and_fold>=2	175.0
 q<0.05_and_fold>=2_and_size_5-500	173.0
-top20_overlap_with_DaG_only_seed	12.0
+d5_filter_q<0.05_fold>=2_size_10-500_overlap>=3	163.0
+top20_overlap_with_DaG_seed	12.0
 fair_set_size_10-500_overlap>=3	639.0
 fair_top20_overlap_q_vs_annotation_matched_z	10.0
 fair_spearman_neglog10p_vs_matched_z	0.955
@@ -20,6 +21,7 @@ top20_median_matched_expected_over_expected	1.174
 candidate_genes_from_raw_top10_pathways	4361.0
 candidate_genes_from_corrected_top10_pathways	483.0
 candidate_genes_from_criteria_set	2746.0
+candidate_genes_from_d5_filter_set	2741.0
 rank_corrected_HIF-1	22.0
 rank_raw_HIF-1	81.0
 rank_corrected_VEGF	14.0

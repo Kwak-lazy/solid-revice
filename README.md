@@ -276,6 +276,18 @@ Both contexts emit the same schema: `gene_id`, `gene_symbol`, `context_id`, `con
     GRB2 91 Pathways), so support count alone mixes cancer relevance with hub-ness.
   - Still open: D7 (evaluation) and a gene-level score; BP rows in earlier tables are historical.
 
+- **Note (2026-10-06): size-correction run repeated for the DaG seed (Pathway).**
+  - Where: `scripts/pathway_size_correction.py --seed DaG` -> `results/seed_expansion/pathway_enrichment_DaG.tsv`,
+    `size_correction_summary_DaG.tsv`. The all-seed files keep their old names; the all-seed
+    enrichment table was re-run and is byte-identical, the summary gained two rows
+    (D5 filter set) and one renamed row (`top20_overlap_with_DaG_seed`).
+  - Measured (DaG, 165 of 212 seeds annotated, 1,822 Pathways): Spearman(size, raw seed count) 0.629;
+    raw top-20 median size 275 vs corrected 70; q<0.05 for 236; D5 filter set 221 (3,066 candidate genes);
+    annotation-matched expected over uniform expected 1.87 (top 20); Spearman(-log10 p, matched z) 0.879.
+  - Ranks (corrected / raw): VEGF 14 / 19, mTOR 24 / 60, HIF-1-alpha TF network 71 / 81,
+    HIF-2-alpha TF network 13 / 69.
+  - Resolved: yes (documented on the Notion decisions page, section 8).
+
 ### 2026-09-21
 
 - [x] Gene ID standardization implemented (Ensembl -> HGNC -> Entrez -> `Gene::Entrez`)
