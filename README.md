@@ -283,6 +283,10 @@ Both contexts emit the same schema: `gene_id`, `gene_symbol`, `context_id`, `con
 - [x] Filed the handoff and seed-analysis results in Drive `BML/KIRC_Hetionet_Project/2026-10-05_handoff_and_seed_analysis` (small files only; see its MANIFEST.md)
 - [x] Wrote the experiment-decision summary to Notion and to `analysis/decisions.md` in that folder
 
+### 2026-10-06
+
+- [x] Size-corrected pathway ranking (`scripts/pathway_size_correction.py` -> `results/seed_expansion/pathway_enrichment.tsv`): fold enrichment, hypergeometric p, BH q, plus an annotation-matched null
+
 ## 7. Results
 Measured on 2026-09-22 from an actual pipeline run.
 
@@ -436,6 +440,18 @@ Notes:
   - Resolved: open - drag the two zips into that folder by hand. `MANIFEST.md` lists the
     sha256 of every file so the upload can be checked.
 
+- **Note (2026-10-06): the FDR counts in the funnel tables use a less conservative denominator.**
+  - Where: `results/seed_expansion/funnel_*.tsv` and `seed_definition_comparison.tsv`
+    (`scripts/seed_expansion.py`, function `enriched`), and the figures quoted from them
+    (217 pathways / 4,219 candidates; 861 BP / 11,025 candidates).
+  - Cause: Benjamini-Hochberg was applied only over contexts that share at least one gene with
+    the seed (1,230 pathways, 6,200 BP). Counting every context as a test (1,822 / 11,381) is
+    stricter. Both are used in practice; the first matches common ORA tools.
+  - Effect: pathways 217 -> 182 (candidates 4,219 -> 4,123); BP 861 -> 653 (11,025 -> 10,847).
+    The ranking order is identical under both; only the cut-off moves.
+  - Resolved: open - pick one convention for the paper. `pathway_size_correction.py` uses the
+    stricter one and reports both counts.
+
 ### 2026-09-21
 
 - **3 Ensembl IDs appear on more than one row (one Ensembl -> several Entrez).**
@@ -490,3 +506,7 @@ Notes:
 ### 2026-10-05
 
 - Added `notebooks/run_handoff_in_colab.ipynb`: runs the teammate's `apply_kirc_to_hetionet_subgraph.py` from the uploaded zip in Colab, checks the result against the handoff README's expected values and packs `output.zip`
+
+### 2026-10-06
+
+- Added `scripts/pathway_size_correction.py` and `results/seed_expansion/pathway_enrichment.tsv` (1,822 pathways) and `size_correction_summary.tsv`
