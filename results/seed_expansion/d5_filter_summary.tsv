@@ -1,0 +1,5 @@
+route	seed	n_seed	n_contexts	candidates_support>=1	candidates_support>=2	candidates_support>=3	candidates_support>=5	jaccard_contexts_vs_all_seed
+pathway	all	698	163	2741	1332	805	423	
+pathway	DaG_only	212	221	3066	1651	1044	609	0.488
+biological_process	all	698	286	5246	3687	2734	1613	
+biological_process	DaG_only	212	445	5952	4412	3437	2220	0.341
